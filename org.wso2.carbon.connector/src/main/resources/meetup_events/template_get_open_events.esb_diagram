@@ -1,303 +1,303 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_VAdNADS_EeS_BbN732GJUQ" type="Esb" name="template_get_open_events.esb_diagram" measurementUnit="Pixel">
-  <children xmi:type="notation:Node" xmi:id="_VClT8DS_EeS_BbN732GJUQ" type="2001">
-    <children xmi:type="notation:DecorationNode" xmi:id="_VClT9TS_EeS_BbN732GJUQ" type="7001">
-      <children xmi:type="notation:Shape" xmi:id="_VEexYDS_EeS_BbN732GJUQ" type="3664" fontName="Lucida Grande">
-        <children xmi:type="notation:DecorationNode" xmi:id="_VEexYjS_EeS_BbN732GJUQ" type="7043">
-          <children xmi:type="notation:Node" xmi:id="_VElfEDS_EeS_BbN732GJUQ" type="3665">
-            <children xmi:type="notation:Node" xmi:id="_VEmtMDS_EeS_BbN732GJUQ" type="3615">
-              <children xmi:type="notation:DecorationNode" xmi:id="_VEmtNTS_EeS_BbN732GJUQ" type="7035">
-                <children xmi:type="notation:Node" xmi:id="_VEvQEDS_EeS_BbN732GJUQ" type="3492">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_VEv3IDS_EeS_BbN732GJUQ" type="5167"/>
-                  <children xmi:type="notation:Node" xmi:id="_VExsUDS_EeS_BbN732GJUQ" type="3033">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VExsUTS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VExsUjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VExsUzS_EeS_BbN732GJUQ"/>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_SBwKwDTAEeSEdec8fDFibg" type="Esb" name="template_get_open_events.esb_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_SEWy0DTAEeSEdec8fDFibg" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_SEXZ4DTAEeSEdec8fDFibg" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_SJcHIDTAEeSEdec8fDFibg" type="3664" fontName="Lucida Grande">
+        <children xmi:type="notation:DecorationNode" xmi:id="_SJcHIjTAEeSEdec8fDFibg" type="7043">
+          <children xmi:type="notation:Node" xmi:id="_SJr-wDTAEeSEdec8fDFibg" type="3665">
+            <children xmi:type="notation:Node" xmi:id="_SJtM4DTAEeSEdec8fDFibg" type="3615">
+              <children xmi:type="notation:DecorationNode" xmi:id="_SJtM5TTAEeSEdec8fDFibg" type="7035">
+                <children xmi:type="notation:Node" xmi:id="_SJ9rkDTAEeSEdec8fDFibg" type="3492">
+                  <children xmi:type="notation:DecorationNode" xmi:id="_SJ-SoDTAEeSEdec8fDFibg" type="5167"/>
+                  <children xmi:type="notation:Node" xmi:id="_SKBV8DTAEeSEdec8fDFibg" type="3033">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SKBV8TTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SKBV8jTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SKBV8zTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:PropertyMediatorInputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.0/@inputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VExsVDS_EeS_BbN732GJUQ" x="-6" y="-5"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SKBV9DTAEeSEdec8fDFibg" x="-6" y="-5"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_VEyTYDS_EeS_BbN732GJUQ" type="3034">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VEyTYTS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VEyTYjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VEyTYzS_EeS_BbN732GJUQ"/>
+                  <children xmi:type="notation:Node" xmi:id="_SKBV9TTAEeSEdec8fDFibg" type="3034">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SKBV9jTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SKBV9zTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SKBV-DTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:PropertyMediatorOutputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.0/@outputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VEyTZDS_EeS_BbN732GJUQ" x="-11" y="-9"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SKBV-TTAEeSEdec8fDFibg" x="-11" y="-9"/>
                   </children>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_VEvQETS_EeS_BbN732GJUQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_VEvQEjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                  <styles xmi:type="notation:LineStyle" xmi:id="_VEvQEzS_EeS_BbN732GJUQ"/>
+                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_SJ9rkTTAEeSEdec8fDFibg"/>
+                  <styles xmi:type="notation:FontStyle" xmi:id="_SJ9rkjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                  <styles xmi:type="notation:LineStyle" xmi:id="_SJ9rkzTAEeSEdec8fDFibg"/>
                   <element xmi:type="esb:PropertyMediator" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.0"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VEvQFDS_EeS_BbN732GJUQ" x="26" y="109" width="77" height="75"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SJ9rlDTAEeSEdec8fDFibg" x="26" y="109" width="77" height="75"/>
                 </children>
-                <children xmi:type="notation:Node" xmi:id="_VE8rcDS_EeS_BbN732GJUQ" type="3492">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_VE9SgDS_EeS_BbN732GJUQ" type="5167"/>
-                  <children xmi:type="notation:Node" xmi:id="_VE-goDS_EeS_BbN732GJUQ" type="3033">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VE-goTS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VE-gojS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VE-gozS_EeS_BbN732GJUQ"/>
+                <children xmi:type="notation:Node" xmi:id="_SKVfADTAEeSEdec8fDFibg" type="3492">
+                  <children xmi:type="notation:DecorationNode" xmi:id="_SKWGEDTAEeSEdec8fDFibg" type="5167"/>
+                  <children xmi:type="notation:Node" xmi:id="_SKX7QDTAEeSEdec8fDFibg" type="3033">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SKX7QTTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SKX7QjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SKX7QzTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:PropertyMediatorInputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.1/@inputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VE-gpDS_EeS_BbN732GJUQ" x="-6" y="-5"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SKX7RDTAEeSEdec8fDFibg" x="-6" y="-5"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_VE_HsDS_EeS_BbN732GJUQ" type="3034">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VE_HsTS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VE_HsjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VE_HszS_EeS_BbN732GJUQ"/>
+                  <children xmi:type="notation:Node" xmi:id="_SKYiUDTAEeSEdec8fDFibg" type="3034">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SKYiUTTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SKYiUjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SKYiUzTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:PropertyMediatorOutputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.1/@outputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VE_HtDS_EeS_BbN732GJUQ" x="-11" y="-9"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SKYiVDTAEeSEdec8fDFibg" x="-11" y="-9"/>
                   </children>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_VE8rcTS_EeS_BbN732GJUQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_VE8rcjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                  <styles xmi:type="notation:LineStyle" xmi:id="_VE8rczS_EeS_BbN732GJUQ"/>
+                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_SKVfATTAEeSEdec8fDFibg"/>
+                  <styles xmi:type="notation:FontStyle" xmi:id="_SKVfAjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                  <styles xmi:type="notation:LineStyle" xmi:id="_SKVfAzTAEeSEdec8fDFibg"/>
                   <element xmi:type="esb:PropertyMediator" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.1"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VE8rdDS_EeS_BbN732GJUQ" x="142" y="109" width="77" height="75"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SKVfBDTAEeSEdec8fDFibg" x="142" y="109" width="77" height="75"/>
                 </children>
-                <children xmi:type="notation:Node" xmi:id="_VFJfwDS_EeS_BbN732GJUQ" type="3742">
-                  <children xmi:type="notation:Node" xmi:id="_VFLU8DS_EeS_BbN732GJUQ" type="3743">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VFLU8TS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VFLU8jS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VFLU8zS_EeS_BbN732GJUQ"/>
+                <children xmi:type="notation:Node" xmi:id="_SKsrYDTAEeSEdec8fDFibg" type="3742">
+                  <children xmi:type="notation:Node" xmi:id="_SKvHoDTAEeSEdec8fDFibg" type="3743">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SKvHoTTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SKvHojTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SKvHozTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:CallMediatorInputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.2/@inputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VFLU9DS_EeS_BbN732GJUQ" x="-6" y="-5"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SKvHpDTAEeSEdec8fDFibg" x="-6" y="-5"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_VFL8ADS_EeS_BbN732GJUQ" type="3744">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VFL8ATS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VFL8AjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VFL8AzS_EeS_BbN732GJUQ"/>
+                  <children xmi:type="notation:Node" xmi:id="_SKvusDTAEeSEdec8fDFibg" type="3744">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SKvusTTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SKvusjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SKvuszTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:CallMediatorOutputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.2/@outputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VFL8BDS_EeS_BbN732GJUQ" x="-11" y="-9"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SKvutDTAEeSEdec8fDFibg" x="-11" y="-9"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_VFL8BTS_EeS_BbN732GJUQ" type="3745">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VFL8BjS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VFL8BzS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VFL8CDS_EeS_BbN732GJUQ"/>
+                  <children xmi:type="notation:Node" xmi:id="_SKvutTTAEeSEdec8fDFibg" type="3745">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SKvutjTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SKvutzTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SKvuuDTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:CallMediatorEndpointOutputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.2/@endpointOutputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VFL8CTS_EeS_BbN732GJUQ"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SKvuuTTAEeSEdec8fDFibg"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_VFL8CjS_EeS_BbN732GJUQ" type="3746">
-                    <children xmi:type="notation:DecorationNode" xmi:id="_VFMjEDS_EeS_BbN732GJUQ" type="7047">
-                      <children xmi:type="notation:Node" xmi:id="_VFVtADS_EeS_BbN732GJUQ" type="3709">
-                        <children xmi:type="notation:DecorationNode" xmi:id="_VFWUEDS_EeS_BbN732GJUQ" type="5206"/>
-                        <children xmi:type="notation:Node" xmi:id="_VFYJQDS_EeS_BbN732GJUQ" type="3710">
-                          <styles xmi:type="notation:DescriptionStyle" xmi:id="_VFYJQTS_EeS_BbN732GJUQ"/>
-                          <styles xmi:type="notation:FontStyle" xmi:id="_VFYJQjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                          <styles xmi:type="notation:LineStyle" xmi:id="_VFYJQzS_EeS_BbN732GJUQ"/>
+                  <children xmi:type="notation:Node" xmi:id="_SKwVwDTAEeSEdec8fDFibg" type="3746">
+                    <children xmi:type="notation:DecorationNode" xmi:id="_SKwVxTTAEeSEdec8fDFibg" type="7047">
+                      <children xmi:type="notation:Node" xmi:id="_SLCpoDTAEeSEdec8fDFibg" type="3709">
+                        <children xmi:type="notation:DecorationNode" xmi:id="_SLDQsDTAEeSEdec8fDFibg" type="5206"/>
+                        <children xmi:type="notation:Node" xmi:id="_SLFs8DTAEeSEdec8fDFibg" type="3710">
+                          <styles xmi:type="notation:DescriptionStyle" xmi:id="_SLFs8TTAEeSEdec8fDFibg"/>
+                          <styles xmi:type="notation:FontStyle" xmi:id="_SLFs8jTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                          <styles xmi:type="notation:LineStyle" xmi:id="_SLFs8zTAEeSEdec8fDFibg"/>
                           <element xmi:type="esb:HTTPEndPointInputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.2/@mediatorFlow/@children.0/@inputConnector"/>
-                          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VFYJRDS_EeS_BbN732GJUQ"/>
+                          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SLFs9DTAEeSEdec8fDFibg"/>
                         </children>
-                        <styles xmi:type="notation:DescriptionStyle" xmi:id="_VFVtATS_EeS_BbN732GJUQ"/>
-                        <styles xmi:type="notation:FontStyle" xmi:id="_VFVtAjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                        <styles xmi:type="notation:LineStyle" xmi:id="_VFVtAzS_EeS_BbN732GJUQ"/>
+                        <styles xmi:type="notation:DescriptionStyle" xmi:id="_SLCpoTTAEeSEdec8fDFibg"/>
+                        <styles xmi:type="notation:FontStyle" xmi:id="_SLCpojTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                        <styles xmi:type="notation:LineStyle" xmi:id="_SLCpozTAEeSEdec8fDFibg"/>
                         <element xmi:type="esb:HTTPEndpoint" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.2/@mediatorFlow/@children.0"/>
-                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VFVtBDS_EeS_BbN732GJUQ" x="107" y="64"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SLCppDTAEeSEdec8fDFibg" x="107" y="64"/>
                       </children>
-                      <styles xmi:type="notation:TitleStyle" xmi:id="_VFMjETS_EeS_BbN732GJUQ" showTitle="true"/>
+                      <styles xmi:type="notation:TitleStyle" xmi:id="_SKwVxjTAEeSEdec8fDFibg" showTitle="true"/>
                     </children>
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VFL8CzS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VFL8DDS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VFL8DTS_EeS_BbN732GJUQ"/>
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SKwVwTTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SKwVwjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SKwVwzTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:MediatorFlow" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.2/@mediatorFlow"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VFL8DjS_EeS_BbN732GJUQ"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SKwVxDTAEeSEdec8fDFibg"/>
                   </children>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_VFJfwTS_EeS_BbN732GJUQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_VFJfwjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                  <styles xmi:type="notation:LineStyle" xmi:id="_VFJfwzS_EeS_BbN732GJUQ"/>
+                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_SKsrYTTAEeSEdec8fDFibg"/>
+                  <styles xmi:type="notation:FontStyle" xmi:id="_SKsrYjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                  <styles xmi:type="notation:LineStyle" xmi:id="_SKsrYzTAEeSEdec8fDFibg"/>
                   <element xmi:type="esb:CallMediator" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.2"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VFJfxDS_EeS_BbN732GJUQ" x="259" y="109" width="170" height="100"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SKsrZDTAEeSEdec8fDFibg" x="259" y="109" width="170" height="100"/>
                 </children>
-                <children xmi:type="notation:Node" xmi:id="_VFkWgDS_EeS_BbN732GJUQ" type="3516">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_VFkWhTS_EeS_BbN732GJUQ" type="5183"/>
-                  <children xmi:type="notation:Node" xmi:id="_VFmLsDS_EeS_BbN732GJUQ" type="3100">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VFmLsTS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VFmLsjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VFmLszS_EeS_BbN732GJUQ"/>
+                <children xmi:type="notation:Node" xmi:id="_SLnRYDTAEeSEdec8fDFibg" type="3516">
+                  <children xmi:type="notation:DecorationNode" xmi:id="_SLnRZTTAEeSEdec8fDFibg" type="5183"/>
+                  <children xmi:type="notation:Node" xmi:id="_SLptoDTAEeSEdec8fDFibg" type="3100">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SLptoTTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SLptojTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SLptozTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:HeaderMediatorInputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.3/@inputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VFmLtDS_EeS_BbN732GJUQ" x="-6" y="-5"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SLptpDTAEeSEdec8fDFibg" x="-6" y="-5"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_VFmLtTS_EeS_BbN732GJUQ" type="3101">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VFmLtjS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VFmLtzS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VFmLuDS_EeS_BbN732GJUQ"/>
+                  <children xmi:type="notation:Node" xmi:id="_SLqUsDTAEeSEdec8fDFibg" type="3101">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SLqUsTTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SLqUsjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SLqUszTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:HeaderMediatorOutputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.3/@outputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VFmLuTS_EeS_BbN732GJUQ" x="-11" y="-9"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SLqUtDTAEeSEdec8fDFibg" x="-11" y="-9"/>
                   </children>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_VFkWgTS_EeS_BbN732GJUQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_VFkWgjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                  <styles xmi:type="notation:LineStyle" xmi:id="_VFkWgzS_EeS_BbN732GJUQ"/>
+                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_SLnRYTTAEeSEdec8fDFibg"/>
+                  <styles xmi:type="notation:FontStyle" xmi:id="_SLnRYjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                  <styles xmi:type="notation:LineStyle" xmi:id="_SLnRYzTAEeSEdec8fDFibg"/>
                   <element xmi:type="esb:HeaderMediator" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.3"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VFkWhDS_EeS_BbN732GJUQ" x="469" y="109" width="77" height="75"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SLnRZDTAEeSEdec8fDFibg" x="469" y="109" width="77" height="75"/>
                 </children>
-                <children xmi:type="notation:Node" xmi:id="_VFwjwDS_EeS_BbN732GJUQ" type="3516">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_VFznEDS_EeS_BbN732GJUQ" type="5183"/>
-                  <children xmi:type="notation:Node" xmi:id="_VF1cQDS_EeS_BbN732GJUQ" type="3100">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VF1cQTS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VF1cQjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VF1cQzS_EeS_BbN732GJUQ"/>
+                <children xmi:type="notation:Node" xmi:id="_SMHAoDTAEeSEdec8fDFibg" type="3516">
+                  <children xmi:type="notation:DecorationNode" xmi:id="_SMHnsDTAEeSEdec8fDFibg" type="5183"/>
+                  <children xmi:type="notation:Node" xmi:id="_SMJc4DTAEeSEdec8fDFibg" type="3100">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SMJc4TTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SMJc4jTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SMJc4zTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:HeaderMediatorInputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.4/@inputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VF1cRDS_EeS_BbN732GJUQ" x="-6" y="-5"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SMJc5DTAEeSEdec8fDFibg" x="-6" y="-5"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_VF2DUDS_EeS_BbN732GJUQ" type="3101">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VF2DUTS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VF2DUjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VF2DUzS_EeS_BbN732GJUQ"/>
+                  <children xmi:type="notation:Node" xmi:id="_SMKD8DTAEeSEdec8fDFibg" type="3101">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SMKD8TTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SMKD8jTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SMKD8zTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:HeaderMediatorOutputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.4/@outputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VF2DVDS_EeS_BbN732GJUQ" x="-11" y="-9"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SMKD9DTAEeSEdec8fDFibg" x="-11" y="-9"/>
                   </children>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_VFwjwTS_EeS_BbN732GJUQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_VFwjwjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                  <styles xmi:type="notation:LineStyle" xmi:id="_VFwjwzS_EeS_BbN732GJUQ"/>
+                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_SMHAoTTAEeSEdec8fDFibg"/>
+                  <styles xmi:type="notation:FontStyle" xmi:id="_SMHAojTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                  <styles xmi:type="notation:LineStyle" xmi:id="_SMHAozTAEeSEdec8fDFibg"/>
                   <element xmi:type="esb:HeaderMediator" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.4"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VFwjxDS_EeS_BbN732GJUQ" x="586" y="109" width="77" height="75"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SMHApDTAEeSEdec8fDFibg" x="586" y="109" width="77" height="75"/>
                 </children>
-                <children xmi:type="notation:Node" xmi:id="_VGBpgDS_EeS_BbN732GJUQ" type="3516">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_VGBphTS_EeS_BbN732GJUQ" type="5183"/>
-                  <children xmi:type="notation:Node" xmi:id="_VGDesDS_EeS_BbN732GJUQ" type="3100">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VGDesTS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VGDesjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VGDeszS_EeS_BbN732GJUQ"/>
+                <children xmi:type="notation:Node" xmi:id="_SMiecDTAEeSEdec8fDFibg" type="3516">
+                  <children xmi:type="notation:DecorationNode" xmi:id="_SMiedTTAEeSEdec8fDFibg" type="5183"/>
+                  <children xmi:type="notation:Node" xmi:id="_SMkToDTAEeSEdec8fDFibg" type="3100">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SMkToTTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SMkTojTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SMkTozTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:HeaderMediatorInputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.5/@inputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VGDetDS_EeS_BbN732GJUQ" x="-6" y="-5"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SMkTpDTAEeSEdec8fDFibg" x="-6" y="-5"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_VGDetTS_EeS_BbN732GJUQ" type="3101">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VGDetjS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VGDetzS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VGDeuDS_EeS_BbN732GJUQ"/>
+                  <children xmi:type="notation:Node" xmi:id="_SMk6sDTAEeSEdec8fDFibg" type="3101">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SMk6sTTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SMk6sjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SMk6szTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:HeaderMediatorOutputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.5/@outputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VGDeuTS_EeS_BbN732GJUQ" x="-11" y="-9"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SMk6tDTAEeSEdec8fDFibg" x="-11" y="-9"/>
                   </children>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_VGBpgTS_EeS_BbN732GJUQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_VGBpgjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                  <styles xmi:type="notation:LineStyle" xmi:id="_VGBpgzS_EeS_BbN732GJUQ"/>
+                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_SMiecTTAEeSEdec8fDFibg"/>
+                  <styles xmi:type="notation:FontStyle" xmi:id="_SMiecjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                  <styles xmi:type="notation:LineStyle" xmi:id="_SMieczTAEeSEdec8fDFibg"/>
                   <element xmi:type="esb:HeaderMediator" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.5"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VGBphDS_EeS_BbN732GJUQ" x="703" y="109" width="77" height="75"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SMiedDTAEeSEdec8fDFibg" x="703" y="109" width="77" height="75"/>
                 </children>
-                <children xmi:type="notation:Node" xmi:id="_VGPE4DS_EeS_BbN732GJUQ" type="3516">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_VGPE5TS_EeS_BbN732GJUQ" type="5183"/>
-                  <children xmi:type="notation:Node" xmi:id="_VGQ6EDS_EeS_BbN732GJUQ" type="3100">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VGQ6ETS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VGQ6EjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VGQ6EzS_EeS_BbN732GJUQ"/>
+                <children xmi:type="notation:Node" xmi:id="_SM_KYDTAEeSEdec8fDFibg" type="3516">
+                  <children xmi:type="notation:DecorationNode" xmi:id="_SM_xdDTAEeSEdec8fDFibg" type="5183"/>
+                  <children xmi:type="notation:Node" xmi:id="_SNBmoDTAEeSEdec8fDFibg" type="3100">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SNBmoTTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SNBmojTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SNBmozTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:HeaderMediatorInputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.6/@inputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VGQ6FDS_EeS_BbN732GJUQ" x="-6" y="-5"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SNBmpDTAEeSEdec8fDFibg" x="-6" y="-5"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_VGRhIDS_EeS_BbN732GJUQ" type="3101">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VGRhITS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VGRhIjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VGRhIzS_EeS_BbN732GJUQ"/>
+                  <children xmi:type="notation:Node" xmi:id="_SNCNsDTAEeSEdec8fDFibg" type="3101">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SNCNsTTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SNCNsjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SNCNszTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:HeaderMediatorOutputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.6/@outputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VGRhJDS_EeS_BbN732GJUQ" x="-11" y="-9"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SNCNtDTAEeSEdec8fDFibg" x="-11" y="-9"/>
                   </children>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_VGPE4TS_EeS_BbN732GJUQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_VGPE4jS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                  <styles xmi:type="notation:LineStyle" xmi:id="_VGPE4zS_EeS_BbN732GJUQ"/>
+                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_SM_xcDTAEeSEdec8fDFibg"/>
+                  <styles xmi:type="notation:FontStyle" xmi:id="_SM_xcTTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                  <styles xmi:type="notation:LineStyle" xmi:id="_SM_xcjTAEeSEdec8fDFibg"/>
                   <element xmi:type="esb:HeaderMediator" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.6"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VGPE5DS_EeS_BbN732GJUQ" x="820" y="109" width="77" height="75"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SM_xczTAEeSEdec8fDFibg" x="820" y="109" width="77" height="75"/>
                 </children>
-                <children xmi:type="notation:Node" xmi:id="_VGb5MDS_EeS_BbN732GJUQ" type="3516">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_VGcgQDS_EeS_BbN732GJUQ" type="5183"/>
-                  <children xmi:type="notation:Node" xmi:id="_VGduYDS_EeS_BbN732GJUQ" type="3100">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VGduYTS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VGduYjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VGduYzS_EeS_BbN732GJUQ"/>
+                <children xmi:type="notation:Node" xmi:id="_SNW90DTAEeSEdec8fDFibg" type="3516">
+                  <children xmi:type="notation:DecorationNode" xmi:id="_SNW91TTAEeSEdec8fDFibg" type="5183"/>
+                  <children xmi:type="notation:Node" xmi:id="_SNZaEDTAEeSEdec8fDFibg" type="3100">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SNZaETTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SNZaEjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SNZaEzTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:HeaderMediatorInputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.7/@inputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VGduZDS_EeS_BbN732GJUQ" x="-6" y="-5"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SNZaFDTAEeSEdec8fDFibg" x="-6" y="-5"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_VGeVcDS_EeS_BbN732GJUQ" type="3101">
-                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VGeVcTS_EeS_BbN732GJUQ"/>
-                    <styles xmi:type="notation:FontStyle" xmi:id="_VGeVcjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                    <styles xmi:type="notation:LineStyle" xmi:id="_VGeVczS_EeS_BbN732GJUQ"/>
+                  <children xmi:type="notation:Node" xmi:id="_SNZaFTTAEeSEdec8fDFibg" type="3101">
+                    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SNZaFjTAEeSEdec8fDFibg"/>
+                    <styles xmi:type="notation:FontStyle" xmi:id="_SNZaFzTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                    <styles xmi:type="notation:LineStyle" xmi:id="_SNZaGDTAEeSEdec8fDFibg"/>
                     <element xmi:type="esb:HeaderMediatorOutputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.7/@outputConnector"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VGeVdDS_EeS_BbN732GJUQ" x="-11" y="-9"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SNZaGTTAEeSEdec8fDFibg" x="-11" y="-9"/>
                   </children>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_VGb5MTS_EeS_BbN732GJUQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_VGb5MjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-                  <styles xmi:type="notation:LineStyle" xmi:id="_VGb5MzS_EeS_BbN732GJUQ"/>
+                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_SNW90TTAEeSEdec8fDFibg"/>
+                  <styles xmi:type="notation:FontStyle" xmi:id="_SNW90jTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+                  <styles xmi:type="notation:LineStyle" xmi:id="_SNW90zTAEeSEdec8fDFibg"/>
                   <element xmi:type="esb:HeaderMediator" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.7"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VGb5NDS_EeS_BbN732GJUQ" x="937" y="109" width="77" height="75"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SNW91DTAEeSEdec8fDFibg" x="937" y="109" width="77" height="75"/>
                 </children>
-                <styles xmi:type="notation:TitleStyle" xmi:id="_VEmtNjS_EeS_BbN732GJUQ" showTitle="true"/>
+                <styles xmi:type="notation:TitleStyle" xmi:id="_SJtM5jTAEeSEdec8fDFibg" showTitle="true"/>
               </children>
-              <styles xmi:type="notation:DescriptionStyle" xmi:id="_VEmtMTS_EeS_BbN732GJUQ"/>
-              <styles xmi:type="notation:FontStyle" xmi:id="_VEmtMjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-              <styles xmi:type="notation:LineStyle" xmi:id="_VEmtMzS_EeS_BbN732GJUQ"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_SJtM4TTAEeSEdec8fDFibg"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_SJtM4jTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_SJtM4zTAEeSEdec8fDFibg"/>
               <element xmi:type="esb:MediatorFlow" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VEmtNDS_EeS_BbN732GJUQ"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SJtM5DTAEeSEdec8fDFibg"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_VEmtNzS_EeS_BbN732GJUQ" type="3616">
-              <styles xmi:type="notation:DescriptionStyle" xmi:id="_VEmtODS_EeS_BbN732GJUQ"/>
-              <styles xmi:type="notation:FontStyle" xmi:id="_VEmtOTS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-              <styles xmi:type="notation:LineStyle" xmi:id="_VEmtOjS_EeS_BbN732GJUQ"/>
+            <children xmi:type="notation:Node" xmi:id="_SJtz8DTAEeSEdec8fDFibg" type="3616">
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_SJtz8TTAEeSEdec8fDFibg"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_SJtz8jTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_SJtz8zTAEeSEdec8fDFibg"/>
               <element xmi:type="esb:SequencesInputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@inputConnector"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VEmtOzS_EeS_BbN732GJUQ" x="-11" y="-9"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SJtz9DTAEeSEdec8fDFibg" x="-11" y="-9"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_VEnUQDS_EeS_BbN732GJUQ" type="3617">
-              <styles xmi:type="notation:DescriptionStyle" xmi:id="_VEnUQTS_EeS_BbN732GJUQ"/>
-              <styles xmi:type="notation:FontStyle" xmi:id="_VEnUQjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-              <styles xmi:type="notation:LineStyle" xmi:id="_VEnUQzS_EeS_BbN732GJUQ"/>
+            <children xmi:type="notation:Node" xmi:id="_SJtz9TTAEeSEdec8fDFibg" type="3617">
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_SJtz9jTAEeSEdec8fDFibg"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_SJtz9zTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_SJtz-DTAEeSEdec8fDFibg"/>
               <element xmi:type="esb:SequencesOutputConnector" href="template_get_open_events.esb#//@server/@children.0/@child/@outputConnector"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VEnURDS_EeS_BbN732GJUQ" x="-11" y="-9"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SJtz-TTAEeSEdec8fDFibg" x="-11" y="-9"/>
             </children>
-            <styles xmi:type="notation:DescriptionStyle" xmi:id="_VElfETS_EeS_BbN732GJUQ"/>
-            <styles xmi:type="notation:FontStyle" xmi:id="_VElfEjS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-            <styles xmi:type="notation:LineStyle" xmi:id="_VElfEzS_EeS_BbN732GJUQ"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_SJr-wTTAEeSEdec8fDFibg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_SJr-wjTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+            <styles xmi:type="notation:LineStyle" xmi:id="_SJr-wzTAEeSEdec8fDFibg"/>
             <element xmi:type="esb:Sequences" href="template_get_open_events.esb#//@server/@children.0/@child"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VElfFDS_EeS_BbN732GJUQ" width="195" height="125"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SJr-xDTAEeSEdec8fDFibg" width="195" height="125"/>
           </children>
         </children>
         <element xmi:type="esb:Template" href="template_get_open_events.esb#//@server/@children.0"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VEexYTS_EeS_BbN732GJUQ" width="30000" height="30000"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SJcHITTAEeSEdec8fDFibg" width="30000" height="30000"/>
       </children>
     </children>
-    <styles xmi:type="notation:DescriptionStyle" xmi:id="_VClT8TS_EeS_BbN732GJUQ"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_VClT8jS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
-    <styles xmi:type="notation:LineStyle" xmi:id="_VClT8zS_EeS_BbN732GJUQ"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_SEWy0TTAEeSEdec8fDFibg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_SEWy0jTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_SEWy0zTAEeSEdec8fDFibg"/>
     <element xmi:type="esb:EsbServer" href="template_get_open_events.esb#//@server"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VClT9DS_EeS_BbN732GJUQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SEWy1DTAEeSEdec8fDFibg"/>
   </children>
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_VAdNATS_EeS_BbN732GJUQ"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_SBwKwTTAEeSEdec8fDFibg"/>
   <element xmi:type="esb:EsbDiagram" href="template_get_open_events.esb#/"/>
-  <edges xmi:type="notation:Connector" xmi:id="_VHCWIDS_EeS_BbN732GJUQ" type="4001" source="_VEnUQDS_EeS_BbN732GJUQ" target="_VExsUDS_EeS_BbN732GJUQ" roundedBendpointsRadius="5" routing="Rectilinear">
-    <styles xmi:type="notation:FontStyle" xmi:id="_VHCWITS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Connector" xmi:id="_SOhbcDTAEeSEdec8fDFibg" type="4001" source="_SJtz9TTAEeSEdec8fDFibg" target="_SKBV8DTAEeSEdec8fDFibg" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_SOhbcTTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
     <element xmi:type="esb:EsbLink" href="template_get_open_events.esb#//@server/@children.0/@child/@outputConnector/@outgoingLink"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VHCWIjS_EeS_BbN732GJUQ" points="[10, 9, -96, -83]$[100, 86, -6, -6]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SOhbcjTAEeSEdec8fDFibg" points="[10, 9, -96, -83]$[100, 86, -6, -6]"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_VHHOoDS_EeS_BbN732GJUQ" type="4001" source="_VEyTYDS_EeS_BbN732GJUQ" target="_VE-goDS_EeS_BbN732GJUQ" roundedBendpointsRadius="5" routing="Rectilinear">
-    <styles xmi:type="notation:FontStyle" xmi:id="_VHHOoTS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Connector" xmi:id="_SOpXQDTAEeSEdec8fDFibg" type="4001" source="_SKBV9TTAEeSEdec8fDFibg" target="_SKX7QDTAEeSEdec8fDFibg" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_SOpXQTTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
     <element xmi:type="esb:EsbLink" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.0/@outputConnector/@outgoingLink"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VHHOojS_EeS_BbN732GJUQ" points="[-11, 0, 66, 0]$[-71, 0, 6, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SOpXQjTAEeSEdec8fDFibg" points="[-11, 0, 66, 0]$[-71, 0, 6, 0]"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_VHK5ADS_EeS_BbN732GJUQ" type="4001" source="_VE_HsDS_EeS_BbN732GJUQ" target="_VFLU8DS_EeS_BbN732GJUQ" roundedBendpointsRadius="5" routing="Rectilinear">
-    <styles xmi:type="notation:FontStyle" xmi:id="_VHK5ATS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Connector" xmi:id="_SOuPwDTAEeSEdec8fDFibg" type="4001" source="_SKYiUDTAEeSEdec8fDFibg" target="_SKvHoDTAEeSEdec8fDFibg" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_SOuPwTTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
     <element xmi:type="esb:EsbLink" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.1/@outputConnector/@outgoingLink"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VHK5AjS_EeS_BbN732GJUQ" points="[-11, 6, 66, -40]$[-71, 42, 6, -4]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SOuPwjTAEeSEdec8fDFibg" points="[-11, 6, 66, -40]$[-71, 42, 6, -4]"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_VHN8UDS_EeS_BbN732GJUQ" type="4001" source="_VFL8ADS_EeS_BbN732GJUQ" target="_VFmLsDS_EeS_BbN732GJUQ" roundedBendpointsRadius="5" routing="Rectilinear">
-    <styles xmi:type="notation:FontStyle" xmi:id="_VHN8UTS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Connector" xmi:id="_SOzIQDTAEeSEdec8fDFibg" type="4001" source="_SKvusDTAEeSEdec8fDFibg" target="_SLptoDTAEeSEdec8fDFibg" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_SOzIQTTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
     <element xmi:type="esb:EsbLink" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.2/@outputConnector/@outgoingLink"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VHN8UjS_EeS_BbN732GJUQ" points="[-11, -2, 288, 44]$[-293, -46, 6, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SOzIQjTAEeSEdec8fDFibg" points="[-11, -2, 288, 44]$[-293, -46, 6, 0]"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_VHRmsDS_EeS_BbN732GJUQ" type="4001" source="_VFmLtTS_EeS_BbN732GJUQ" target="_VF1cQDS_EeS_BbN732GJUQ" roundedBendpointsRadius="5" routing="Rectilinear">
-    <styles xmi:type="notation:FontStyle" xmi:id="_VHRmsTS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Connector" xmi:id="_SO4n0DTAEeSEdec8fDFibg" type="4001" source="_SLqUsDTAEeSEdec8fDFibg" target="_SMJc4DTAEeSEdec8fDFibg" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_SO4n0TTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
     <element xmi:type="esb:EsbLink" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.3/@outputConnector/@outgoingLink"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VHRmsjS_EeS_BbN732GJUQ" points="[-11, 0, 66, 0]$[-71, 0, 6, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SO4n0jTAEeSEdec8fDFibg" points="[-11, 0, 66, 0]$[-71, 0, 6, 0]"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_VHVREDS_EeS_BbN732GJUQ" type="4001" source="_VF2DUDS_EeS_BbN732GJUQ" target="_VGDesDS_EeS_BbN732GJUQ" roundedBendpointsRadius="5" routing="Rectilinear">
-    <styles xmi:type="notation:FontStyle" xmi:id="_VHVRETS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Connector" xmi:id="_SO9gUDTAEeSEdec8fDFibg" type="4001" source="_SMKD8DTAEeSEdec8fDFibg" target="_SMkToDTAEeSEdec8fDFibg" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_SO9gUTTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
     <element xmi:type="esb:EsbLink" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.4/@outputConnector/@outgoingLink"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VHVREjS_EeS_BbN732GJUQ" points="[-11, 0, 66, 0]$[-71, 0, 6, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SO9gUjTAEeSEdec8fDFibg" points="[-11, 0, 66, 0]$[-71, 0, 6, 0]"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_VHYUYDS_EeS_BbN732GJUQ" type="4001" source="_VGDetTS_EeS_BbN732GJUQ" target="_VGQ6EDS_EeS_BbN732GJUQ" roundedBendpointsRadius="5" routing="Rectilinear">
-    <styles xmi:type="notation:FontStyle" xmi:id="_VHYUYTS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Connector" xmi:id="_SPCY0DTAEeSEdec8fDFibg" type="4001" source="_SMk6sDTAEeSEdec8fDFibg" target="_SNBmoDTAEeSEdec8fDFibg" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_SPCY0TTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
     <element xmi:type="esb:EsbLink" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.5/@outputConnector/@outgoingLink"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VHYUYjS_EeS_BbN732GJUQ" points="[-11, 0, 66, 0]$[-71, 0, 6, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SPCY0jTAEeSEdec8fDFibg" points="[-11, 0, 66, 0]$[-71, 0, 6, 0]"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_VHcl0DS_EeS_BbN732GJUQ" type="4001" source="_VGRhIDS_EeS_BbN732GJUQ" target="_VGduYDS_EeS_BbN732GJUQ" roundedBendpointsRadius="5" routing="Rectilinear">
-    <styles xmi:type="notation:FontStyle" xmi:id="_VHcl0TS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Connector" xmi:id="_SPJGgDTAEeSEdec8fDFibg" type="4001" source="_SNCNsDTAEeSEdec8fDFibg" target="_SNZaEDTAEeSEdec8fDFibg" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_SPJGgTTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
     <element xmi:type="esb:EsbLink" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.6/@outputConnector/@outgoingLink"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VHcl0jS_EeS_BbN732GJUQ" points="[-11, 0, 66, 0]$[-71, 0, 6, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SPJGgjTAEeSEdec8fDFibg" points="[-11, 0, 66, 0]$[-71, 0, 6, 0]"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_VHgQMDS_EeS_BbN732GJUQ" type="4001" source="_VGeVcDS_EeS_BbN732GJUQ" target="_VEmtNzS_EeS_BbN732GJUQ" roundedBendpointsRadius="5" routing="Rectilinear">
-    <styles xmi:type="notation:FontStyle" xmi:id="_VHgQMTS_EeS_BbN732GJUQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Connector" xmi:id="_SPPNIDTAEeSEdec8fDFibg" type="4001" source="_SNZaFTTAEeSEdec8fDFibg" target="_SJtz8DTAEeSEdec8fDFibg" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_SPPNITTAEeSEdec8fDFibg" fontName="Lucida Grande"/>
     <element xmi:type="esb:EsbLink" href="template_get_open_events.esb#//@server/@children.0/@child/@mediatorFlow/@children.7/@outputConnector/@outgoingLink"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VHgQMjS_EeS_BbN732GJUQ" points="[1, -9, -11, 83]$[10, -83, -2, 9]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SPPNIjTAEeSEdec8fDFibg" points="[1, -9, -11, 83]$[10, -83, -2, 9]"/>
   </edges>
 </notation:Diagram>
