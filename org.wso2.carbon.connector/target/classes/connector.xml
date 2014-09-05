@@ -4,6 +4,7 @@
         <dependency component="helloWorld"/>
         <dependency component="meetup_events"/>
         <dependency component="meetup_categories"/>
-        <description>wso2 sample connector library</description>
+        <dependency component="batch"/>
+        <description>wso2 ESB Carbon connector library for Meetup</description>
     </component>
 </connector>

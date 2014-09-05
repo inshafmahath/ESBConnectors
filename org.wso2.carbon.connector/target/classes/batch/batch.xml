@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="http://ws.apache.org/ns/synapse" name="getCategories">
+    <parameter name="key"/>
+    <sequence>
+        <property name="uri.var.key" expression="$func:key" scope="default" type="STRING"/>
+        <call/>
+    </sequence>
+</template>
