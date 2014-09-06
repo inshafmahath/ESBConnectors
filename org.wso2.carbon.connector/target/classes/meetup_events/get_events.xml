@@ -14,7 +14,7 @@
           <call>
             <endpoint>
                 <http method="get"
-                      uri-template="https://api.meetup.com/2/open_events.xml?topic={uri.var.topic}&amp;key={uri.var.key}" />
+                      uri-template="https://api.meetup.com/2/events?topic={uri.var.topic}&amp;key={uri.var.key}" />
             </endpoint>
         </call>
 
