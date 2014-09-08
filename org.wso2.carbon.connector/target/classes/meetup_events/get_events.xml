@@ -1,4 +1,4 @@
-<template name="getOpenEvents" xmlns="http://ws.apache.org/ns/synapse">
+<template name="getEvents" xmlns="http://ws.apache.org/ns/synapse">
 
     <!-- Required Parameters -->
     <parameter name="key" description="API key" />
