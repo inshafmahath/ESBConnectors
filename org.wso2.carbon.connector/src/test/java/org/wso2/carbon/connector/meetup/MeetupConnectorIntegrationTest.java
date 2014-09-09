@@ -20,13 +20,14 @@ package org.wso2.carbon.connector.meetup;
 import java.net.URL;
 import java.util.Properties;
 
-import javax.activation.DataHandler;
-
 import org.apache.axis2.context.ConfigurationContext;
+
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+
 import org.wso2.carbon.automation.api.clients.proxy.admin.ProxyServiceAdminClient;
 import org.wso2.carbon.automation.api.clients.utils.AuthenticateStub;
 import org.wso2.carbon.automation.utils.axis2client.ConfigurationContextProvider;
@@ -35,10 +36,12 @@ import org.wso2.carbon.esb.ESBIntegrationTest;
 import org.wso2.carbon.mediation.library.stub.MediationLibraryAdminServiceStub;
 import org.wso2.carbon.mediation.library.stub.upload.MediationLibraryUploaderStub;
 
+import javax.activation.DataHandler;
+
 public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
 
 
-    private static final String CONNECTOR_NAME = "linkedin";
+    private static final String CONNECTOR_NAME = "meetup";
 
     private MediationLibraryUploaderStub mediationLibUploadStub = null;
 
@@ -48,14 +51,16 @@ public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
 
     private String repoLocation = null;
 
-    private String linkedinConnectorFileName = CONNECTOR_NAME + ".zip";
+    private String meetupConnectorFileName = CONNECTOR_NAME + ".zip";
 
-    private Properties linkedinConnectorProperties = null;
+    private Properties meetupConnectorProperties = null;
 
     private String pathToProxiesDirectory = null;
 
     private String pathToRequestsDirectory = null;
 
+
+    @BeforeClass(alwaysRun = true)
     public void setEnvironment() throws Exception {
 
         super.init();
@@ -78,17 +83,57 @@ public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
         }
         proxyAdmin = new ProxyServiceAdminClient(esbServer.getBackEndUrl(), esbServer.getSessionCookie());
 
-        ConnectorIntegrationUtil.uploadConnector(repoLocation, mediationLibUploadStub, linkedinConnectorFileName);
+        ConnectorIntegrationUtil.uploadConnector(repoLocation, mediationLibUploadStub, meetupConnectorFileName);
         log.info("Sleeping for " + 30000 / 1000 + " seconds while waiting for synapse import");
         Thread.sleep(30000);
 
         adminServiceStub.updateStatus("{org.wso2.carbon.connector}" + CONNECTOR_NAME, CONNECTOR_NAME,
                 "org.wso2.carbon.connector", "enabled");
 
-        linkedinConnectorProperties = ConnectorIntegrationUtil.getConnectorConfigProperties(CONNECTOR_NAME);
+        meetupConnectorProperties = ConnectorIntegrationUtil.getConnectorConfigProperties(CONNECTOR_NAME);
 
-        pathToProxiesDirectory = repoLocation + linkedinConnectorProperties.getProperty("proxyDirectoryRelativePath");
-        pathToRequestsDirectory = repoLocation + linkedinConnectorProperties.getProperty("requestDirectoryRelativePath");
+        pathToProxiesDirectory = repoLocation + meetupConnectorProperties.getProperty("proxyDirectoryRelativePath");
+        pathToRequestsDirectory = repoLocation + meetupConnectorProperties.getProperty("requestDirectoryRelativePath");
 
+    }
+
+    @Override
+    protected void cleanup() throws Exception {
+        axis2Client.destroy();
+    }
+
+
+    @Test(groups = { "wso2.esb" }, description = "meetup {getOpenEvents} integration test")
+    public void testGetOpenEventsWithRequiredParameters() throws Exception {
+
+        String jsonRequestFilePath = pathToRequestsDirectory + "getOpenEvents_mandatory.txt";
+        String methodName = "meetup_get_open_events";
+
+        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+        String modifiedJsonString = String.format(jsonString,
+               meetupConnectorProperties.getProperty("key"),
+//                meetupConnectorProperties.getProperty("category"),
+//                meetupConnectorProperties.getProperty("city"),
+//                meetupConnectorProperties.getProperty("country"),
+//                meetupConnectorProperties.getProperty("lat"),
+//                meetupConnectorProperties.getProperty("lon"),
+//                meetupConnectorProperties.getProperty("state"),
+//                meetupConnectorProperties.getProperty("text"),
+//                meetupConnectorProperties.getProperty("topic"),
+                meetupConnectorProperties.getProperty("zip")
+                );
+        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+
+
+        try {
+
+            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
+            Assert.assertTrue(responseHeader == 200);
+           // JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+          //  Assert.assertTrue(jsonObject.has("results"));
+        } finally {
+            proxyAdmin.deleteProxy(methodName);
+        }
     }
 }
