@@ -15,7 +15,7 @@
 * specific language governing permissions and limitations
 * under the License.
 */
-package org.wso2.carbon.connector.integration.test.meetup;
+package org.wso2.carbon.connector.meetup;
 
 import java.util.Properties;
 
@@ -23,7 +23,7 @@ import org.apache.axis2.context.ConfigurationContext;
 import org.wso2.carbon.automation.api.clients.proxy.admin.ProxyServiceAdminClient;
 import org.wso2.carbon.automation.api.clients.utils.AuthenticateStub;
 import org.wso2.carbon.automation.utils.axis2client.ConfigurationContextProvider;
-import org.wso2.carbon.connector.integration.test.common.ConnectorIntegrationUtil;
+import org.wso2.carbon.connector.common.ConnectorIntegrationUtil;
 import org.wso2.carbon.esb.ESBIntegrationTest;
 import org.wso2.carbon.mediation.library.stub.MediationLibraryAdminServiceStub;
 import org.wso2.carbon.mediation.library.stub.upload.MediationLibraryUploaderStub;

@@ -1,5 +1,5 @@
 
-package org.wso2.carbon.connector.integration.test.common;
+package org.wso2.carbon.connector.common;
 
 import org.apache.axiom.om.OMElement;
 import org.apache.axiom.om.util.AXIOMUtil;
