@@ -52,9 +52,9 @@ org.wso2.carbon.connector/target/meetup.zip
 
 org.wso2.carbon.connector/target/org.wso2.carbon.connector.meetup-4.2.0.jar
 
-org.wso2.carbon.connector/target/
+target/
 
-org.wso2.carbon.connector/.idea/
+.idea/
 
 org.wso2.carbon.connector/.idea/workspace.xml
 
