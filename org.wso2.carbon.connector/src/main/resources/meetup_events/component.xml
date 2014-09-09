@@ -5,5 +5,41 @@
             <file>get_open_events.xml</file>
             <description>List open events for given query.</description>
         </component>
+        <component name="getConcierge">
+            <file>get_concierge.xml</file>
+            <description>List concierge events for given query.</description>
+        </component>
+        <component name="getEvents">
+            <file>get_events.xml</file>
+            <description>List events for given query.</description>
+        </component>
+        <component name="getEventByID">
+            <file>get_event_by_id.xml</file>
+            <description>List events for given query.</description>
+        </component>
+        <component name="getEventComments">
+            <file>get_event_comments.xml</file>
+            <description>List event comments for given query.</description>
+        </component>
+        <component name="getEventCommentByID">
+            <file>get_event_comment_by_id.xml</file>
+            <description>List event comments for given query.</description>
+        </component>
+        <component name="getEventCommentLikes">
+            <file>get_event_comment_likes.xml</file>
+            <description>List event comments for given query.</description>
+        </component>
+        <component name="getEventRating">
+            <file>get_event_ratings.xml</file>
+            <description>List event comments for given query.</description>
+        </component>
+        <component name="postEventComments">
+            <file>post_event_comment.xml</file>
+            <description>post event comments.</description>
+        </component>
+        <component name="deleteEventCommentByID">
+            <file>delete_event_comment_by_id.xml</file>
+            <description>delete event comments.</description>
+        </component>
     </subComponents>
 </component>
