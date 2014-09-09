@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/main/resources/batch/template_batch.esb=UTF-8
+encoding//src/main/resources/batch/template_batch.esb_diagram=UTF-8
+encoding//src/main/resources/meetup_events/template_get_events.esb=UTF-8
+encoding//src/main/resources/meetup_events/template_get_events.esb_diagram=UTF-8
+encoding//src/main/resources/meetup_events/template_get_open_events.esb=UTF-8
+encoding//src/main/resources/meetup_events/template_get_open_events.esb_diagram=UTF-8
