@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.wso2.carbon.connector.meetup.iml" filepath="$PROJECT_DIR$/org.wso2.carbon.connector.meetup.iml" />
     </modules>
   </component>
 </project>

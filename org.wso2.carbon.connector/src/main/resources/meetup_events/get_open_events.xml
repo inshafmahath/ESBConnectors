@@ -53,6 +53,100 @@
         <property name="uri.var.time" expression="$func:time" />
         <property name="uri.var.topic" expression="$func:topic" />
         <property name="uri.var.zip" expression="$func:zip" />
+        <property name="uri.var.query" value="" />
+
+
+
+
+        <script language="js">
+            <![CDATA[
+
+			var and_text = mc.getProperty('uri.var.and_text');
+			var category = mc.getProperty('uri.var.category');
+			var city = mc.getProperty('uri.var.city');
+			var country = mc.getProperty('uri.var.country');
+			var fields = mc.getProperty('uri.var.fields');
+			var lat = mc.getProperty('uri.var.lat');
+			var limited_events = mc.getProperty('uri.var.limited_events');
+			var lon = mc.getProperty('uri.var.lon');
+			var radius = mc.getProperty('uri.var.radius');
+			var state = mc.getProperty('uri.var.state');
+			var status = mc.getProperty('uri.var.status');
+			var text = mc.getProperty('uri.var.text');
+			var text_format = mc.getProperty('uri.var.text_format');
+			var time = mc.getProperty('uri.var.time');
+			var topic = mc.getProperty('uri.var.topic');
+			var zip = mc.getProperty('uri.var.zip');
+			var query = mc.getProperty('uri.var.query');
+
+			if (and_text != null && and_text != "") {
+				query = query + '&and_text=' + and_text;
+			}
+
+			if (category != null && category != "") {
+				query = query + '&category=' + category;
+			}
+
+			if(city !=null && city != "") {
+				query = query + '&city=' + city;
+			}
+
+			if (country != null && country != "") {
+				query = query + '&country=' + country;
+			}
+
+			if (fields != null && fields != "") {
+				query = query + '&fields=' + fields;
+			}
+
+			if(lat != null && lat != "") {
+				query = query + '&lat=' + lat;
+			}
+
+			if (limited_events != null && limited_events != "") {
+				query = query + '&limited_events=' + limited_events;
+			}
+
+            if (lon != null && lon != "") {
+				query = query + '&lon=' + lon;
+			}
+
+			if (radius != null && radius != "") {
+				query = query + '&radius=' + radius;
+			}
+
+			if(state !=null && state != "") {
+				query = query + '&state=' + state;
+			}
+
+			if (status != null && status != "") {
+				query = query + '&status=' + status;
+			}
+
+			if (text != null && text != "") {
+				query = query + '&text=' + text;
+			}
+
+			if(text_format != null && text_format != "") {
+				query = query + '&text_format=' + text_format;
+			}
+
+			if (time != null && time != "") {
+				query = query + '&time=' + time;
+			}
+
+			if(topic != null && topic != "") {
+				query = query + '&topic=' + topic;
+			}
+
+			if (zip != null && zip != "") {
+				query = query + '&zip=' + zip;
+			}
+
+			mc.setProperty('uri.var.query', query);
+
+	 		]]>
+        </script>
 
 
         <filter
@@ -62,24 +156,13 @@
             </then>
         </filter>
 
-        <filter
-                xpath="get-property('uri.var.topic') = '' or not(string(get-property('uri.var.topic')))">
-            <then>
-                <property name="uri.var.topic" value="" />
-            </then>
-        </filter>
-        <filter
-                xpath="get-property('uri.var.zip') = '' or not(string(get-property('uri.var.zip')))">
-            <then>
-                <property name="uri.var.zip" value="" />
-            </then>
-        </filter>
+
 
         <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
-            <property name="string" value="get-property('uri.var.key')" />
+            <property name="string" expression="fn:concat('key - ', get-property('uri.var.key'))" />
         </log>
         <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
-            <property name="string2" value="get-property('uri.var.topic')"/>
+            <property name="string" expression="fn:concat('query - ', get-property('uri.var.query'))"/>
         </log>
 
 
@@ -87,7 +170,7 @@
           <call>
             <endpoint>
                 <http method="get"
-                      uri-template="https://api.meetup.com/2/open_events.xml?topic={uri.var.topic}&amp;zip={uri.var.zip}&amp;key={uri.var.key}" />
+                      uri-template="{uri.var.apiUrl}/{uri.var.apiVersion}/open_events?key={uri.var.key}{uri.var.query}" />
             </endpoint>
         </call>
 

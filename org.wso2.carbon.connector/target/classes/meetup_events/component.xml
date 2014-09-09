@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<component name="meetup_events" type="synapse/template">
-    <subComponents>
-        <component name="getOpenEvents">
-            <file>get_open_events.xml</file>
-            <description>List open events for given query.</description>
-        </component>
-    </subComponents>
-</component>
