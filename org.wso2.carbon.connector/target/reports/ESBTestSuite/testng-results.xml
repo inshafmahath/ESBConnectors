@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="ESBTestSuite" duration-ms="6" started-at="2014-09-09T11:05:59Z" finished-at="2014-09-09T11:05:59Z">
+<suite name="ESBTestSuite" duration-ms="5" started-at="2014-09-09T12:22:23Z" finished-at="2014-09-09T12:22:23Z">
   <groups>
   </groups>
-  <test name="Meetup-Connector-Test" duration-ms="6" started-at="2014-09-09T11:05:59Z" finished-at="2014-09-09T11:05:59Z">
+  <test name="Meetup-Connector-Test" duration-ms="5" started-at="2014-09-09T12:22:23Z" finished-at="2014-09-09T12:22:23Z">
   </test>
 </suite>
