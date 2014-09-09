@@ -1,5 +1,5 @@
 
-org.wso2.carbon.connector/.idea/compiler.xml
+org.wso2.carbon.connector/.idea/
 
 org.wso2.carbon.connector/.idea/compiler.xml
 
@@ -47,4 +47,4 @@ org.wso2.carbon.connector/target/maven-archiver/pom.properties
 
 org.wso2.carbon.connector/target/meetup.zip
 
-org.wso2.carbon.connector/target/org.wso2.carbon.connector.meetup-4.2.0.jar
+org.wso2.carbon.connector/target/
