@@ -162,7 +162,14 @@
             <property name="string" expression="fn:concat('key - ', get-property('uri.var.key'))" />
         </log>
         <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
+<<<<<<< HEAD
             <property name="string" expression="fn:concat('query - ', get-property('uri.var.query'))"/>
+=======
+            <property name="string" value="get-property('uri.var.key')" />
+        </log>
+        <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
+            <property name="string2" value="get-property('uri.var.topic')"/>
+>>>>>>> FETCH_HEAD
         </log>
 
 

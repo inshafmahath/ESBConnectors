@@ -6,6 +6,7 @@
         <dependency component="meetup_events"/>
         <dependency component="meetup_categories"/>
         <dependency component="batch"/>
+        <dependency component="boards"/>
         <description>wso2 ESB Carbon connector library for Meetup</description>
     </component>
 </connector>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="batchRequests" xmlns="http://ws.apache.org/ns/synapse" description="Performs multiple API requests in batch, useful for reducing HTTP network requests. This method is only available for OAuth authentication">
+
+    <!-- Required parameters -->
+    <parameter name="access_token" description="OAuth access token for all authenticated API requests"/>
+    <parameter name="requests" description="Requests should be provided within a JSON-encoded array in the following format attached the requests parameter within a POST body"/>
+
+    <sequence>
+
+        <property name="uri.var.access_token" expression="$func:access_token"/>
+        <property name="uri.var.requests" expression="$func:requests"/>
+
+        <payloadFactory>
+            <format>
+                <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+                    <soapenv:Header></soapenv:Header>
+                    <soapenv:Body>
+                        <root>
+                            <requests>$1</requests>
+
+                        </root>
+                    </soapenv:Body>
+                </soapenv:Envelope>
+            </format>
+
+            <args>
+                <arg expression="get-property('uri.var.requests')" />
+
+            </args>
+
+        </payloadFactory>
+
+        <property name="messageType" value="application/x-www-form-urlencoded" scope="axis2" />
+        <property name="DISABLE_CHUNKING" value="true" scope="axis2"/>
+        <call>
+            <endpoint>
+                <http method="POST" uri-template="https://api.meetup.com/batch?access_token={uri.var.access_token}" />
+                <property name="messageType" value="application/x-www-form-urlencoded" scope="axis2" />
+                <property name="DISABLE_CHUNKING" value="true" scope="axis2"/>
+
+            </endpoint>
+        </call>
+
+        <!-- Remove response custom header information -->
+        <header name="x-li-format" scope="transport" action="remove" />
+        <header name="X-LI-UUID" scope="transport" action="remove" />
+        <header name="X-Li-Pop" scope="transport" action="remove" />
+        <header name="X-Li-Fabric" scope="transport" action="remove" />
+        <header name="x-li-request-id" scope="transport" action="remove" />
+
+    </sequence>
+</template>
