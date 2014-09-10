@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="boards" type="synapse/template">
+    <subComponents>
+        <component name="getDiscussionBoards">
+            <file>getDiscussionBoards.xml</file>
+            <description>List Discussion Boards</description>
+        </component>
+        <component name="getGroupDiscussions">
+            <file>getGroupDiscussions.xml</file>
+            <description>Listings of Group discussions</description>
+        </component>
+        <component name="getGroupDiscussionPosts">
+            <file>getGroupDiscussionPosts.xml</file>
+            <description>Listings of Group discussions posts</description>
+        </component>
+    </subComponents>
+</component>

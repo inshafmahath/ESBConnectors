@@ -1,0 +1,26 @@
+<template name="init" xmlns="http://ws.apache.org/ns/synapse">
+
+	<parameter name="apiUrl" description="URL of the meetup API" />
+	<parameter name="accessToken" description="Access Token for access backend services" />
+
+	<sequence>
+
+		<property name="uri.var.accessToken" expression="$func:accessToken" />
+		<property name="uri.var.apiUrl" expression="$func:apiUrl" />
+        <property name="uri.var.apiVersion" expression="$func:apiVersion" />
+
+
+        <filter source="boolean(get-property('uri.var.apiUrl'))" regex="false">
+			<then>
+				<property name="uri.var.apiUrl" value="http://api.meetup.com" />
+			</then>
+		</filter>
+        <filter source="boolean(get-property('uri.var.apiVersion'))" regex="false">
+            <then>
+                <property name="uri.var.apiVersion" value="2" />
+            </then>
+        </filter>
+
+	</sequence>
+
+</template>

@@ -1,0 +1,17 @@
+<template name="getCategories" xmlns="http://ws.apache.org/ns/synapse">
+
+    <!-- Required Parameters -->
+    <parameter name="key" description="API key" />
+
+    <sequence>
+        <property name="uri.var.key" expression="$func:key" />
+
+        <call>
+            <endpoint>
+                <http method="get"
+                      uri-template="{uri.var.apiUrl}/{uri.var.apiVersion}/categories?key={uri.var.key}" />
+            </endpoint>
+        </call>
+
+    </sequence>
+</template>

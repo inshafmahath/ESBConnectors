@@ -1,0 +1,191 @@
+<template name="getOpenEvents" xmlns="http://ws.apache.org/ns/synapse">
+
+    <!-- Required Parameters -->
+    <parameter name="key" description="API key" />
+    <!-- Optional Parameters -->
+    <parameter name="and_text" description="To retrieve the and_text." />
+    <!-- At least one of the required parameter must be supplied with the request-->
+    <parameter name="category" description="Comma delimited list of category ids to limit recommendations to." />
+    <!-- At least one of the required parameter must be supplied with the request-->
+    <parameter name="city" description="To retrieve results based on city" />
+    <!-- At least one of the required parameter must be supplied with the request-->
+    <parameter name="country" description="To retrieve results based on country" />
+    <!-- Optional Parameters -->
+    <parameter name="fields" description="To retrieve results based on fields" />
+    <!-- At least one of the required parameter must be supplied with the request-->
+    <parameter name="lat" description="To retrieve results based on lat" />
+    <!-- Optional Parameters -->
+    <parameter name="limited_events" description="To retrieve results based on limited_events" />
+    <!-- At least one of the required parameter must be supplied with the request-->
+    <parameter name="lon" description="To retrieve results based on lon" />
+    <!-- Optional Parameters -->
+    <parameter name="radius" description="To retrieve results based on radius" />
+    <!-- At least one of the required parameter must be supplied with the request-->
+    <parameter name="state" description="To retrieve results based on state" />
+    <!-- Optional Parameters -->
+    <parameter name="status" description="To retrieve results based on status" />
+    <!-- At least one of the required parameter must be supplied with the request-->
+    <parameter name="text" description="To retrieve results based on text" />
+    <!-- Optional Parameters -->
+    <parameter name="text_format" description="To retrieve results based on text_format" />
+    <!-- Optional Parameters -->
+    <parameter name="time" description="To retrieve results based on time" />
+    <!-- At least one of the required parameter must be supplied with the request-->
+    <parameter name="topic" description="To retrieve results based on topic" />
+    <!-- At least one of the required parameter must be supplied with the request-->
+    <parameter name="zip" description="To retrieve results based on zip" />
+
+    <sequence>
+        <property name="uri.var.key" expression="$func:key" />
+        <property name="uri.var.and_text" expression="$func:and_text" />
+        <property name="uri.var.category" expression="$func:category" />
+        <property name="uri.var.city" expression="$func:city" />
+        <property name="uri.var.country" expression="$func:country" />
+        <property name="uri.var.fields" expression="$func:fields" />
+        <property name="uri.var.lat" expression="$func:lat" />
+        <property name="uri.var.limited_events" expression="$func:limited_events" />
+        <property name="uri.var.lon" expression="$func:lon" />
+        <property name="uri.var.radius" expression="$func:radius" />
+        <property name="uri.var.state" expression="$func:state" />
+        <property name="uri.var.status" expression="$func:status" />
+        <property name="uri.var.text" expression="$func:text" />
+        <property name="uri.var.text_format" expression="$func:text_format" />
+        <property name="uri.var.time" expression="$func:time" />
+        <property name="uri.var.topic" expression="$func:topic" />
+        <property name="uri.var.zip" expression="$func:zip" />
+        <property name="uri.var.query" value="" />
+
+
+
+
+        <script language="js">
+            <![CDATA[
+
+			var and_text = mc.getProperty('uri.var.and_text');
+			var category = mc.getProperty('uri.var.category');
+			var city = mc.getProperty('uri.var.city');
+			var country = mc.getProperty('uri.var.country');
+			var fields = mc.getProperty('uri.var.fields');
+			var lat = mc.getProperty('uri.var.lat');
+			var limited_events = mc.getProperty('uri.var.limited_events');
+			var lon = mc.getProperty('uri.var.lon');
+			var radius = mc.getProperty('uri.var.radius');
+			var state = mc.getProperty('uri.var.state');
+			var status = mc.getProperty('uri.var.status');
+			var text = mc.getProperty('uri.var.text');
+			var text_format = mc.getProperty('uri.var.text_format');
+			var time = mc.getProperty('uri.var.time');
+			var topic = mc.getProperty('uri.var.topic');
+			var zip = mc.getProperty('uri.var.zip');
+			var query = mc.getProperty('uri.var.query');
+
+			if (and_text != null && and_text != "") {
+				query = query + '&and_text=' + and_text;
+			}
+
+			if (category != null && category != "") {
+				query = query + '&category=' + category;
+			}
+
+			if(city !=null && city != "") {
+				query = query + '&city=' + city;
+			}
+
+			if (country != null && country != "") {
+				query = query + '&country=' + country;
+			}
+
+			if (fields != null && fields != "") {
+				query = query + '&fields=' + fields;
+			}
+
+			if(lat != null && lat != "") {
+				query = query + '&lat=' + lat;
+			}
+
+			if (limited_events != null && limited_events != "") {
+				query = query + '&limited_events=' + limited_events;
+			}
+
+            if (lon != null && lon != "") {
+				query = query + '&lon=' + lon;
+			}
+
+			if (radius != null && radius != "") {
+				query = query + '&radius=' + radius;
+			}
+
+			if(state !=null && state != "") {
+				query = query + '&state=' + state;
+			}
+
+			if (status != null && status != "") {
+				query = query + '&status=' + status;
+			}
+
+			if (text != null && text != "") {
+				query = query + '&text=' + text;
+			}
+
+			if(text_format != null && text_format != "") {
+				query = query + '&text_format=' + text_format;
+			}
+
+			if (time != null && time != "") {
+				query = query + '&time=' + time;
+			}
+
+			if(topic != null && topic != "") {
+				query = query + '&topic=' + topic;
+			}
+
+			if (zip != null && zip != "") {
+				query = query + '&zip=' + zip;
+			}
+
+			mc.setProperty('uri.var.query', query);
+
+	 		]]>
+        </script>
+
+
+        <filter
+                xpath="get-property('uri.var.key') = '' or not(string(get-property('uri.var.key')))">
+            <then>
+                <property name="uri.var.key" value="" />
+            </then>
+        </filter>
+
+
+
+        <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
+            <property name="string" expression="fn:concat('key - ', get-property('uri.var.key'))" />
+        </log>
+        <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
+            <property name="string" expression="fn:concat('query - ', get-property('uri.var.query'))"/>
+        </log>
+        <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
+            <property name="string" expression="fn:concat('apiUrl - ', get-property('uri.var.apiUrl'))"/>
+        </log>
+        <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
+            <property name="string" expression="fn:concat('apiVersion - ', get-property('uri.var.apiVersion'))"/>
+        </log>
+
+
+
+          <call>
+            <endpoint>
+                <http method="get"
+                      uri-template="{uri.var.apiUrl}/{uri.var.apiVersion}/open_events?key={uri.var.key}{uri.var.query}" />
+            </endpoint>
+        </call>
+
+
+        <!-- Remove response custom header information -->
+        <header name="x-li-format" scope="transport" action="remove" />
+        <header name="X-LI-UUID" scope="transport" action="remove" />
+        <header name="X-Li-Pop" scope="transport" action="remove" />
+        <header name="X-Li-Fabric" scope="transport" action="remove" />
+        <header name="x-li-request-id" scope="transport" action="remove" />
+    </sequence>
+</template>
