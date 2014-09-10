@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="Inshafs-MacBook-Pro.local" name="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest" tests="1" failures="0" timestamp="10 Sep 2014 04:49:29 GMT" time="38.831" errors="0">
-  <testcase name="testGetOpenEventsWithRequiredParameters" time="8.029" classname="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest"/>
+<testsuite hostname="Inshafs-MacBook-Pro.local" name="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest" tests="1" failures="0" timestamp="10 Sep 2014 05:49:00 GMT" time="35.688" errors="0">
+  <testcase name="testGetOpenEventsWithRequiredParameters" time="4.854" classname="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest"/>
 </testsuite>

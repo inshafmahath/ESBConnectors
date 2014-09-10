@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<component name="meetup_categories" type="synapse/template">
-    <subComponents>
-        <component name="getCategories">
-            <file>get_categories.xml</file>
-            <description>List categories for given query.</description>
-        </component>
-    </subComponents>
-</component>

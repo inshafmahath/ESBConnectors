@@ -2,17 +2,17 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ESBTestSuite" duration-ms="38831" started-at="2014-09-10T10:18:50Z" finished-at="2014-09-10T10:19:29Z">
+  <suite name="ESBTestSuite" duration-ms="35688" started-at="2014-09-10T11:18:25Z" finished-at="2014-09-10T11:19:00Z">
     <groups>
       <group name="java.lang.reflect.Method">
         <method signature="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest.testGetOpenEventsWithRequiredParameters()" name="testGetOpenEventsWithRequiredParameters" class="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest"/>
       </group>
     </groups>
-    <test name="Meetup-Connector-Test" duration-ms="38831" started-at="2014-09-10T10:18:50Z" finished-at="2014-09-10T10:19:29Z">
+    <test name="Meetup-Connector-Test" duration-ms="35688" started-at="2014-09-10T11:18:25Z" finished-at="2014-09-10T11:19:00Z">
       <class name="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest">
-        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="30789" started-at="2014-09-10T10:18:50Z" finished-at="2014-09-10T10:19:21Z">
+        <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="30820" started-at="2014-09-10T11:18:25Z" finished-at="2014-09-10T11:18:56Z">
         </test-method>
-        <test-method status="PASS" signature="testGetOpenEventsWithRequiredParameters()" name="testGetOpenEventsWithRequiredParameters" duration-ms="8029" started-at="2014-09-10T10:19:21Z" description="meetup {getOpenEvents} integration test" finished-at="2014-09-10T10:19:29Z">
+        <test-method status="PASS" signature="testGetOpenEventsWithRequiredParameters()" name="testGetOpenEventsWithRequiredParameters" duration-ms="4854" started-at="2014-09-10T11:18:56Z" description="meetup {getOpenEvents} integration test" finished-at="2014-09-10T11:19:00Z">
         </test-method>
       </class>
     </test>

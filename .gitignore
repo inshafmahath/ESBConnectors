@@ -33,8 +33,10 @@ org.wso2.carbon.connector/src/main/resources/batch/batch.xml
 
 org.wso2.carbon.connector/target/classes/batch/batch.xml
 
-org.wso2.carbon.connector/repository/wso2esb-4.8.1/repository/components/features/org.wso2.carbon.logging.mgt.ui_4.2.1/p2.inf
+repository/wso2esb-4.8.1/
 
 target/
 
 .idea/
+
+org.wso2.carbon.connector/repository/wso2esb-4.8.1.zip/*
