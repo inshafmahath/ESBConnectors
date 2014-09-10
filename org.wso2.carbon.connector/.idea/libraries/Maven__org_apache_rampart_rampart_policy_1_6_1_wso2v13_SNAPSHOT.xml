@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.apache.rampart:rampart-policy:1.6.1-wso2v13-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/rampart/rampart-policy/1.6.1-wso2v13-SNAPSHOT/rampart-policy-1.6.1-wso2v13-20140908.190847-622.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/rampart/rampart-policy/1.6.1-wso2v13-SNAPSHOT/rampart-policy-1.6.1-wso2v13-20140909.205225-626.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/rampart/rampart-policy/1.6.1-wso2v13-SNAPSHOT/rampart-policy-1.6.1-wso2v13-20140908.190847-622-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/rampart/rampart-policy/1.6.1-wso2v13-SNAPSHOT/rampart-policy-1.6.1-wso2v13-20140909.205225-626-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/rampart/rampart-policy/1.6.1-wso2v13-SNAPSHOT/rampart-policy-1.6.1-wso2v13-20140908.190847-622-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/rampart/rampart-policy/1.6.1-wso2v13-SNAPSHOT/rampart-policy-1.6.1-wso2v13-20140909.205225-626-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

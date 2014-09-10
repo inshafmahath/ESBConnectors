@@ -28,7 +28,7 @@
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.mediation.initializer</artifactId>
-            <version>4.2.0</version>
+            <version>${stub.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.synapse</groupId>
@@ -91,11 +91,6 @@
             <version>${proxyadmin.stub.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>org.wso2.carbon.mediation.initializer</artifactId>
-            <version>${stub.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.apache.synapse</groupId>
             <artifactId>synapse-core</artifactId>
             <version>${synapse.core.version}</version>
@@ -104,17 +99,6 @@
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.mediation.configadmin.stub</artifactId>
             <version>${stub.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>org.wso2.carbon.mediation.library.stub</artifactId>
-            <version>${carbon.platform.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>javax.servlet</groupId>
-                    <artifactId>servlet-api</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.wso2.carbon</groupId>
@@ -134,11 +118,6 @@
         <dependency>
             <groupId>org.wso2.carbon.automation</groupId>
             <artifactId>org.wso2.carbon.automation.api</artifactId>
-            <version>${test.framework.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.automation</groupId>
-            <artifactId>org.wso2.carbon.automation.core</artifactId>
             <version>${test.framework.version}</version>
         </dependency>
         <dependency>
@@ -221,31 +200,6 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy</id>
-                        <phase>generate-test-resources</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>org.apache.commons</groupId>
-                                    <artifactId>commons-email</artifactId>
-                                    <version>1.2</version>
-                                    <type>jar</type>
-                                    <overWrite>true</overWrite>
-                                    <outputDirectory>target/connector/dependencies</outputDirectory>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
                     <execution>
@@ -317,7 +271,7 @@
                         <sec.verifier.dir>${basedir}/target/security-verifier/</sec.verifier.dir>
                         <maven.test.haltafterfailure>false</maven.test.haltafterfailure>
                         <carbon.zip>
-                            ${basedir}/repository/wso2esb-${esb.version}.zip
+                            ${basedir}/../../Documents/Assignments/wso2esb-${esb.version}.zip
                         </carbon.zip>
                         <emma.home>${basedir}/target/emma</emma.home>
                         <instr.file>${basedir}/src/test/resources/instrumentation.txt</instr.file>
@@ -526,6 +480,7 @@
 
 
     <repositories>
+
         <repository>
             <id>wso2-maven2-repository</id>
             <url>http://dist.wso2.org/maven2</url>
@@ -533,27 +488,6 @@
         <repository>
             <id>central</id>
             <url>http://repo1.maven.org/maven2/</url>
-        </repository>
-        <repository>
-            <id>atlassian-contrib</id>
-            <url>https://maven.atlassian.com/contrib</url>
-        </repository>
-        <repository>
-            <id>atlassian-proxy</id>
-            <url>https://maven.atlassian.com/repository/public</url>
-        </repository>
-        <repository>
-            <id>atlassian-public</id>
-            <url>https://maven.atlassian.com/public/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-                <checksumPolicy>warn</checksumPolicy>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-                <checksumPolicy>warn</checksumPolicy>
-            </releases>
         </repository>
         <repository>
             <id>wso2-nexus</id>
@@ -598,17 +532,14 @@
     </distributionManagement>
 
     <properties>
-        <jrjc.version>2.0.0-m19</jrjc.version>
-        <jersey.client.version>1.5</jersey.client.version>
-        <slf4j.version>1.6.1</slf4j.version>
         <automation.framework.version>4.3.1-SNAPSHOT</automation.framework.version>
         <stub.version>4.2.0</stub.version>
         <synapse.core.version>2.1.1-wso2v7</synapse.core.version>
         <common.version>4.3.0-SNAPSHOT</common.version>
         <proxyadmin.stub.version>4.2.1</proxyadmin.stub.version>
+        <test.framework.version>${carbon.platform.version}</test.framework.version>
         <carbon.platform.version>4.2.0</carbon.platform.version>
         <esb.version>4.8.1</esb.version>
-        <test.framework.version>${carbon.platform.version}</test.framework.version>
     </properties>
 
 </project>

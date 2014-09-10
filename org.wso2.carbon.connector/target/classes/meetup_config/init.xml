@@ -12,7 +12,7 @@
 
         <filter source="boolean(get-property('uri.var.apiUrl'))" regex="false">
 			<then>
-				<property name="uri.var.apiUrl" value="https://api.meetup.com" />
+				<property name="uri.var.apiUrl" value="http://api.meetup.com" />
 			</then>
 		</filter>
         <filter source="boolean(get-property('uri.var.apiVersion'))" regex="false">

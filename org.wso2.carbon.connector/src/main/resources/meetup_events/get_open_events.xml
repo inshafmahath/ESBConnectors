@@ -164,6 +164,12 @@
         <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
             <property name="string" expression="fn:concat('query - ', get-property('uri.var.query'))"/>
         </log>
+        <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
+            <property name="string" expression="fn:concat('apiUrl - ', get-property('uri.var.apiUrl'))"/>
+        </log>
+        <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
+            <property name="string" expression="fn:concat('apiVersion - ', get-property('uri.var.apiVersion'))"/>
+        </log>
 
 
 
