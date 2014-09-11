@@ -39,4 +39,8 @@ target/
 
 .idea/
 
+org.wso2.carbon.connector/.idea/
+
+org.wso2.carbon.connector/target/
+
 org.wso2.carbon.connector/repository/wso2esb-4.8.1.zip/*

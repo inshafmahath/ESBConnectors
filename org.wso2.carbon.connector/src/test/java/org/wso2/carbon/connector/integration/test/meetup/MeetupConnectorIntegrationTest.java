@@ -22,6 +22,7 @@ import java.util.Properties;
 
 import org.apache.axis2.context.ConfigurationContext;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -132,7 +133,7 @@ public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
             //Assert.assertTrue(responseHeader == 200);
             JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
             //Assert.assertTrue(jsonObject.has("results"));
-            System.out.println("--------------@@@@@@@@---------");
+            //System.out.println("--------------@@@@@@@@---------");
             //System.out.println(jsonObject);
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
@@ -140,6 +141,37 @@ public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
             Assert.assertTrue(responseHeader == 200);
 
 
+
+        } finally {
+            proxyAdmin.deleteProxy(methodName);
+        }
+    }
+
+    @Test(groups = { "wso2.esb" }, description = "meetup {batchRequests} integration test")
+    public void testMeetupBatchRequests() throws Exception {
+
+        String jsonRequestFilePath = pathToRequestsDirectory + "batchRequests_mandatory.txt";
+        String methodName = "meetup_batch_requests";
+
+        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+        String modifiedJsonString = String.format(jsonString,
+                meetupConnectorProperties.getProperty("access_token"),
+                meetupConnectorProperties.getProperty("requests")
+        );
+        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+
+        try {
+
+            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
+            Assert.assertTrue(responseHeader == 200);
+
+            JSONArray jsonArray = ConnectorIntegrationUtil.sendRequestJSONArray(getProxyServiceURL(methodName), modifiedJsonString);
+            JSONObject jsonObject = jsonArray.getJSONObject(0);
+            Assert.assertTrue(jsonObject.has("status"));
+            Assert.assertTrue(jsonObject.getInt("status")==200);
+            //System.out.println("--------------@@@@@@@@---------");
+            //System.out.println(jsonObject);
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
