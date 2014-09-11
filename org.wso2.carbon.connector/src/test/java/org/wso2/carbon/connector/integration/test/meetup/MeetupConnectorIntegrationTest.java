@@ -42,23 +42,23 @@ import javax.activation.DataHandler;
 public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
 
 
-    private static final String CONNECTOR_NAME = "meetup";
+    protected static final String CONNECTOR_NAME = "meetup";
 
-    private MediationLibraryUploaderStub mediationLibUploadStub = null;
+    protected MediationLibraryUploaderStub mediationLibUploadStub = null;
 
-    private MediationLibraryAdminServiceStub adminServiceStub = null;
+    protected MediationLibraryAdminServiceStub adminServiceStub = null;
 
-    private ProxyServiceAdminClient proxyAdmin;
+    protected ProxyServiceAdminClient proxyAdmin;
 
-    private String repoLocation = null;
+    protected String repoLocation = null;
 
-    private String meetupConnectorFileName = CONNECTOR_NAME + ".zip";
+    protected String meetupConnectorFileName = CONNECTOR_NAME + ".zip";
 
-    private Properties meetupConnectorProperties = null;
+    protected Properties meetupConnectorProperties = null;
 
-    private String pathToProxiesDirectory = null;
+    protected String pathToProxiesDirectory = null;
 
-    private String pathToRequestsDirectory = null;
+    protected String pathToRequestsDirectory = null;
 
 
     @BeforeClass(alwaysRun = true)
@@ -147,34 +147,4 @@ public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
         }
     }
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {batchRequests} integration test")
-    public void testMeetupBatchRequests() throws Exception {
-
-        String jsonRequestFilePath = pathToRequestsDirectory + "batchRequests_mandatory.txt";
-        String methodName = "meetup_batch_requests";
-
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("access_token"),
-                meetupConnectorProperties.getProperty("requests")
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
-
-        try {
-
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 200);
-
-            JSONArray jsonArray = ConnectorIntegrationUtil.sendRequestJSONArray(getProxyServiceURL(methodName), modifiedJsonString);
-            JSONObject jsonObject = jsonArray.getJSONObject(0);
-            Assert.assertTrue(jsonObject.has("status"));
-            Assert.assertTrue(jsonObject.getInt("status")==200);
-            //System.out.println("--------------@@@@@@@@---------");
-            //System.out.println(jsonObject);
-
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
 }
