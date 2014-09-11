@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <proxy xmlns="http://ws.apache.org/ns/synapse"
-       name="meetup_group_discussions"
+       name="batch_batchRequests"
        transports="https,http"
        statistics="disable"
        trace="disable"
@@ -8,14 +8,12 @@
     <target>
         <inSequence>
             <property name="access_token" expression="json-eval($.access_token)"/>
-            <property name="urlname" expression="json-eval($.urlname)"/>
-            <property name="bid" expression="json-eval($.bid)"/>
+            <property name="requests" expression="json-eval($.requests)"/>
             <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
-            <meetup.getGroupDiscussions>
+            <meetup.batchRequests>
                 <access_token>{$ctx:access_token}</access_token>
-                <urlname>{$ctx:urlname}</urlname>
-                <bid>{$ctx:bid}</bid>
-            </meetup.getGroupDiscussions>
+                <requests>{$ctx:requests}</requests>
+            </meetup.batchRequests>
             <respond/>
         </inSequence>
         <outSequence>

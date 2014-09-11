@@ -74,7 +74,7 @@ public class ConnectorIntegrationUtil {
         
         HttpURLConnection httpConn = (HttpURLConnection) connection;
         int responseCode = httpConn.getResponseCode();
-        
+        System.out.println(responseCode);
         return responseCode;
     }
     
@@ -150,7 +150,7 @@ public class ConnectorIntegrationUtil {
                 out = sb.toString();
             }
         }
-
+        System.out.println(out);
         JSONObject jsonObject = new JSONObject(out);
 
         return jsonObject;
@@ -200,7 +200,7 @@ public class ConnectorIntegrationUtil {
                 System.out.println(out);
             }
         }
-
+        System.out.println(out);
         return new JSONArray(out);
     }
 

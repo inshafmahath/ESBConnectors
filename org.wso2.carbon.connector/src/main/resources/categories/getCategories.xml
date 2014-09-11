@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template name="getGroupDiscussions" xmlns="http://ws.apache.org/ns/synapse"
-          description="Listings of Group discussions">
-
-    <!-- Required parameters -->
-    <parameter name="urlname" description="URL name for required discussion boards"/>
-    <parameter name="bid" description="Valid board ID for this group"/>
+<template name="getCategories" xmlns="http://ws.apache.org/ns/synapse" description="Listings of Group discussion posts">
     <parameter name="access_token" description="OAuth access token for all authenticated API requests"/>
-
     <sequence>
-
-        <property name="uri.var.urlname" expression="$func:urlname"/>
-        <property name="uri.var.bid" expression="$func:bid"/>
         <property name="uri.var.access_token" expression="$func:access_token"/>
-
 
         <call>
             <endpoint>
                 <http method="get"
-                      uri-template="https://api.meetup.com/{uri.var.urlname}/boards/{uri.var.bid}/discussions?access_token={uri.var.access_token}"/>
-
+                      uri-template="https://api.meetup.com/2/categories?access_token={uri.var.access_token}"/>
             </endpoint>
         </call>
 

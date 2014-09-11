@@ -12,38 +12,36 @@ import java.net.URL;
 /**
  * Created with IntelliJ IDEA.
  * User: ananthaneshan
- * Date: 9/11/14
- * Time: 5:51 PM
+ * Date: 9/12/14
+ * Time: 1:10 AM
  * To change this template use File | Settings | File Templates.
  */
-public class BatchIntegrationTest extends MeetupConnectorIntegrationTest {
+public class CategoriesIntegrationTest extends MeetupConnectorIntegrationTest {
     /**
-     * Test Batch request API operation for Mandatory fields.
-     * Expecting Response header 200 and status code 200 in returned JSONArray.
+     * Test getCategories API operation.
+     * Expecting Response header '200' and 'id' JSONObject in returned JSONArray.
      *
      * @throws Exception if test fails.
      */
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "Meetup batchRequests integration test for Mandatory fields.")
-    public void testBatchRequestsMandatory() throws Exception {
+    @Test(enabled = false, groups = {"wso2.esb"}, description = "Test getCategories API operation.")
+    public void testGetCategoriesMandatory() throws Exception {
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "batchRequests_mandatory.txt";
-        String methodName = "batch_batchRequests";
+        String jsonRequestFilePath = pathToRequestsDirectory + "categories_getCategories_mandatory.txt";
+        String methodName = "categories_getCategories";
 
         final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
         final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
         String modifiedJsonString = String.format(jsonString,
                 meetupConnectorProperties.getProperty("access_token"));
         proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
-
+        System.out.println(modifiedJsonString + "********************************************************************");
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 200);
 
-            JSONArray jsonArray = ConnectorIntegrationUtil.sendRequestJSONArray(getProxyServiceURL(methodName), modifiedJsonString);
-            JSONObject jsonObject = jsonArray.getJSONObject(0);
-            Assert.assertTrue(jsonObject.has("status"));
-            Assert.assertTrue(jsonObject.getInt("status") == 200);
+            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+            Assert.assertTrue(jsonObject.has("results"));
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
@@ -51,23 +49,20 @@ public class BatchIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
     /**
-     * Test Batch request API operation for negative scenario.
-     * Expecting 401 request header and errors element in returned JSONObject.
+     * Test getCategories API operation for negative scenario.
+     * Expecting Response header '401' and 'details' JSONObject in returned JSONArray.
      *
      * @throws Exception if test fails.
      */
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "Meetup batchRequests integration test for negative scenario.")
-    public void testBatchRequestsNegative() throws Exception {
+    @Test(enabled = false, groups = {"wso2.esb"}, description = "Test getCategories API operation.")
+    public void testGetCategoriesNegative() throws Exception {
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "batchRequests_negative.txt";
-        String methodName = "batch_batchRequests";
+        String jsonRequestFilePath = pathToRequestsDirectory + "categories_getCategories_negative.txt";
+        String methodName = "categories_getCategories";
 
         final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
         final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        /*String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("access_token"),
-                meetupConnectorProperties.getProperty("requests")
-        );*/
+
         proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
         try {
@@ -76,7 +71,7 @@ public class BatchIntegrationTest extends MeetupConnectorIntegrationTest {
             Assert.assertTrue(responseHeader == 401);
 
             JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(jsonObject.has("errors"));
+            Assert.assertTrue(jsonObject.has("details"));
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
