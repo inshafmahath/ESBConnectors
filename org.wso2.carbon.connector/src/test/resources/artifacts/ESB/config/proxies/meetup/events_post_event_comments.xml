@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="events_post_event_comments"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="key" expression="json-eval($.key)"/>
+            <property name="comment" expression="json-eval($.comment)"/>
+            <property name="event_id" expression="json-eval($.event_id)"/>
+            <property name="in_reply_to" expression="json-eval($.in_reply_to)"/>
+            <property name="notifications" expression="json-eval($.notifications)"/>
+
+           <meetup.init/>
+            <meetup.postEventComments>
+                <key>{$ctx:key}</key>
+                <comment>{$ctx:comment}</comment>
+                <event_id>{$ctx:event_id}</event_id>
+                <in_reply_to>{$ctx:in_reply_to}</in_reply_to>
+                <notifications>{$ctx:notifications}</notifications>
+            </meetup.postEventComments>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>
+                                

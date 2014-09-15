@@ -3,9 +3,9 @@
 
     <!-- this is for developing withing the carbon context -->
     <!--<parent>-->
-        <!--<groupId>org.wso2.carbon</groupId>-->
-        <!--<artifactId>carbon-components</artifactId>-->
-        <!--<version>4.2.0</version>-->
+    <!--<groupId>org.wso2.carbon</groupId>-->
+    <!--<artifactId>carbon-components</artifactId>-->
+    <!--<version>4.2.0</version>-->
     <!--</parent>	-->
     <!--
     <parent>
@@ -33,7 +33,7 @@
         <dependency>
             <groupId>org.apache.synapse</groupId>
             <artifactId>synapse-core</artifactId>
-            <version>2.1.1-wso2v7</version>
+            <version>${synapse.core.version}</version>
         </dependency>
 
         <dependency>
@@ -89,11 +89,6 @@
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.proxyadmin.stub</artifactId>
             <version>${proxyadmin.stub.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.synapse</groupId>
-            <artifactId>synapse-core</artifactId>
-            <version>${synapse.core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.wso2.carbon</groupId>
@@ -331,24 +326,25 @@
                         </configuration>
                     </execution>
                     <!--execution>
-                    <id>unpack-mar-jks</id>
-                    <phase>compile</phase>
-                    <goals>
-                    <goal>unpack</goal>
-                    </goals>
-                    <configuration>
-                    <artifactItems>
-                    <artifactItem>
-                    <groupId>org.wso2.esb</groupId>
-                    <artifactId>wso2esb</artifactId>
-                    <version>${esb.version}</version>
-                    <type>zip</type>
-                    <overWrite>true</overWrite>
-                    <outputDirectory>${basedir}/target/tobeCopied/</outputDirectory>
-                    <includes>**/*.jks,**/*.mar,**/synapse_sample*.xml</includes>
-                    </artifactItem>
-                    </artifactItems>
-                    </configuration>
+                        <id>unpack-mar-jks</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.wso2.esb</groupId>
+                                    <artifactId>wso2esb</artifactId>
+                                    <version>${esb.version}</version>
+                                    <type>zip</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${basedir}/target/tobeCopied/</outputDirectory>
+                                    <includes>**/*.jks,**/*.mar,**/synapse_sample*.xml</includes>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+
                     </execution-->
                 </executions>
             </plugin>
@@ -540,6 +536,7 @@
         <test.framework.version>${carbon.platform.version}</test.framework.version>
         <carbon.platform.version>4.2.0</carbon.platform.version>
         <esb.version>4.8.1</esb.version>
+        <esb.version2>4.8.1.2</esb.version2>
     </properties>
 
 </project>

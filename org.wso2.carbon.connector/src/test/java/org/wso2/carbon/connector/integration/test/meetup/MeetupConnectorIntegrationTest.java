@@ -17,17 +17,11 @@
 */
 package org.wso2.carbon.connector.integration.test.meetup;
 
-import java.net.URL;
-import java.util.Properties;
-
 import org.apache.axis2.context.ConfigurationContext;
-
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-
 import org.wso2.carbon.automation.api.clients.proxy.admin.ProxyServiceAdminClient;
 import org.wso2.carbon.automation.api.clients.utils.AuthenticateStub;
 import org.wso2.carbon.automation.utils.axis2client.ConfigurationContextProvider;
@@ -37,27 +31,68 @@ import org.wso2.carbon.mediation.library.stub.MediationLibraryAdminServiceStub;
 import org.wso2.carbon.mediation.library.stub.upload.MediationLibraryUploaderStub;
 
 import javax.activation.DataHandler;
+import java.net.URL;
+import java.util.Properties;
 
 public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
 
 
-    private static final String CONNECTOR_NAME = "meetup";
+    protected static final String CONNECTOR_NAME = "meetup";
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-    private MediationLibraryUploaderStub mediationLibUploadStub = null;
+    protected MediationLibraryUploaderStub mediationLibUploadStub = null;
 
-    private MediationLibraryAdminServiceStub adminServiceStub = null;
+    protected MediationLibraryAdminServiceStub adminServiceStub = null;
 
-    private ProxyServiceAdminClient proxyAdmin;
+    protected ProxyServiceAdminClient proxyAdmin;
 
-    private String repoLocation = null;
+    protected String repoLocation = null;
 
-    private String meetupConnectorFileName = CONNECTOR_NAME + ".zip";
+    protected String meetupConnectorFileName = CONNECTOR_NAME + ".zip";
 
-    private Properties meetupConnectorProperties = null;
+    protected Properties meetupConnectorProperties = null;
 
-    private String pathToProxiesDirectory = null;
+    protected String pathToProxiesDirectory = null;
 
-    private String pathToRequestsDirectory = null;
+    protected String pathToRequestsDirectory = null;
+
+=======
+
+    protected MediationLibraryUploaderStub mediationLibUploadStub;
+
+    protected MediationLibraryAdminServiceStub adminServiceStub;
+
+    protected ProxyServiceAdminClient proxyAdmin;
+
+    protected String repoLocation;
+
+    protected String meetupConnectorFileName = CONNECTOR_NAME + ".zip";
+
+    protected Properties meetupConnectorProperties;
+
+    protected String pathToProxiesDirectory;
+
+    protected String pathToRequestsDirectory;
+>>>>>>> FETCH_HEAD
+=======
+
+    protected MediationLibraryUploaderStub mediationLibUploadStub;
+
+    protected MediationLibraryAdminServiceStub adminServiceStub;
+
+    protected ProxyServiceAdminClient proxyAdmin;
+
+    protected String repoLocation;
+
+    protected String meetupConnectorFileName = CONNECTOR_NAME + ".zip";
+
+    protected Properties meetupConnectorProperties;
+
+    protected String pathToProxiesDirectory;
+
+    protected String pathToRequestsDirectory;
+>>>>>>> FETCH_HEAD
 
 
     @BeforeClass(alwaysRun = true)
@@ -84,8 +119,8 @@ public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
         proxyAdmin = new ProxyServiceAdminClient(esbServer.getBackEndUrl(), esbServer.getSessionCookie());
 
         ConnectorIntegrationUtil.uploadConnector(repoLocation, mediationLibUploadStub, meetupConnectorFileName);
-        log.info("Sleeping for " + 30000 / 1000 + " seconds while waiting for synapse import");
-        Thread.sleep(30000);
+        log.info("Sleeping for " + 15000 / 1000 + " seconds while waiting for synapse import");
+        Thread.sleep(15000);
 
         adminServiceStub.updateStatus("{org.wso2.carbon.connector}" + CONNECTOR_NAME, CONNECTOR_NAME,
                 "org.wso2.carbon.connector", "enabled");
@@ -102,8 +137,10 @@ public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
         axis2Client.destroy();
     }
 
+<<<<<<< HEAD
+=======
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getOpenEvents} integration test")
+    @Test(enabled = false, groups = { "wso2.esb" }, description = "meetup {getOpenEvents} integration test")
     public void testGetOpenEventsWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "getOpenEvents_mandatory.txt";
@@ -132,7 +169,7 @@ public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
             //Assert.assertTrue(responseHeader == 200);
             JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
             //Assert.assertTrue(jsonObject.has("results"));
-            System.out.println("--------------@@@@@@@@---------");
+            //System.out.println("--------------@@@@@@@@---------");
             //System.out.println(jsonObject);
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
@@ -145,4 +182,9 @@ public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
             proxyAdmin.deleteProxy(methodName);
         }
     }
+
+<<<<<<< HEAD
+>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
 }

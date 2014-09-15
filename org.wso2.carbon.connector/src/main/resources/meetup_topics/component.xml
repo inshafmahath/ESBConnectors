@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="meetup_topics" type="synapse/template">
+    <subComponents>
+        <component name="getTopics">
+            <file>getTopics.xml</file>
+            <description>List topics for given query.</description>
+        </component>
+        <component name="getTopicCategories">
+            <file>getTopicCategories.xml</file>
+            <description>List Topic Categories for given query.</description>
+        </component>
+        <component name="getRecommendGroupTopics">
+            <file>getRecommendGroupTopics.xml</file>
+            <description>List recommended topics for given query.</description>
+        </component>
+       </subComponents>
+</component>

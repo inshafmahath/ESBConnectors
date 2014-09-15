@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="Inshafs-MacBook-Pro.local" name="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest" tests="1" failures="0" timestamp="10 Sep 2014 05:49:00 GMT" time="35.688" errors="0">
-  <testcase name="testGetOpenEventsWithRequiredParameters" time="4.854" classname="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest"/>
+<testsuite hostname="Inshafs-MacBook-Pro.local" name="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest" tests="7" failures="0" timestamp="15 Sep 2014 05:41:30 GMT" time="21.757" errors="0">
+  <testcase name="testGetRecommendGroupTopicsWithNegativeParameters" time="1.521" classname="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+  <testcase name="testGetRecommendGroupTopicsWithOptionalParameters" time="0.712" classname="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+  <testcase name="testGetRecommendGroupTopicsWithRequiredParameters" time="0.715" classname="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+  <testcase name="testGetTopicCategoriesWithNegativeParameters" time="0.728" classname="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+  <testcase name="testGetTopicCategoriesWithOptionalParameters" time="0.845" classname="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+  <testcase name="testGetTopicsWithNegativeParameters" time="0.72" classname="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+  <testcase name="testGetTopicsWithOptionalParameters" time="0.732" classname="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
 </testsuite>

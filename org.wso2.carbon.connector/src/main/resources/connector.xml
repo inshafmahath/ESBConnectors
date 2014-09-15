@@ -4,9 +4,18 @@
         <dependency component="helloWorld"/>
         <dependency component="meetup_config" />
         <dependency component="meetup_events"/>
-        <dependency component="meetup_categories"/>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <dependency component="meetup_topics"/>
+=======
+>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
         <dependency component="batch"/>
         <dependency component="boards"/>
+        <dependency component="categories"/>
+        <dependency component="cities"/>
+        <dependency component="dashboard"/>
         <description>wso2 ESB Carbon connector library for Meetup</description>
     </component>
 </connector>

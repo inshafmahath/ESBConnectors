@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="ESBTestSuite" duration-ms="35688" started-at="2014-09-10T11:18:25Z" finished-at="2014-09-10T11:19:00Z">
+<suite name="ESBTestSuite" duration-ms="21757" started-at="2014-09-15T11:11:08Z" finished-at="2014-09-15T11:11:30Z">
   <groups>
     <group name="java.lang.reflect.Method">
-      <method signature="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest.testGetOpenEventsWithRequiredParameters()" name="testGetOpenEventsWithRequiredParameters" class="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest"/>
+      <method signature="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest.testGetRecommendGroupTopicsWithNegativeParameters()" name="testGetRecommendGroupTopicsWithNegativeParameters" class="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+      <method signature="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest.testGetRecommendGroupTopicsWithOptionalParameters()" name="testGetRecommendGroupTopicsWithOptionalParameters" class="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+      <method signature="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest.testGetRecommendGroupTopicsWithRequiredParameters()" name="testGetRecommendGroupTopicsWithRequiredParameters" class="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+      <method signature="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest.testGetTopicCategoriesWithNegativeParameters()" name="testGetTopicCategoriesWithNegativeParameters" class="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+      <method signature="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest.testGetTopicCategoriesWithOptionalParameters()" name="testGetTopicCategoriesWithOptionalParameters" class="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+      <method signature="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest.testGetTopicsWithNegativeParameters()" name="testGetTopicsWithNegativeParameters" class="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
+      <method signature="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest.testGetTopicsWithOptionalParameters()" name="testGetTopicsWithOptionalParameters" class="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest"/>
     </group>
   </groups>
-  <test name="Meetup-Connector-Test" duration-ms="35688" started-at="2014-09-10T11:18:25Z" finished-at="2014-09-10T11:19:00Z">
-    <class name="org.wso2.carbon.connector.integration.test.meetup.MeetupConnectorIntegrationTest">
-      <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="30820" started-at="2014-09-10T11:18:25Z" finished-at="2014-09-10T11:18:56Z">
+  <test name="Meetup-Connector-Test" duration-ms="21757" started-at="2014-09-15T11:11:08Z" finished-at="2014-09-15T11:11:30Z">
+    <class name="org.wso2.carbon.connector.integration.test.meetup.topics.TopicsIntegrationTest">
+      <test-method status="PASS" signature="setEnvironment()" name="setEnvironment" is-config="true" duration-ms="15766" started-at="2014-09-15T11:11:08Z" finished-at="2014-09-15T11:11:24Z">
       </test-method>
-      <test-method status="PASS" signature="testGetOpenEventsWithRequiredParameters()" name="testGetOpenEventsWithRequiredParameters" duration-ms="4854" started-at="2014-09-10T11:18:56Z" description="meetup {getOpenEvents} integration test" finished-at="2014-09-10T11:19:00Z">
+      <test-method status="PASS" signature="testGetRecommendGroupTopicsWithNegativeParameters()" name="testGetRecommendGroupTopicsWithNegativeParameters" duration-ms="1521" started-at="2014-09-15T11:11:24Z" description="meetup {getRecommendGroupTopics} integration test" finished-at="2014-09-15T11:11:25Z">
+      </test-method>
+      <test-method status="PASS" signature="testGetRecommendGroupTopicsWithOptionalParameters()" name="testGetRecommendGroupTopicsWithOptionalParameters" duration-ms="712" started-at="2014-09-15T11:11:25Z" description="meetup {getRecommendGroupTopics} integration test" finished-at="2014-09-15T11:11:26Z">
+      </test-method>
+      <test-method status="PASS" signature="testGetRecommendGroupTopicsWithRequiredParameters()" name="testGetRecommendGroupTopicsWithRequiredParameters" duration-ms="715" started-at="2014-09-15T11:11:26Z" description="meetup {getRecommendGroupTopics} integration test" finished-at="2014-09-15T11:11:27Z">
+      </test-method>
+      <test-method status="PASS" signature="testGetTopicCategoriesWithNegativeParameters()" name="testGetTopicCategoriesWithNegativeParameters" duration-ms="728" started-at="2014-09-15T11:11:27Z" description="meetup {getTopicCategories} integration test" finished-at="2014-09-15T11:11:28Z">
+      </test-method>
+      <test-method status="PASS" signature="testGetTopicCategoriesWithOptionalParameters()" name="testGetTopicCategoriesWithOptionalParameters" duration-ms="845" started-at="2014-09-15T11:11:28Z" description="meetup {getTopicCategories} integration test" finished-at="2014-09-15T11:11:28Z">
+      </test-method>
+      <test-method status="PASS" signature="testGetTopicsWithNegativeParameters()" name="testGetTopicsWithNegativeParameters" duration-ms="720" started-at="2014-09-15T11:11:28Z" description="meetup {getTopics} integration test" finished-at="2014-09-15T11:11:29Z">
+      </test-method>
+      <test-method status="PASS" signature="testGetTopicsWithOptionalParameters()" name="testGetTopicsWithOptionalParameters" duration-ms="732" started-at="2014-09-15T11:11:29Z" description="meetup {getTopics} integration test" finished-at="2014-09-15T11:11:30Z">
       </test-method>
     </class>
   </test>

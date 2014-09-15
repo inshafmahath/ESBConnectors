@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="boards_getDiscussionPosts"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="access_token" expression="json-eval($.access_token)"/>
+            <property name="urlname" expression="json-eval($.urlname)"/>
+            <property name="bid" expression="json-eval($.bid)"/>
+            <property name="did" expression="json-eval($.did)"/>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <meetup.getGroupDiscussionPosts>
+                <access_token>{$ctx:access_token}</access_token>
+                <urlname>{$ctx:urlname}</urlname>
+                <bid>{$ctx:bid}</bid>
+                <did>{$ctx:did}</did>
+            </meetup.getGroupDiscussionPosts>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <description/>
+</proxy>

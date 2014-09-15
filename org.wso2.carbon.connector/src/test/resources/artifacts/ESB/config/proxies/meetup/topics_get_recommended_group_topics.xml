@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="topics_get_recommended_group_topics"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="key" expression="json-eval($.key)"/>
+            <property name="text" expression="json-eval($.text)"/>
+            <property name="lang" expression="json-eval($.lang)"/>
+            <property name="page" expression="json-eval($.page)"/>
+            <property name="other_topics" expression="json-eval($.other_topics)"/>
+
+           <meetup.init/>
+            <meetup.getRecommendGroupTopics>
+                <key>{$ctx:key}</key>
+                <text>{$ctx:text}</text>
+                <lang>{$ctx:lang}</lang>
+                <page>{$ctx:page}</page>
+                <other_topics>{$ctx:other_topics}</other_topics>
+            </meetup.getRecommendGroupTopics>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>
+                                

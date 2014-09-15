@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="batch_batchRequests"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="access_token" expression="json-eval($.access_token)"/>
+            <property name="requests" expression="json-eval($.requests)"/>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <meetup.batchRequests>
+                <access_token>{$ctx:access_token}</access_token>
+                <requests>{$ctx:requests}</requests>
+            </meetup.batchRequests>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <description/>
+</proxy>

@@ -13,7 +13,7 @@
     
    <test name="Meetup-Connector-Test" preserve-order="true" verbose="2">
         <packages>
-            <package name="org.wso2.carbon.connector.integration.test.meetup"/>
+            <package name="org.wso2.carbon.connector.integration.test.meetup.topics"/>
         </packages>
     </test>
     

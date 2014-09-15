@@ -2,43 +2,43 @@
 <component name="meetup_events" type="synapse/template">
     <subComponents>
         <component name="getOpenEvents">
-            <file>get_open_events.xml</file>
+            <file>getOpenEvents.xml</file>
             <description>List open events for given query.</description>
         </component>
         <component name="getConcierge">
-            <file>get_concierge.xml</file>
+            <file>getConcierge.xml</file>
             <description>List concierge events for given query.</description>
         </component>
         <component name="getEvents">
-            <file>get_events.xml</file>
+            <file>getEvents.xml</file>
             <description>List events for given query.</description>
         </component>
         <component name="getEventByID">
-            <file>get_event_by_id.xml</file>
+            <file>getEventById.xml</file>
             <description>List events for given query.</description>
         </component>
         <component name="getEventComments">
-            <file>get_event_comments.xml</file>
+            <file>getEventComments.xml</file>
             <description>List event comments for given query.</description>
         </component>
         <component name="getEventCommentByID">
-            <file>get_event_comment_by_id.xml</file>
+            <file>getEventCommentById.xml</file>
             <description>List event comments for given query.</description>
         </component>
         <component name="getEventCommentLikes">
-            <file>get_event_comment_likes.xml</file>
+            <file>getEventCommentLikes.xml</file>
             <description>List event comments for given query.</description>
         </component>
         <component name="getEventRating">
-            <file>get_event_ratings.xml</file>
+            <file>getEventRating.xml</file>
             <description>List event comments for given query.</description>
         </component>
         <component name="postEventComments">
-            <file>post_event_comment.xml</file>
+            <file>postEventComment.xml</file>
             <description>post event comments.</description>
         </component>
         <component name="deleteEventCommentByID">
-            <file>delete_event_comment_by_id.xml</file>
+            <file>deleteEventCommentById.xml</file>
             <description>delete event comments.</description>
         </component>
     </subComponents>
