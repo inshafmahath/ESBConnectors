@@ -1,3 +1,11 @@
-.project
-.idea
-org.eclipse.jdt.core.prefs
+.project/
+
+.idea/
+
+.settings
+
+org.wso2.carbon.connector.meetup.iml
+
+org.wso2.carbon.connector.meetup.iws
+
+org.wso2.carbon.connector.meetup.ipr
