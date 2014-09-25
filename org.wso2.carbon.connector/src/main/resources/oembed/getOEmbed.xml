@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="getOEmbed" xmlns="http://ws.apache.org/ns/synapse" description="">
+
+    <!-- Required parameters -->
+    <parameter name="url" description="OEmbed URL"/>
+
+    <sequence>
+        <property name="uri.var.url" expression="$func:url"/>
+        <call>
+            <endpoint>
+                <http method="get" uri-template="http://api.meetup.com/oembed?url={uri.var.url}" />
+
+            </endpoint>
+        </call>
+
+        <!-- Remove response custom header information -->
+        <header name="x-li-format" scope="transport" action="remove" />
+        <header name="X-LI-UUID" scope="transport" action="remove" />
+        <header name="X-Li-Pop" scope="transport" action="remove" />
+        <header name="X-Li-Fabric" scope="transport" action="remove" />
+        <header name="x-li-request-id" scope="transport" action="remove" />
+
+    </sequence>
+</template>

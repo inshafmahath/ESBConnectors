@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="photos" type="synapse/template">
+    <subComponents>
+        <component name="getPhotoComments">
+            <file>getPhotoComments.xml</file>
+            <description>get photo comments</description>
+        </component>
+        <component name="postPhotoComment">
+            <file>postPhotoComment.xml</file>
+            <description>post photo comment</description>
+        </component>
+    </subComponents>
+</component>

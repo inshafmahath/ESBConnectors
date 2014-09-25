@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="oembed" type="synapse/template">
+    <subComponents>
+        <component name="getOEmbed">
+            <file>getOEmbed.xml</file>
+            <description>OEmbed URL</description>
+        </component>
+    </subComponents>
+</component>

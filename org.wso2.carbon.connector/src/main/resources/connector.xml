@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connector>
+    <component name="meetup" package="org.wso2.carbon.connector" >
+        <dependency component="helloWorld"/>
+        <dependency component="meetup_config" />
+        <dependency component="meetup_events"/>
+        <dependency component="batch"/>
+        <dependency component="boards"/>
+        <dependency component="categories"/>
+        <dependency component="cities"/>
+        <dependency component="dashboard"/>
+        <dependency component="meta"/>
+        <dependency component="notifications"/>
+        <dependency component="oembed"/>
+        <dependency component="photos"/>
+        <description>wso2 ESB Carbon connector library for Meetup</description>
+    </component>
+</connector>
