@@ -84,6 +84,8 @@
 				query = query + '&and_text=' + encoded_and_text;
 			}
 
+
+
 			if (category != null && category != "") {
 			    var encoded_category = encodeURIComponent(mc.getProperty('uri.var.category'));
 				query = query + '&category=' + encoded_category;
@@ -105,8 +107,8 @@
 			}
 
 			if(lat != null && lat != "") {
-				var lat_category = encodeURIComponent(mc.getProperty('uri.var.lat'));
-				query = query + '&lat=' + lat_category;
+				var encoded_lat = encodeURIComponent(mc.getProperty('uri.var.lat'));
+				query = query + '&lat=' + encoded_lat;
 			}
 
 			if (limited_events != null && limited_events != "") {

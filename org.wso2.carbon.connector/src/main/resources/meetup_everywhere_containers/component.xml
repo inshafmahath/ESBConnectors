@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="meetup_everywhere_containers" type="synapse/template">
+    <subComponents>
+        <component name="getContainer">
+            <file>getContainer.xml</file>
+            <description>List containers for given query.</description>
+        </component>
+        <component name="getContainerById">
+            <file>getContainerById.xml</file>
+            <description>List a container based on id for given query.</description>
+        </component>
+        <component name="getContainerIdAlert">
+            <file>getContainerIdAlert.xml</file>
+            <description>List container id alert for given query.</description>
+        </component>
+        <component name="postContainer">
+            <file>postContainer.xml</file>
+            <description>Post container for given query.</description>
+        </component>
+        <component name="postContainerById">
+            <file>postContainerById.xml</file>
+            <description>Edit container for given query.</description>
+        </component>
+        <component name="postContainerIdAlert">
+            <file>postContainerIdAlert.xml</file>
+            <description>Post container for given query.</description>
+        </component>
+       </subComponents>
+</component>

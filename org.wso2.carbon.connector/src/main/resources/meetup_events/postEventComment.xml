@@ -21,6 +21,10 @@
         <script language="js">
             <![CDATA[
 
+
+            var encoded_comments = encodeURIComponent(mc.getProperty('uri.var.comment'));
+
+
 			var notifications = mc.getProperty('uri.var.notifications');
 
 			if (notifications != null && notifications != "") {
@@ -33,13 +37,14 @@
 
 
 			mc.setProperty('uri.var.notifications', notifications);
+			mc.setProperty('uri.var.comment', encoded_comments);
 
 	 		]]>
         </script>
 
 
 
-         <filter xpath="(get-property('uri.var.in_reply_to') = '')">
+        <filter xpath="(get-property('uri.var.in_reply_to') = '')">
 
         <then>
 

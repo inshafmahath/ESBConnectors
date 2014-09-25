@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="meetup_venues" type="synapse/template">
+    <subComponents>
+        <component name="getOpenVenues">
+            <file>getOpenVenues.xml</file>
+            <description>List open venues for given query.</description>
+        </component>
+        <component name="getRecommendedVenues">
+            <file>getRecommendedVenues.xml</file>
+            <description>List recommended venues for given query.</description>
+        </component>
+        <component name="getVenues">
+            <file>getVenues.xml</file>
+            <description>List venues for given query.</description>
+        </component>
+        <component name="postVenues">
+            <file>postVenues.xml</file>
+            <description>Post venues for given query.</description>
+        </component>
+       </subComponents>
+</component>

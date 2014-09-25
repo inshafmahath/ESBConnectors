@@ -59,3 +59,7 @@ org.wso2.carbon.connector/src/main/resources/connector.xml
 org.wso2.carbon.connector/src/test/java/org/wso2/carbon/connector/integration/test/meetup/MeetupConnectorIntegrationTest.java
 
 org.wso2.carbon.connector/src/test/resources/artifacts/ESB/connector/config/meetup.properties
+
+org.wso2.carbon.connector/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_1.xml
+
+org.wso2.carbon.connector/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_1_2.xml

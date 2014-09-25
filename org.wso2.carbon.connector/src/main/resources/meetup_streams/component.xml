@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="meetup_streams" type="synapse/template">
+    <subComponents>
+        <component name="getStramRSVPS">
+            <file>getStramRSVPS.xml</file>
+            <description>Retrieve stream rsvps  for given query.</description>
+        </component>
+        <component name="getStreamOpenVenues">
+            <file>getStreamOpenVenues.xml</file>
+            <description>Retrieve stream open venues for given query.</description>
+        </component>
+       </subComponents>
+</component>

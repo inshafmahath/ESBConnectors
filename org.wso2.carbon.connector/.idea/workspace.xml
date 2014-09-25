@@ -2,8 +2,141 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cf77e1c-6381-4b41-8b46-4496b9c7a4ea" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/connector.xml" afterPath="$PROJECT_DIR$/src/main/resources/connector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/meetup_topics/getTopicCategories.xml" afterPath="$PROJECT_DIR$/src/main/resources/meetup_topics/getTopicCategories.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/icon/icon-large.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/icon/icon-small.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/everywhere/containers/EverywhereContainersIntegrationTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/streams/StreamIntegrationTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/venues/VenuesIntegrationTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/component.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_streams/component.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_venues/component.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/deleteEventById.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/deleteEventCommentLike.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/deleteEventCommentSubscribe.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/deleteEventWatchlist.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventByID_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventByID_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventWatchlist_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventWatchlist_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventsCommentLike_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventsCommentLike_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventsCommentSubscribe_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventsCommentSubscribe_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_by_id.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_comment_like.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_comment_subscribe.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_watchlist.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_getEventsAttendance_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_getEventsAttendance_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_getEventsAttendance_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_attendance.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventAttendance_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventAttendance_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventAttendance_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventPayments_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventPayments_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventPayments_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventRating_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventRating_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventRating_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventWatchlist_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventWatchlist_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsById_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsById_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsCommentLike_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsCommentLike_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsCommentSubscribe_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsCommentSubscribe_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsCommentsFlag_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsCommentsFlag_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsCommentsFlag_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEvents_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEvents_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEvents_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_attendance.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_comment_like.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_comment_subscribe.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_comments_flag.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_payments.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_rating.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_watchlist.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_events.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_events_by_id.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_getContainerAlert_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_getContainerAlert_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_getContainerById_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_getContainerById_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_getContainer_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_getContainer_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_getContainer_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerAlert_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerAlert_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerById_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerById_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainer_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainer_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainer_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_get_container.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_get_container_alerts.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_get_container_by_id.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_post_container.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_post_container_alerts.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_post_container_by_id.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/getContainer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/getContainerById.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/getContainerIdAlert.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/getEventAttendance.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_venues/getOpenVenues.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_venues/getRecommendedVenues.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_streams/getStramRSVPS.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_streams/getStreamOpenVenues.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_venues/getVenues.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/postContainer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/postContainerById.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/postContainerIdAlert.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/postEventAttendance.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/postEventCommentFlag.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/postEventCommentLike.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/postEventCommentSubscribe.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/postEventPayments.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/postEventRating.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/postEventWatchlist.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/postEvents.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/postEventsById.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/meetup_venues/postVenues.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/streams_get_open_venues.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/streams_get_open_venues_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getOpenVenues_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getOpenVenues_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getOpenVenues_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getRecommendedVenues_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getRecommendedVenues_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getVenues_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getVenues_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getVenues_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/venues_get_open_venues.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/venues_get_recommended_venues.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/venues_get_venues.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_postVenues_mandatory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_postVenues_negative.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_postVenues_optional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/venues_post_venues.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_1_2.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/common/ConnectorIntegrationUtil.java" afterPath="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/common/ConnectorIntegrationUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/events/EventsIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/events/EventsIntegrationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/meetup_events/component.xml" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/component.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventCommentsByID_mandatory.txt" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventCommentsByID_mandatory.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventCommentsByID_negative.txt" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventCommentsByID_negative.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsComments_mandatory.txt" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsComments_mandatory.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsComments_optional.txt" afterPath="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsComments_optional.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/meetup_events/getOpenEvents.xml" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/getOpenEvents.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/meetup_config/init.xml" afterPath="$PROJECT_DIR$/src/main/resources/meetup_config/init.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.wso2.carbon.connector.meetup.iml" afterPath="$PROJECT_DIR$/org.wso2.carbon.connector.meetup.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/meetup_events/postEventComment.xml" afterPath="$PROJECT_DIR$/src/main/resources/meetup_events/postEventComment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="org.wso2.carbon.connector.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,7 +158,108 @@
     <favorites_list name="org.wso2.carbon.connector" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="everywhere_containers_post_container_alerts.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_post_container_alerts.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="585">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="24" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="everywhere_container_getContainerById_optional.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_getContainerById_optional.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="everywhere_container_postContainerById_negative.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerById_negative.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.07097792" vertical-offset="0" max-vertical-offset="634">
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="streams_get_open_venues_optional.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/streams_get_open_venues_optional.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="venues_getOpenVenues_optional.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getOpenVenues_optional.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="everywhere_container_postContainerById_optional.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerById_optional.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="venues_postVenues_optional.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_postVenues_optional.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="venues_getVenues_optional.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getVenues_optional.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="venues_getVenues_mandatory.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getVenues_mandatory.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="everywhere_container_getContainerById_negative.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_getContainerById_negative.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -38,57 +272,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/getEventsComments_optional.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/meetup_get_event_comments.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/MeetupConnectorIntegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/getEventCommentById.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_comment_by_id.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/getEventCommentByID_negative.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/getEventCommentByID_mandatory.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/getEventCommentByID_optional.txt" />
-        <option value="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/EventsIntegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/component.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/connector/config/meetup.properties" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/getEventsCommentLikes_mandatory.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_comment_likes.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/getEventRating_optional.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/getEventRating_mandatory.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/getEventsCommentLikes_negative.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/getEventRating_negative.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_open_events.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_by_id.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_concierge.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_events.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_comments.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_rating.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/postEventsComments_negative.txt" />
-        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/postEventComment.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/postEventsComments_mandatory.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/postEventsComments_optional.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_comments.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventsComments_negative.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventsComments_optional.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_comments.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/events/EventsIntegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_comments_by_id.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/getTopicCategories.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/meetup_topics/getTopicCategories.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/meetup_topics/getTopics.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_watchlist.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/postEventWatchlist.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventWatchlist_mandatory.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventWatchlist_negative.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_watchlist.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/deleteEventWatchlist.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/postEventAttendance.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_venues.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_venues/component.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_postVenues_negative.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_postVenues_mandatory.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_venues/postVenues.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_postVenues_optional.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/venues_post_venues.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/postEventCommentFlag.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_post_container.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainer_mandatory.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainer_negative.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/postContainer.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainer_optional.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/postContainerByID.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerById_mandatory.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerById_optional.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerById_negative.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_post_container_by_id.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/postContainerById.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/postContainerIdAlert.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/component.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_post_container_alerts.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerAlert_negative.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerAlert_optional.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_events.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEvents_negative.txt" />
         <option value="$PROJECT_DIR$/src/test/resources/testng.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/connector.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/topics_get_topics.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getTopics_optional.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getTopics_negative.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/topics_get_topic_categories.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/topics_get_recommended_group_topics.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getTopicCategories_optional.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getTopicCategories_negative.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getRecommendGroupTopics_mandatory.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getRecommendGroupTopics_negative.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getRecommendGroupTopics_optional.txt" />
-        <option value="$PROJECT_DIR$/src/main/resources/meetup_topics/component.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/meetup_topics/getRecommendGroupTopics.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/topics/TopicsIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEvents_mandatory.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEvents_optional.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/postEventsById.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsById_negative.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/postEvents.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventByID_negative.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_by_id.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/component.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventByID_mandatory.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_events_by_id.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsById_optional.txt" />
+        <option value="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/events/EventsIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/everywhere/containers/EverywhereContainersIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/venues/VenuesIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_events/deleteEventById.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_comment_likes.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/meetup_topics/getTopics.xml" />
       </list>
     </option>
   </component>
@@ -142,7 +376,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
+    <option name="x" value="-1" />
+    <option name="y" value="27" />
     <option name="width" value="1440" />
     <option name="height" value="823" />
   </component>
@@ -187,7 +422,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -213,8 +448,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -310,10 +545,6 @@
               <option name="myItemId" value="keystores" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="products" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -337,7 +568,11 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="artifacts" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ESB" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -368,6 +603,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ESB" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -406,40 +645,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="meetup" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.wso2.carbon.connector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.wso2.carbon.connector" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artifacts" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ESB" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -496,6 +701,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="meetup" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.wso2.carbon.connector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.wso2.carbon.connector" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meetup" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="venues" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -563,7 +802,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
+              <option name="myItemId" value="streams" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -593,7 +832,71 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="meetup" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="containers" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.wso2.carbon.connector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.wso2.carbon.connector" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meetup" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.wso2.carbon.connector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.wso2.carbon.connector" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -655,58 +958,6 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.wso2.carbon.connector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.wso2.carbon.connector" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meetup_topics" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.wso2.carbon.connector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.wso2.carbon.connector" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meetup_events" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -718,34 +969,38 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="MavenSettings" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/meetup_topics" />
+    <property name="LayoutCode.rearrangeEntriesXML" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.wso2.carbon.connector.integration.test.streams" />
+      <recent name="org.wso2.carbon.connector.integration.test.meetup.everywhere.containers" />
       <recent name="org.wso2.carbon.connector.integration.test.meetup.topics" />
       <recent name="org.wso2.carbon.connector.common" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup" />
-      <recent name="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup" />
-      <recent name="$PROJECT_DIR$/src/main/resources/meetup_topics" />
       <recent name="$PROJECT_DIR$/src/main/resources/meetup_events" />
-      <recent name="$PROJECT_DIR$/src/test/resources/keystores/stratos" />
+      <recent name="$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup" />
+      <recent name="$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers" />
+      <recent name="$PROJECT_DIR$/src/main/resources/meetup_venues" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.wso2.carbon.connector.integration.test.meetup" />
+      <recent name="org.wso2.carbon.connector.integration.test.meetup.venues" />
+      <recent name="org.wso2.carbon.connector.integration.test.meetup.events" />
+      <recent name="org.wso2.carbon.connector.integration.test.common" />
+      <recent name="org.wso2.carbon.connector.integration.test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/meetup_topics" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="org.wso2.carbon.connector.integration.test.meetup.events" />
-      <recent name="org.wso2.carbon.connector.integration.test.meetup" />
-      <recent name="org.wso2.carbon.connector.integration.test.common" />
-      <recent name="org.wso2.carbon.connector.integration.test" />
-      <recent name="org.wso2.carbon.connector.meetup" />
     </key>
   </component>
   <component name="RunManager">
@@ -924,18 +1179,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="823" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1" y="27" width="1440" height="823" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831737" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -943,14 +1197,40 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24236111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25608012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831737" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25608012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -967,12 +1247,13 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <MESSAGE value="Test automation framework is configured to meetup." />
     <option name="LAST_COMMIT_MESSAGE" value="Test automation framework is configured to meetup." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -980,438 +1261,400 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_getEventsCommentLikes_negative.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_by_id.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042674255" vertical-offset="0" max-vertical-offset="703">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_getEventRating_optional.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041322313" vertical-offset="0" max-vertical-offset="726">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_getEvents_negative.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="726">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_getEventsComments_negative.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041322313" vertical-offset="0" max-vertical-offset="726">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_getEventRating_negative.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041322313" vertical-offset="0" max-vertical-offset="726">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/CitiesIntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.40495867" vertical-offset="459" max-vertical-offset="1185">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_by_id.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5547653" vertical-offset="0" max-vertical-offset="703">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_events.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91749644" vertical-offset="0" max-vertical-offset="840">
-          <caret line="43" column="18" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_open_events.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6827881" vertical-offset="195" max-vertical-offset="945">
-          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="17" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_comments.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59917355" vertical-offset="0" max-vertical-offset="726">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.70412517" vertical-offset="0" max-vertical-offset="703">
+          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_rating.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/getEventComments.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55785125" vertical-offset="0" max-vertical-offset="726">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/getEventRating.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08264463" vertical-offset="0" max-vertical-offset="1770">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsComments_negative.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10330579" vertical-offset="0" max-vertical-offset="726">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/batch/batchRequests.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14726508" vertical-offset="60" max-vertical-offset="855">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsComments_optional.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_postEventsComments_mandatory.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042674255" vertical-offset="0" max-vertical-offset="703">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
+        <state vertical-scroll-proportion="0.4694168" vertical-offset="195" max-vertical-offset="2160">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_comments.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/postEventComment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4132231" vertical-offset="579" max-vertical-offset="2070">
-          <caret line="107" column="103" selection-start-line="107" selection-start-column="103" selection-end-line="107" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventCommentsByID_mandatory.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06198347" vertical-offset="0" max-vertical-offset="726">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/events_deleteEventCommentsByID_negative.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06198347" vertical-offset="0" max-vertical-offset="726">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/deleteEventCommentById.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08415147" vertical-offset="420" max-vertical-offset="1215">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.17069702" vertical-offset="0" max-vertical-offset="703">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="25" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_comments_by_id.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041322313" vertical-offset="0" max-vertical-offset="726">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.17069702" vertical-offset="0" max-vertical-offset="703">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="21" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/MeetupConnectorIntegrationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_comment_subscribe.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54545456" vertical-offset="399" max-vertical-offset="1125">
-          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.17069702" vertical-offset="0" max-vertical-offset="703">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="20" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/categories/component.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/postEventCommentLike.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="726">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/getConcierge.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/deleteEventCommentLike.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8471074" vertical-offset="615" max-vertical-offset="2550">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_comment_like.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17069702" vertical-offset="0" max-vertical-offset="703">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="20" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/getEvents.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_comment_like.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.661157" vertical-offset="480" max-vertical-offset="2265">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.17069702" vertical-offset="0" max-vertical-offset="703">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="20" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/getEventCommentById.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_comment_subscribe.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.021037867" vertical-offset="45" max-vertical-offset="1215">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/getEventCommentLikes.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.35123968" vertical-offset="255" max-vertical-offset="1680">
-          <caret line="0" column="36" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/getOpenEvents.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5371901" vertical-offset="855" max-vertical-offset="3180">
-          <caret line="83" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/tenantList.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="726">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30991736" vertical-offset="0" max-vertical-offset="726">
-          <caret line="15" column="83" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_concierge.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9917355" vertical-offset="0" max-vertical-offset="915">
-          <caret line="48" column="18" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_comment_likes.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5165289" vertical-offset="0" max-vertical-offset="726">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="19" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getTopics_optional.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_rating.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="21" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getTopics_negative.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/getEventRating.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041322313" vertical-offset="0" max-vertical-offset="726">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1770">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_comment_by_id.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17069702" vertical-offset="0" max-vertical-offset="703">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="22" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/topics_get_topics.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/postEventComment.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041322313" vertical-offset="0" max-vertical-offset="726">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.49075392" vertical-offset="0" max-vertical-offset="2145">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_rating.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getTopicCategories_negative.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/postEventAttendance.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1830">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_attendance.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="28" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getTopicCategories_optional.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_get_event_attendance.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10330579" vertical-offset="0" max-vertical-offset="726">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getRecommendGroupTopics_negative.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_payments.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12802276" vertical-offset="0" max-vertical-offset="703">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="28" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getRecommendGroupTopics_optional.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_post_event_watchlist.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06401138" vertical-offset="0" max-vertical-offset="703">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="20" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/topics_getRecommendGroupTopics_mandatory.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/events_delete_event_watchlist.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042674255" vertical-offset="0" max-vertical-offset="703">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/connector.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="20" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/topics_get_topic_categories.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.17069702" vertical-offset="0" max-vertical-offset="703">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="28" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_topics/getRecommendGroupTopics.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_events/getEventAttendance.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61593175" vertical-offset="752" max-vertical-offset="1455">
-          <caret line="79" column="53" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.3478261" vertical-offset="0" max-vertical-offset="1305">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/topics_get_recommended_group_topics.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17069702" vertical-offset="0" max-vertical-offset="703">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/topics_get_topics.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5334282" vertical-offset="0" max-vertical-offset="703">
+          <caret line="25" column="21" selection-start-line="8" selection-start-column="5" selection-end-line="25" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_topics/getTopics.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7894737" vertical-offset="2" max-vertical-offset="1470">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5334282" vertical-offset="0" max-vertical-offset="1470">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_venues/getOpenVenues.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2310">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/venues_get_open_venues.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="37" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_topics/getTopicCategories.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_venues/getVenues.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="1425">
-          <caret line="69" column="85" selection-start-line="69" selection-start-column="85" selection-end-line="69" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/venues_get_venues.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/events/EventsIntegrationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/venues_get_recommended_venues.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38691324" vertical-offset="1423" max-vertical-offset="2190">
-          <caret line="615" column="85" selection-start-line="615" selection-start-column="85" selection-end-line="615" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#testGetOpenEventsWithRequiredParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetOpenEventsWithNegativeParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetOpenEventsWithOptionalParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetConciergeWithNegativeParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetConciergeWithOptionalParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventsWithRequiredParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventsWithNegativeParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventsWithOptionalParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventsByIDWithRequiredParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventsByIDWithNegativeParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventsByIDWithOptionalParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventCommentsWithRequiredParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventCommentsWithNegativeParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventCommentsWithOptionalParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventCommentsByIDWithRequiredParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventCommentsByIDWithNegativeParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventCommentsByIDWithOptionalParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventCommentLikesWithRequiredParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventCommentLikesWithNegativeParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventRatingWithRequiredParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventRatingWithNegativeParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testGetEventRatingWithOptionalParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testPostEventCommentsWithRequiredParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testPostEventCommentsWithNegativeParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testPostEventCommentsWithOptionalParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-            <element signature="method#testDeleteEventCommentsByIDWithRequiredParameters#0;class#EventsIntegrationTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/meetup/topics/TopicsIntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.196455" vertical-offset="0" max-vertical-offset="2910">
-          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="38" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/wso2/carbon/connector/integration/test/common/ConnectorIntegrationUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/venues_post_venues.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3328592" vertical-offset="1731" max-vertical-offset="5175">
-          <caret line="158" column="48" selection-start-line="158" selection-start-column="28" selection-end-line="158" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="39" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/topics_get_recommended_group_topics.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_post_container.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45454547" vertical-offset="0" max-vertical-offset="726">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="29" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_topics/component.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/getContainer.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3305785" vertical-offset="0" max-vertical-offset="726">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_get_container.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="24" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_get_container_by_id.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/meetup_everywhere_containers/postContainerById.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_post_container_by_id.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_get_container_alerts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="24" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/proxies/meetup/everywhere_containers_post_container_alerts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="24" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_getContainerById_optional.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="634">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/streams_get_open_venues_optional.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="611">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getOpenVenues_optional.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="611">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerById_optional.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="634">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_postVenues_optional.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="634">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getVenues_optional.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="634">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/venues_getVenues_mandatory.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="657">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_getContainerById_negative.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="657">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/artifacts/ESB/config/restRequests/meetup/everywhere_container_postContainerById_negative.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07097792" vertical-offset="0" max-vertical-offset="634">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
           <folding />
         </state>
       </provider>

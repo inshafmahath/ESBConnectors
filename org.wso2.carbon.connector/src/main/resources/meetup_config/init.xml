@@ -8,6 +8,8 @@
 		<property name="uri.var.accessToken" expression="$func:accessToken" />
 		<property name="uri.var.apiUrl" expression="$func:apiUrl" />
         <property name="uri.var.apiVersion" expression="$func:apiVersion" />
+        <property name="uri.var.apiStreamURL" expression="$func:apiStreamURL" />
+
 
 
         <filter source="boolean(get-property('uri.var.apiUrl'))" regex="false">
@@ -18,6 +20,11 @@
         <filter source="boolean(get-property('uri.var.apiVersion'))" regex="false">
             <then>
                 <property name="uri.var.apiVersion" value="2" />
+            </then>
+        </filter>
+        <filter source="boolean(get-property('uri.var.apiStreamURL'))" regex="false">
+            <then>
+                <property name="uri.var.apiStreamURL" value="http://stream.meetup.com" />
             </then>
         </filter>
 

@@ -33,6 +33,10 @@
             <file>getEventRating.xml</file>
             <description>List event comments for given query.</description>
         </component>
+        <component name="getEventAttendance">
+            <file>getEventAttendance.xml</file>
+            <description>List event attendance for given query.</description>
+        </component>
         <component name="postEventComments">
             <file>postEventComment.xml</file>
             <description>post event comments.</description>
@@ -41,5 +45,58 @@
             <file>deleteEventCommentById.xml</file>
             <description>delete event comments.</description>
         </component>
+        <component name="postEvents">
+            <file>postEvents.xml</file>
+            <description>post event comments.</description>
+        </component>
+        <component name="postEventsById">
+            <file>postEventsById.xml</file>
+            <description>Edit event watchlist for given query.</description>
+        </component>
+        <component name="postEventCommentFlag">
+            <file>postEventCommentFlag.xml</file>
+            <description>post event comments flag.</description>
+        </component>
+        <component name="postEventCommentSubscribe">
+            <file>postEventCommentSubscribe.xml</file>
+            <description>post request to subscribe for comments.</description>
+        </component>
+        <component name="deleteEventCommentSubscribe">
+            <file>deleteEventCommentSubscribe.xml</file>
+            <description>delete request to un subscribe for comments.</description>
+        </component>
+        <component name="postEventCommentLike">
+            <file>postEventCommentLike.xml</file>
+            <description>delete request to un subscribe for comments.</description>
+        </component>
+        <component name="deleteEventCommentLike">
+            <file>deleteEventCommentLike.xml</file>
+            <description>delete request to un subscribe for comments.</description>
+        </component>
+        <component name="postEventRating">
+            <file>postEventRating.xml</file>
+            <description>post event rating.</description>
+        </component>
+        <component name="postEventAttendance">
+            <file>postEventAttendance.xml</file>
+            <description>Post event attendance for given query.</description>
+        </component>
+        <component name="postEventPayments">
+            <file>postEventPayments.xml</file>
+            <description>Post event payment for given query.</description>
+        </component>
+        <component name="postEventWatchlist">
+            <file>postEventWatchlist.xml</file>
+            <description>Post event watchlist for given query.</description>
+        </component>
+        <component name="deleteEventWatchlist">
+            <file>deleteEventWatchlist.xml</file>
+            <description>Delete event watchlist for given query.</description>
+        </component>
+        <component name="deleteEventById">
+            <file>deleteEventById.xml</file>
+            <description>Delete event  for given query.</description>
+        </component>
+
     </subComponents>
 </component>
