@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="everywhere_containers_get_container_alerts"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="key" expression="json-eval($.key)"/>
+            <property name="container_id" expression="json-eval($.container_id)"/>
+            <property name="comments" expression="json-eval($.comments)"/>
+            <property name="rsvps" expression="json-eval($.rsvps)"/>
+            <property name="updates" expression="json-eval($.updates)"/>
+            <meetup.init/>
+            <meetup.getContainerIdAlert>
+                <key>{$ctx:key}</key>
+                <container_id>{$ctx:container_id}</container_id>
+                <comments>{$ctx:comments}</comments>
+                <rsvps>{$ctx:rsvps}</rsvps>
+                <updates>{$ctx:updates}</updates>
+            </meetup.getContainerIdAlert>
+            <respond/>
+        </inSequence>
+        <outSequence>
+
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>
+                                

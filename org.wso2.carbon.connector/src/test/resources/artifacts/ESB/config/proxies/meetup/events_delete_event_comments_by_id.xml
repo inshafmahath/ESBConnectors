@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="events_delete_event_comments_by_id"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="key" expression="json-eval($.key)"/>
+            <property name="comment_id" expression="json-eval($.comment_id)"/>
+            <property name="fields" expression="json-eval($.fields)"/>
+
+           <meetup.init/>
+            <meetup.deleteEventCommentByID>
+                <key>{$ctx:key}</key>
+                <comment_id>{$ctx:comment_id}</comment_id>
+                <fields>{$ctx:fields}</fields>
+            </meetup.deleteEventCommentByID>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>
+                                

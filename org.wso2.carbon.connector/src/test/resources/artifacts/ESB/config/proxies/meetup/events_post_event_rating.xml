@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="events_post_event_rating"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="key" expression="json-eval($.key)"/>
+            <property name="event_id" expression="json-eval($.event_id)"/>
+            <property name="rating" expression="json-eval($.rating)"/>
+            <property name="attendee_count" expression="json-eval($.attendee_count)"/>
+
+           <meetup.init/>
+            <meetup.postEventRating>
+                <key>{$ctx:key}</key>
+                <event_id>{$ctx:event_id}</event_id>
+                <rating>{$ctx:rating}</rating>
+                <attendee_count>{$ctx:attendee_count}</attendee_count>
+
+            </meetup.postEventRating>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>
+                                
