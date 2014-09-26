@@ -4,7 +4,7 @@
         <dependency component="helloWorld"/>
         <dependency component="meetup_config" />
         <dependency component="meetup_events"/>
-        <dependency component="batch"/>
+        <dependency component="meetup_batch"/>
         <dependency component="boards"/>
         <dependency component="categories"/>
         <dependency component="cities"/>
@@ -13,6 +13,8 @@
         <dependency component="notifications"/>
         <dependency component="oembed"/>
         <dependency component="photos"/>
+        <dependency component="profiles"/>
+        <dependency component="rsvps"/>
         <description>wso2 ESB Carbon connector library for Meetup</description>
     </component>
 </connector>

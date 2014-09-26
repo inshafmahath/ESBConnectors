@@ -2,7 +2,7 @@
 
 .idea/
 
-.settings
+target/
 
 org.wso2.carbon.connector.meetup.iml
 

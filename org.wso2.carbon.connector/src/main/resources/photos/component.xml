@@ -3,11 +3,23 @@
     <subComponents>
         <component name="getPhotoComments">
             <file>getPhotoComments.xml</file>
-            <description>get photo comments</description>
+            <description>This method returns comments on meetup photos. To post messages, see the corresponding write method</description>
         </component>
         <component name="postPhotoComment">
             <file>postPhotoComment.xml</file>
-            <description>post photo comment</description>
+            <description>This method posts comments that appear below photos</description>
+        </component>
+        <component name="deletePhoto">
+            <file>deletePhoto.xml</file>
+            <description>Delete specified event photo</description>
+        </component>
+        <component name="getPhotoAlbums">
+            <file>getPhotoAlbums.xml</file>
+            <description>This method returns photo albums associated with Meetup groups. To create albums, see the corresponding write method.</description>
+        </component>
+        <component name="getPhotos">
+            <file>getPhotos.xml</file>
+            <description>This method returns photos by member, group, album, event, photo ID, or tagged member.</description>
         </component>
     </subComponents>
 </component>

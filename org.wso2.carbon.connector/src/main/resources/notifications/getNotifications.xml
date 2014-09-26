@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template name="getNotifications" xmlns="http://ws.apache.org/ns/synapse"
-          description="Notifications">
+          description="Returns all recent Meetup notifications for the authorized member.">
 
     <!-- Required parameters -->
-    <parameter name="key" description="OAuth access token for all authenticated API requests"/>
+    <parameter name="key" description="API key for all authenticated API requests"/>
+    <parameter name="access_token" description="OAuth access token for all authenticated API requests"/>
+    <parameter name="fields" description="Request that additional fields (separated by commas) be included in the output."/>
 
     <sequence>
 
         <property name="uri.var.key" expression="$func:key"/>
+        <property name="uri.var.access_token" expression="$func:access_token"/>
+        <property name="uri.var.fields" expression="$func:fields"/>
+        <filter xpath="get-property('uri.var.access_token') = '' or not(string(get-property('uri.var.access_token')))">
+            <then>
+                <call>
+                    <endpoint>
+                        <http method="get"
+                              uri-template="https://api.meetup.com/notifications?key={uri.var.key}&amp;fields={uri.var.fields}"/>
 
+                    </endpoint>
+                </call>
 
-        <call>
-            <endpoint>
-                <http method="get"
-                      uri-template="https://api.meetup.com/notifications?key={uri.var.key}"/>
+            </then>
+            <else>
+                <header name="Authorization"
+                        expression="fn:concat('Bearer ',get-property('uri.var.access_token'))"
+                        scope="transport"/>
+                <call>
+                    <endpoint>
+                        <http method="get"
+                              uri-template="https://api.meetup.com/notifications?fields={uri.var.fields}"/>
 
-            </endpoint>
-        </call>
+                    </endpoint>
+                </call>
+            </else>
+        </filter>
 
         <!-- Remove response custom header information -->
         <header name="x-li-format" scope="transport" action="remove"/>

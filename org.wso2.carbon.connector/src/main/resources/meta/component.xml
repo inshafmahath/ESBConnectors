@@ -3,7 +3,7 @@
     <subComponents>
         <component name="getStatus">
             <file>getStatus.xml</file>
-            <description>Performs multiple API requests in batch, useful for reducing HTTP network requests. This method is only available for OAuth authentication</description>
+            <description>Returns the current API service status</description>
         </component>
     </subComponents>
 </component>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template name="getCategories" xmlns="http://ws.apache.org/ns/synapse" description="Listings of Group discussion posts">
+<template name="getCategories" xmlns="http://ws.apache.org/ns/synapse" description="Returns a list of Meetup group categories">
     <parameter name="access_token" description="OAuth access token for all authenticated API requests"/>
     <sequence>
         <property name="uri.var.access_token" expression="$func:access_token"/>

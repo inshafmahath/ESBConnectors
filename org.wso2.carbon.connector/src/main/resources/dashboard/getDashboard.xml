@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template name="getDashboard" xmlns="http://ws.apache.org/ns/synapse" description="Get Dashboard Information">
+<template name="getDashboard" xmlns="http://ws.apache.org/ns/synapse" description="A dashboard of aggregated Meetup information for the authorized member">
     <parameter name="access_token" description="OAuth access token for all authenticated API requests"/>
     <sequence>
         <property name="uri.var.access_token" expression="$func:access_token"/>

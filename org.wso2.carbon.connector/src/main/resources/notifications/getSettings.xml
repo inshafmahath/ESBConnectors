@@ -1,22 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template name="getSettings" xmlns="http://ws.apache.org/ns/synapse"
-          description="Notifications">
+          description="Lists group and member-specific notification settings for the authenticated member">
 
     <!-- Required parameters -->
-    <parameter name="key" description="OAuth access token for all authenticated API requests"/>
+    <parameter name="key" description="API Key for authenticated API requests"/>
+    <parameter name="access_token" description="OAuth access token for all authenticated API requests"/>
 
     <sequence>
 
         <property name="uri.var.key" expression="$func:key"/>
+        <property name="uri.var.access_token" expression="$func:access_token"/>
+        <filter xpath="get-property('uri.var.access_token') = '' or not(string(get-property('uri.var.access_token')))">
+            <then>
+                <call>
+                    <endpoint>
+                        <http method="get"
+                              uri-template="https://api.meetup.com/notifications/settings?key={uri.var.key}"/>
 
+                    </endpoint>
+                </call>
 
-        <call>
-            <endpoint>
-                <http method="get"
-                      uri-template="https://api.meetup.com/notifications/settings?key={uri.var.key}"/>
+            </then>
+            <else>
+                <header name="Authorization"
+                        expression="fn:concat('Bearer ',get-property('uri.var.access_token'))"
+                        scope="transport"/>
+                <call>
+                    <endpoint>
+                        <http method="get"
+                              uri-template="https://api.meetup.com/notifications/settings"/>
 
-            </endpoint>
-        </call>
+                    </endpoint>
+                </call>
+            </else>
+        </filter>
+
 
         <!-- Remove response custom header information -->
         <header name="x-li-format" scope="transport" action="remove"/>

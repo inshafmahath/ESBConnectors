@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="rsvps" type="synapse/template">
+    <subComponents>
+        <component name="getRSVPs">
+            <file>getRSVPs.xml</file>
+            <description>Query for Event RSVPs by event</description>
+        </component>
+        <component name="createRSVP">
+            <file>createRSVP.xml</file>
+            <description>Creates or updates an existing RSVP</description>
+        </component>
+        <component name="getRSVP">
+            <file>getRSVP.xml</file>
+            <description>Retrieve a single RSVP</description>
+        </component>
+    </subComponents>
+</component>

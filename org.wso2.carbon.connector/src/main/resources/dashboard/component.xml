@@ -3,7 +3,7 @@
     <subComponents>
         <component name="getDashboard">
             <file>getDashboard.xml</file>
-            <description>sample wso2 connector library</description>
+            <description>A dashboard of aggregated Meetup information for the authorized member</description>
         </component>
     </subComponents>
 </component>

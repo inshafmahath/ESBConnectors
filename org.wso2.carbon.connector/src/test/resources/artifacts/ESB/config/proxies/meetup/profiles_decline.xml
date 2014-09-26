@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="profiles_decline"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="anon" expression="json-eval($.anon)"/>
+            <property name="ban" expression="json-eval($.ban)"/>
+            <property name="explanation" expression="json-eval($.explanation)"/>
+            <property name="member" expression="json-eval($.member)"/>
+            <property name="send_copy" expression="json-eval($.send_copy)"/>
+            <property name="access_token" expression="json-eval($.access_token)"/>
+            <property name="urlname" expression="json-eval($.urlname)"/>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <meetup.decline>
+                <anon>{$ctx:anon}</anon>
+                <ban>{$ctx:ban}</ban>
+                <explanation>{$ctx:explanation}</explanation>
+                <member>{$ctx:member}</member>
+                <send_copy>{$ctx:send_copy}</send_copy>
+                <access_token>{$ctx:access_token}</access_token>
+                <urlname>{$ctx:urlname}</urlname>
+            </meetup.decline>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <description/>
+</proxy>

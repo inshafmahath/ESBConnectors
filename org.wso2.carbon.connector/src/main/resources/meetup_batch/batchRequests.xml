@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template name="postPhotoComment" xmlns="http://ws.apache.org/ns/synapse" description="This method posts comments that appear below photos">
+<template name="batchRequests" xmlns="http://ws.apache.org/ns/synapse" description="Performs multiple API requests in meetup_batch, useful for reducing HTTP network requests. This method is only available for OAuth authentication">
 
     <!-- Required parameters -->
-    <parameter name="photo_id" description="ID of a photo"/>
-    <parameter name="key" description="API key"/>
-    <parameter name="comment" description="photo comment"/>
+    <parameter name="access_token" description="OAuth access token for all authenticated API requests"/>
+    <parameter name="requests" description="Requests should be provided within a JSON-encoded array in the following format attached the requests parameter within a POST body"/>
 
     <sequence>
-        <property name="uri.var.photo_id" expression="$func:photo_id"/>
-        <property name="uri.var.key" expression="$func:key"/>
-        <property name="uri.var.comment" expression="$func:comment"/>
+
+        <property name="uri.var.access_token" expression="$func:access_token"/>
+        <property name="uri.var.requests" expression="$func:requests"/>
+
         <payloadFactory>
             <format>
                 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
                     <soapenv:Header></soapenv:Header>
                     <soapenv:Body>
                         <root>
-                            <photo_id>$1</photo_id>
-                            <comment>$2</comment>
-                            <key>$3</key>
+                            <requests>$1</requests>
 
                         </root>
                     </soapenv:Body>
@@ -26,18 +24,20 @@
             </format>
 
             <args>
-                <arg expression="get-property('uri.var.photo_id')" />
-                <arg expression="get-property('uri.var.comment')" />
-                <arg expression="get-property('uri.var.key')" />
+                <arg expression="get-property('uri.var.requests')" />
 
             </args>
 
         </payloadFactory>
+
+        <property name="messageType" value="application/x-www-form-urlencoded" scope="axis2" />
+        <property name="DISABLE_CHUNKING" value="true" scope="axis2"/>
         <call>
             <endpoint>
-                <http method="post" uri-template="https://api.meetup.com/2/photo_comment" />
+                <http method="POST" uri-template="https://api.meetup.com/meetup_batch?access_token={uri.var.access_token}" />
                 <property name="messageType" value="application/x-www-form-urlencoded" scope="axis2" />
                 <property name="DISABLE_CHUNKING" value="true" scope="axis2"/>
+
             </endpoint>
         </call>
 

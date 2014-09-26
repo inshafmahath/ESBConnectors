@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template name="getStatus" xmlns="http://ws.apache.org/ns/synapse" description="">
+<template name="getStatus" xmlns="http://ws.apache.org/ns/synapse" description="Returns the current API service status">
 
     <sequence>
         <call>

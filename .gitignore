@@ -67,3 +67,23 @@ org.wso2.carbon.connector/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_
 org.wso2.carbon.connector/.idea/workspace.xml
 
 org.wso2.carbon.connector/.idea/vcs.xml
+
+org.wso2.carbon.connector/src/test/resources/artifacts/ESB/config/proxies/meetup/Meta_getStatus.xml
+
+
+
+org.wso2.carbon.connector/src/test/resources/artifacts/ESB/config/proxies/meetup/meetup_getmember_byid.xml
+
+org.wso2.carbon.connector/src/test/resources/artifacts/ESB/config/proxies/meetup/meetup_delete_ewrsvps.xml
+
+org.wso2.carbon.connector/src/test/resources/artifacts/ESB/config/proxies/meetup/meetup_delete_ewfollow.xml
+
+org.wso2.carbon.connector/src/test/resources/artifacts/ESB/config/restRequests/meetup/notifications_getNotifications_mandatory.txt
+
+org.wso2.carbon.connector/src/test/resources/artifacts/ESB/config/restRequests/meetup/notifications_getSettings_mandatory.txt
+
+org.wso2.carbon.connector/src/test/resources/artifacts/ESB/config/restRequests/meetup/photos_getPhotoComments_mandatory.txt
+
+org.wso2.carbon.connector/src/test/resources/artifacts/ESB/samples/resources/smooks/edi-mapping.xml
+
+org.wso2.carbon.connector/src/test/resources/artifacts/ESB/samples/resources/smooks/mapping.xml

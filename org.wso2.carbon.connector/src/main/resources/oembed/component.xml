@@ -3,7 +3,7 @@
     <subComponents>
         <component name="getOEmbed">
             <file>getOEmbed.xml</file>
-            <description>OEmbed URL</description>
+            <description>oEmbed implementation</description>
         </component>
     </subComponents>
 </component>
