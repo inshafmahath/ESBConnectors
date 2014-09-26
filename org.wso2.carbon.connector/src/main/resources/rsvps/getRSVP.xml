@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="getRSVP" xmlns="http://ws.apache.org/ns/synapse" description="Retrieve a single RSVP">
+
+    <!-- Required parameters -->
+    <parameter name="rsvp_id"
+               description="RSVP ID you want to retrieve"/>
+    <parameter name="access_token" description="Authorization token"/>
+    <!--Optional parameters -->
+    <parameter name="fields"
+               description="Request that additional fields (separated by commas) be included in the output"/>
+
+    <sequence>
+        <property name="uri.var.rsvp_id" expression="$func:rsvp_id"/>
+        <property name="uri.var.access_token" expression="$func:access_token"/>
+        <property name="uri.var.fields" expression="$func:fields"/>
+
+        <property name="ContentType" value="application/json" scope="axis2" type="STRING"/>
+
+        <header name="Authorization"
+                expression="fn:concat('Bearer ',get-property('uri.var.access_token'))"
+                scope="transport"/>
+        <call>
+            <endpoint>
+                <http method="get"
+                      uri-template="https://api.meetup.com/2/rsvp/{uri.var.rsvp_id}?fields={uri.var.fields}"
+                      format="rest"/>
+                <property name="Accept" value="application/json" scope="transport"/>
+            </endpoint>
+        </call>
+
+        <!-- Remove response custom header information -->
+        <header name="x-li-format" scope="transport" action="remove"/>
+        <header name="X-LI-UUID" scope="transport" action="remove"/>
+        <header name="X-Li-Pop" scope="transport" action="remove"/>
+        <header name="X-Li-Fabric" scope="transport" action="remove"/>
+        <header name="x-li-request-id" scope="transport" action="remove"/>
+
+    </sequence>
+</template>

@@ -8,9 +8,11 @@
     <target>
         <inSequence>
             <property name="key" expression="json-eval($.key)"/>
+            <property name="access_token" expression="json-eval($.access_token)"/>
             <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
             <meetup.getNotifications>
                 <key>{$ctx:key}</key>
+                <access_token>{$ctx:access_token}</access_token>
             </meetup.getNotifications>
             <respond/>
         </inSequence>

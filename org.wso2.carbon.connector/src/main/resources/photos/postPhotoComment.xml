@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template name="postPhotoComment" xmlns="http://ws.apache.org/ns/synapse" description="">
+<template name="postPhotoComment" xmlns="http://ws.apache.org/ns/synapse" description="This method posts comments that appear below photos">
 
     <!-- Required parameters -->
     <parameter name="photo_id" description="ID of a photo"/>
     <parameter name="key" description="API key"/>
+    <parameter name="comment" description="photo comment"/>
 
     <sequence>
-        <property name="uri.var.photoID" expression="$func:photo_id"/>
+        <property name="uri.var.photo_id" expression="$func:photo_id"/>
         <property name="uri.var.key" expression="$func:key"/>
+        <property name="uri.var.comment" expression="$func:comment"/>
+        <payloadFactory>
+            <format>
+                <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+                    <soapenv:Header></soapenv:Header>
+                    <soapenv:Body>
+                        <root>
+                            <photo_id>$1</photo_id>
+                            <comment>$2</comment>
+                            <key>$3</key>
+
+                        </root>
+                    </soapenv:Body>
+                </soapenv:Envelope>
+            </format>
+
+            <args>
+                <arg expression="get-property('uri.var.photo_id')" />
+                <arg expression="get-property('uri.var.comment')" />
+                <arg expression="get-property('uri.var.key')" />
+
+            </args>
+
+        </payloadFactory>
         <call>
             <endpoint>
-                <http method="get" uri-template="https://api.meetup.com/2/photo_comments?photo_id={uri.var.photoID}&amp;key={uri.var.key}" />
-
+                <http method="post" uri-template="https://api.meetup.com/2/photo_comment" />
+                <property name="messageType" value="application/x-www-form-urlencoded" scope="axis2" />
+                <property name="DISABLE_CHUNKING" value="true" scope="axis2"/>
             </endpoint>
         </call>
 

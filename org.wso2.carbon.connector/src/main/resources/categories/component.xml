@@ -3,7 +3,7 @@
     <subComponents>
         <component name="getCategories">
             <file>getCategories.xml</file>
-            <description>sample wso2 connector library</description>
+            <description>Returns a list of Meetup group categories</description>
         </component>
     </subComponents>
 </component>

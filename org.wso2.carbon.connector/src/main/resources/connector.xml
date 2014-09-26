@@ -13,6 +13,8 @@
         <dependency component="notifications"/>
         <dependency component="oembed"/>
         <dependency component="photos"/>
+        <dependency component="profiles"/>
+        <dependency component="rsvps"/>
         <description>wso2 ESB Carbon connector library for Meetup</description>
     </component>
 </connector>

@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <proxy xmlns="http://ws.apache.org/ns/synapse"
-       name="notifications_getSettings"
+       name="profiles_editProfile"
        transports="https,http"
        statistics="disable"
        trace="disable"
        startOnLoad="true">
     <target>
         <inSequence>
-            <property name="key" expression="json-eval($.key)"/>
+            <property name="mid" expression="json-eval($.mid)"/>
+            <property name="gid" expression="json-eval($.gid)"/>
+            <property name="intro" expression="json-eval($.intro)"/>
             <property name="access_token" expression="json-eval($.access_token)"/>
             <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
-            <meetup.getSettings>
-                <key>{$ctx:key}</key>
+            <meetup.editProfile>
+                <mid>{$ctx:mid}</mid>
+                <gid>{$ctx:gid}</gid>
+                <intro>{$ctx:intro}</intro>
                 <access_token>{$ctx:access_token}</access_token>
-            </meetup.getSettings>
+            </meetup.editProfile>
             <respond/>
         </inSequence>
         <outSequence>

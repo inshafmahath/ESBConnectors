@@ -3,11 +3,11 @@
     <subComponents>
         <component name="getNotifications">
             <file>getNotifications.xml</file>
-            <description>List Notifications</description>
+            <description>Returns all recent Meetup notifications for the authorized member.</description>
         </component>
         <component name="getSettings">
             <file>getSettings.xml</file>
-            <description>Get Notifications Settings</description>
+            <description>Lists group and member-specific notification settings for the authenticated member</description>
         </component>
     </subComponents>
 </component>

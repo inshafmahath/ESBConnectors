@@ -8,9 +8,7 @@
     <target>
         <inSequence>
             <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
-            <meetup.getStatus>
-
-            </meetup.getStatus>
+            <meetup.getStatus/>
             <respond/>
         </inSequence>
         <outSequence>

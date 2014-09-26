@@ -1,3 +1,4 @@
 {
-"key":"%s"
+"key":"%s",
+"access_token":"%s"
 }
