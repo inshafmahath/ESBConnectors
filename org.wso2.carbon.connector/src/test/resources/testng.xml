@@ -14,6 +14,11 @@
    <test name="Meetup-Connector-Test" preserve-order="true" verbose="2">
         <packages>
             <package name="org.wso2.carbon.connector.integration.test.meetup.events"/>
+            <package name="org.wso2.carbon.connector.integration.test.meetup.events"/>
+            <package name="org.wso2.carbon.connector.integration.test.meetup.everywhere.containers"/>
+            <package name="org.wso2.carbon.connector.integration.test.meetup.streams"/>
+            <package name="org.wso2.carbon.connector.integration.test.meetup.topics"/>
+            <package name="org.wso2.carbon.connector.integration.test.meetup.venues"/>
         </packages>
     </test>
     

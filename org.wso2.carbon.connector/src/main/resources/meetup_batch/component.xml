@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component name="meta" type="synapse/template">
+<component name="meetup_batch" type="synapse/template">
     <subComponents>
-        <component name="getStatus">
-            <file>getStatus.xml</file>
+        <component name="batchRequests">
+            <file>batchRequests.xml</file>
             <description>Performs multiple API requests in meetup_batch, useful for reducing HTTP network requests. This method is only available for OAuth authentication</description>
         </component>
     </subComponents>

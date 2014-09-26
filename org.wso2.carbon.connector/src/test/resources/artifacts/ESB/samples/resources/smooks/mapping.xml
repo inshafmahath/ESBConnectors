@@ -25,7 +25,7 @@
     <medi:segments xmltag="orders">
 
         <medi:segment segcode="HDR" xmltag="header">
-            <medi:field xmltag="batch-id"/>
+            <medi:field xmltag="meetup_batch-id"/>
             <medi:field xmltag="date"/>
         </medi:segment>
 

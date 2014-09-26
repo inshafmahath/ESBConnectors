@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="Inshafs-MacBook-Pro.local" name="org.wso2.carbon.connector.integration.test.meetup.events.EventsIntegrationTest" tests="1" failures="0" timestamp="23 Sep 2014 07:15:26 GMT" time="17.601" errors="0">
-  <testcase name="testPostEventsByIDWithOptionalParameters" time="1.596" classname="org.wso2.carbon.connector.integration.test.meetup.events.EventsIntegrationTest"/>
-</testsuite>

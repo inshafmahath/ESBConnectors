@@ -4,7 +4,7 @@
         <dependency component="helloWorld"/>
         <dependency component="meetup_config" />
         <dependency component="meetup_events"/>
-        <dependency component="batch"/>
+        <dependency component="meetup_batch"/>
         <dependency component="boards"/>
         <dependency component="categories"/>
         <dependency component="cities"/>
