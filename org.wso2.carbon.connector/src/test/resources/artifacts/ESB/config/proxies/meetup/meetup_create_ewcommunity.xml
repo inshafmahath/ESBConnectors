@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="meetup_create_ewcommunity"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="urlname" expression="json-eval($.urlname)"/>
+            <property name="container_id" expression="json-eval($.container_id)"/>
+            <property name="country" expression="json-eval($.country)"/>
+            <property name="lat" expression="json-eval($.lat)"/>
+            <property name="lon" expression="json-eval($.lon)"/>
+            <property name="name" expression="json-eval($.name)"/>
+            <property name="state" expression="json-eval($.state)"/>
+            <property name="zip" expression="json-eval($.zip)"/>
+            <property name="city" expression="json-eval($.city)"/>
+
+            <property name="key" expression="json-eval($.key)"/>
+            <meetup.create_ewcommunity>
+                <container_id>{$ctx:container_id}</container_id>
+                <country>{$ctx:country}</country>
+                <lat>{$ctx:lat}</lat>
+                <lon>{$ctx:lon}</lon>
+                <state>{$ctx:state}</state>
+                <zip>{$ctx:zip}</zip>
+                <city>{$ctx:city}</city>
+                <urlname>{$ctx:urlname}</urlname>
+                <name>{$ctx:name}</name>
+                <key>{$ctx:key}</key>
+            </meetup.create_ewcommunity>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="meetup_getcommunity"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="zip" expression="json-eval($.zip)"/>
+            <property name="community_id" expression="json-eval($.community_id)"/>
+            <property name="community_urlname" expression="json-eval($.community_urlname)"/>
+            <property name="container_id" expression="json-eval($.container_id)"/>
+            <property name="country" expression="json-eval($.country)"/>
+            <property name="fields" expression="json-eval($.fields)"/>
+            <property name="city" expression="json-eval($.city)"/>
+            <property name="state" expression="json-eval($.state)"/>
+            <property name="lat" expression="json-eval($.lat)"/>
+            <property name="lon" expression="json-eval($.lon)"/>
+            <property name="urlname" expression="json-eval($.urlname)"/>
+            <property name="key" expression="json-eval($.key)"/>
+            <meetup.getcommunity >
+                <zip>{$ctx:zip}</zip>
+                <community_id>{$ctx:community_id}</community_id>
+                <community_urlname>{$ctx:community_urlname}</community_urlname>
+                <container_id>{$ctx:container_id}</container_id>
+                <country>{$ctx:country}</country>
+                <fields>{$ctx:fields}</fields>
+                <city>{$ctx:city}</city>
+                <state>{$ctx:state}</state>
+                <lat>{$ctx:lat}</lat>
+                <lon>{$ctx:lon}</lon>
+                <urlname>{$ctx:urlname}</urlname>
+                <key>{$ctx:key}</key>
+            </meetup.getcommunity >
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>

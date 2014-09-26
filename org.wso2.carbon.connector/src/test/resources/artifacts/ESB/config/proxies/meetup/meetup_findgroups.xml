@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="meetup_findgroups"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="zip" expression="json-eval($.zip)"/>
+            <property name="category" expression="json-eval($.category)"/>
+            <property name="country" expression="json-eval($.country)"/>
+            <property name="fields" expression="json-eval($.fields)"/>
+            <property name="filter" expression="json-eval($.filter)"/>
+            <property name="lat" expression="json-eval($.lat)"/>
+            <property name="location" expression="json-eval($.location)"/>
+            <property name="lon" expression="json-eval($.lon)"/>
+            <property name="radius" expression="json-eval($.radius)"/>
+            <property name="self_groups" expression="json-eval($.self_groups)"/>
+            <property name="text" expression="json-eval($.text)"/>
+            <property name="upcoming_events" expression="json-eval($.upcoming_events)"/>
+
+            <property name="key" expression="json-eval($.key)"/>
+            <meetup.findgroups>
+                <zip>{$ctx:zip}</zip>
+                <category>{$ctx:category}</category>
+                <country>{$ctx:country}</country>
+                <filter>{$ctx:filter}</filter>
+                <fields>{$ctx:fields}</fields>
+                <lat>{$ctx:lat}</lat>
+                <location>{$ctx:location}</location>
+                <lon>{$ctx:lon}</lon>
+                <radius>{$ctx:radius}</radius>
+                <self_groups>{$ctx:self_groups}</self_groups>
+                <text>{$ctx:text}</text>
+                <upcoming_events>{$ctx:upcoming_events}</upcoming_events>
+                <key>{$ctx:key}</key>
+            </meetup.findgroups>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>

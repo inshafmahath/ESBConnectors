@@ -1,6 +1,0 @@
-{
-"key":"%s",
-"since_count":"",
-"since_mtime":"",
-"trickle":""
-}

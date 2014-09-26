@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="meetup_getmembers"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="group_id" expression="json-eval($.group_id)"/>
+            <property name="group_urlname" expression="json-eval($.group_urlname)"/>
+            <property name="service" expression="json-eval($.service)"/>
+            <property name="member_id" expression="json-eval($.member_id)"/>
+            <property name="topic" expression="json-eval($.topic)"/>
+            <property name="groupnum" expression="json-eval($.groupnum)"/>
+
+            <property name="key" expression="json-eval($.key)"/>
+            <meetup.getmembers>
+                <group_id>{$ctx:group_id}</group_id>
+                <group_urlname>{$ctx:group_urlname}</group_urlname>
+                <service>{$ctx:service}</service>
+                <member_id>{$ctx:member_id}</member_id>
+                <topic>{$ctx:topic}</topic>
+                <groupnum>{$ctx:groupnum}</groupnum>
+
+                <key>{$ctx:key}</key>
+            </meetup.getmembers>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>
+                                

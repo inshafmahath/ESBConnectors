@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="meetup_add_group_topics"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="topic_id" expression="json-eval($.topic_id)"/>
+            <property name="urlname" expression="json-eval($.urlname)"/>
+
+            <property name="key" expression="json-eval($.key)"/>
+            <meetup.add_group_topics>
+                <topic_id>{$ctx:topic_id}</topic_id>
+                <urlname>{$ctx:urlname}</urlname>
+                <key>{$ctx:key}</key>
+            </meetup.add_group_topics>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>

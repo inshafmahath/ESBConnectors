@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="meetup_get_ewseed_event"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="community_urlname" expression="json-eval($.community_urlname)"/>
+            <property name="fields" expression="json-eval($.fields)"/>
+            <property name="status" expression="json-eval($.status)"/>
+            <property name="container_id" expression="json-eval($.container_id)"/>
+            <property name="seed_id" expression="json-eval($.seed_id)"/>
+            <property name="urlname" expression="json-eval($.urlname)"/>
+            <property name="key" expression="json-eval($.key)"/>
+            <meetup.get_ewseed_event>
+                <community_urlname>{$ctx:community_urlname}</community_urlname>
+                <fields>{$ctx:fields}</fields>
+                <status>{$ctx:status}</status>
+                <container_id>{$ctx:container_id}</container_id>
+                <seed_id>{$ctx:seed_id}</seed_id>
+                <urlname>{$ctx:urlname}</urlname>
+                <key>{$ctx:key}</key>
+            </meetup.get_ewseed_event>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>

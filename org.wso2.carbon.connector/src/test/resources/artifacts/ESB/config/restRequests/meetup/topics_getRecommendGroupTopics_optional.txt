@@ -1,7 +1,0 @@
-{
-"key":"%s",
-"lang":"en_us",
-"other_topics":"223",
-"page":"20",
-"text":"photo"
-}

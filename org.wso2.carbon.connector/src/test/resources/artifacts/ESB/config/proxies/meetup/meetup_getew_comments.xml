@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="meetup_getew_comments"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="comment_id" expression="json-eval($.comment_id)"/>
+            <property name="community_id" expression="json-eval($.community_id)"/>
+            <property name="community_urlname" expression="json-eval($.community_urlname)"/>
+            <property name="container_id" expression="json-eval($.container_id)"/>
+            <property name="event_status" expression="json-eval($.event_status)"/>
+            <property name="fields" expression="json-eval($.fields)"/>
+            <property name="event_id" expression="json-eval($.event_id)"/>
+            <property name="member_id" expression="json-eval($.member_id)"/>
+            <property name="parent_comment_id" expression="json-eval($.parent_comment_id)"/>
+            <property name="urlname" expression="json-eval($.urlname)"/>
+            <property name="key" expression="json-eval($.key)"/>
+            <meetup.getew_comments>
+                <comment_id>{$ctx:comment_id}</comment_id>
+                <community_id>{$ctx:community_id}</community_id>
+                <community_urlname>{$ctx:community_urlname}</community_urlname>
+                <container_id>{$ctx:container_id}</container_id>
+                <event_status>{$ctx:event_status}</event_status>
+                <fields>{$ctx:fields}</fields>
+                <event_id>{$ctx:event_id}</event_id>
+                <member_id>{$ctx:member_id}</member_id>
+                <parent_comment_id>{$ctx:parent_comment_id}</parent_comment_id>
+                <urlname>{$ctx:urlname}</urlname>
+                <key>{$ctx:key}</key>
+            </meetup.getew_comments>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>

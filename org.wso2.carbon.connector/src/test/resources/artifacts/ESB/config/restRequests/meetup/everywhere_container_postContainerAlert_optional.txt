@@ -1,7 +1,0 @@
-{
-"key":"%s",
-"container_id":"40392",
-"comments":"true",
-"rsvps":"true",
-"updates":"true"
-}

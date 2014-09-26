@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="meetup_find_recomended_group"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <property name="country" expression="json-eval($.country)"/>
+            <property name="category" expression="json-eval($.category)"/>
+            <property name="fields" expression="json-eval($.fields)"/>
+            <property name="lat" expression="json-eval($.lat)"/>
+            <property name="location" expression="json-eval($.location)"/>
+            <property name="lon" expression="json-eval($.lon)"/>
+            <property name="radius" expression="json-eval($.radius)"/>
+            <property name="topic_id" expression="json-eval($.topic_id)"/>
+            <property name="zip" expression="json-eval($.zip)"/>
+            <property name="key" expression="json-eval($.key)"/>
+            <meetup.find_recomended_group>
+                <country>{$ctx:country}</country>
+                <category>{$ctx:category}</category>
+                <fields>{$ctx:fields}</fields>
+                <lat>{$ctx:lat}</lat>
+                <location>{$ctx:location}</location>
+                <lon>{$ctx:lon}</lon>
+                <radius>{$ctx:radius}</radius>
+                <topic_id>{$ctx:topic_id}</topic_id>
+                <zip>{$ctx:zip}</zip>
+                <key>{$ctx:key}</key>
+            </meetup.find_recomended_group>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>
