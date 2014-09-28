@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template name="batchRequests" xmlns="http://ws.apache.org/ns/synapse" description="Performs multiple API requests in meetup_batch, useful for reducing HTTP network requests. This method is only available for OAuth authentication">
+<template name="batchRequests" xmlns="http://ws.apache.org/ns/synapse" description="Performs multiple API requests in batch, useful for reducing HTTP network requests. This method is only available for OAuth authentication">
 
     <!-- Required parameters -->
     <parameter name="access_token" description="OAuth access token for all authenticated API requests"/>
@@ -34,7 +34,7 @@
         <property name="DISABLE_CHUNKING" value="true" scope="axis2"/>
         <call>
             <endpoint>
-                <http method="POST" uri-template="https://api.meetup.com/meetup_batch?access_token={uri.var.access_token}" />
+                <http method="POST" uri-template="https://api.meetup.com/batch?access_token={uri.var.access_token}" />
                 <property name="messageType" value="application/x-www-form-urlencoded" scope="axis2" />
                 <property name="DISABLE_CHUNKING" value="true" scope="axis2"/>
 

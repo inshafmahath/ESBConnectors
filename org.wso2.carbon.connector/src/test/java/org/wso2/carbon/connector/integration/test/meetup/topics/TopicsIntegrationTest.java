@@ -32,7 +32,8 @@ public class TopicsIntegrationTest extends MeetupConnectorIntegrationTest {
 
         try {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
+            int responseHeader = ConnectorIntegrationUtil
+		            .sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -55,7 +56,8 @@ public class TopicsIntegrationTest extends MeetupConnectorIntegrationTest {
 
         try {
 
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+            JSONObject jsonObject = ConnectorIntegrationUtil
+		            .sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(jsonObject.has("results"));
 
         } finally {
@@ -80,7 +82,8 @@ public class TopicsIntegrationTest extends MeetupConnectorIntegrationTest {
 
         try {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
+            int responseHeader = ConnectorIntegrationUtil
+		            .sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -104,7 +107,8 @@ public class TopicsIntegrationTest extends MeetupConnectorIntegrationTest {
 
         try {
 
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+            JSONObject jsonObject = ConnectorIntegrationUtil
+		            .sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(jsonObject.has("results"));
 
         } finally {
@@ -128,7 +132,8 @@ public class TopicsIntegrationTest extends MeetupConnectorIntegrationTest {
 
         try {
 
-            JSONArray jsonObjectArray = ConnectorIntegrationUtil.sendRequestJSONArray(getProxyServiceURL(methodName), modifiedJsonString);
+            JSONArray jsonObjectArray = ConnectorIntegrationUtil
+		            .sendRequestJSONArray(getProxyServiceURL(methodName), modifiedJsonString);
             JSONObject jsonObject = (JSONObject) jsonObjectArray.get(0);
             Assert.assertTrue(jsonObject.has("id"));
 
@@ -155,7 +160,8 @@ public class TopicsIntegrationTest extends MeetupConnectorIntegrationTest {
 
         try {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
+            int responseHeader = ConnectorIntegrationUtil
+		            .sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -179,7 +185,8 @@ public class TopicsIntegrationTest extends MeetupConnectorIntegrationTest {
 
         try {
 
-            JSONArray jsonObjectArray = ConnectorIntegrationUtil.sendRequestJSONArray(getProxyServiceURL(methodName), modifiedJsonString);
+            JSONArray jsonObjectArray = ConnectorIntegrationUtil
+		            .sendRequestJSONArray(getProxyServiceURL(methodName), modifiedJsonString);
             JSONObject jsonObject = (JSONObject) jsonObjectArray.get(0);
             Assert.assertTrue(jsonObject.has("id"));
             //JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);

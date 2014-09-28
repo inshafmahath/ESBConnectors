@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="photos_postPhotoComment"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="photo_id" expression="json-eval($.photo_id)"/>
+            <property name="key" expression="json-eval($.key)"/>
+            <property name="comment" expression="json-eval($.comment)"/>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <meetup.postPhotoComment>
+                <photo_id>{$ctx:photo_id}</photo_id>
+                <key>{$ctx:key}</key>
+                <comment>{$ctx:comment}</comment>
+            </meetup.postPhotoComment>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <description/>
+</proxy>
