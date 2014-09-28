@@ -9,5 +9,9 @@
             <file>getSettings.xml</file>
             <description>Lists group and member-specific notification settings for the authenticated member</description>
         </component>
+        <component name="markRead">
+            <file>markRead.xml</file>
+            <description>Marks groups of notifications as read.</description>
+        </component>
     </subComponents>
 </component>

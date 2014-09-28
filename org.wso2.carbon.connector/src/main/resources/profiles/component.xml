@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="profiles" type="synapse/template">
+    <subComponents>
+        <component name="getProfiles">
+            <file>getProfiles.xml</file>
+            <description>This method returns member profiles associated with a particular group.</description>
+        </component>
+        <component name="createProfile">
+            <file>createProfile.xml</file>
+            <description>This method allows an authenticated member to join a group by creating a profile.</description>
+        </component>
+        <component name="editProfile">
+            <file>editProfile.xml</file>
+            <description>Update a member's group profile</description>
+        </component>
+        <component name="getProfile">
+            <file>getProfile.xml</file>
+            <description>Retrieves a single group profile.</description>
+        </component>
+        <component name="deleteProfile">
+            <file>deleteProfile.xml</file>
+            <description>Deletes a member's group profile.</description>
+        </component>
+        <component name="approvals">
+            <file>approvals.xml</file>
+            <description>Approves one or more requests for group membership.</description>
+        </component>
+        <component name="decline">
+            <file>decline.xml</file>
+            <description>Declines one or more requests for group membership.</description>
+        </component>
+
+    </subComponents>
+</component>

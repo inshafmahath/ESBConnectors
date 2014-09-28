@@ -87,4 +87,39 @@ public class NotificationsIntegrationTest extends MeetupConnectorIntegrationTest
         }
     }
 
+
+	/**
+     * Test markRead API operation for Mandatory fields. this API method returns notification.
+     * Expecting Response header '200' JSONObject in returned JSONArray.
+     *
+     * @throws Exception if test fails.
+     */
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "Testing markRead notifications API method")
+    public void testMarkReadMandatory() throws Exception {
+
+        String jsonRequestFilePath = pathToRequestsDirectory + "notifications_markRead_mandatory.txt";
+        String methodName = "notifications_markRead";
+
+        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+        String modifiedJsonString = String.format(jsonString,
+                meetupConnectorProperties.getProperty("key"),
+                meetupConnectorProperties.getProperty("access_token"));
+        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+
+        try {
+
+            int responseHeader = ConnectorIntegrationUtil
+		            .sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
+            Assert.assertTrue(responseHeader == 200);
+
+            /*JSONObject jsonObject= ConnectorIntegrationUtil
+		            .sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+            Assert.assertTrue(jsonObject.has("self"));*/
+
+        } finally {
+            proxyAdmin.deleteProxy(methodName);
+        }
+    }
+
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="notifications_markRead"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <property name="key" expression="json-eval($.key)"/>
+            <property name="access_token" expression="json-eval($.access_token)"/>
+            <property name="fields" expression="json-eval($.fields)"/>
+            <property name="since_id" expression="json-eval($.since_id)"/>
+            <property name="REQUEST_HOST_HEADER" value="api.meetup.com" scope="axis2"/>
+            <meetup.markRead>
+                <key>{$ctx:key}</key>
+                <access_token>{$ctx:access_token}</access_token>
+                <fields>{$ctx:fields}</fields>
+                <since_id>{$ctx:since_id}</since_id>
+            </meetup.markRead>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+    </target>
+    <description/>
+</proxy>
