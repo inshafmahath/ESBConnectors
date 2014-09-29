@@ -13,19 +13,25 @@
     
    <test name="Meetup-Connector-Test" preserve-order="true" verbose="2">
         <packages>
-            <!--<package name="org.wso2.carbon.connector.integration.test.meetup.events"/>-->
-            <!--<package name="org.wso2.carbon.connector.integration.test.meetup.everywhere.containers"/>-->
-            <!--<package name="org.wso2.carbon.connector.integration.test.meetup.streams"/>-->
-            <!--<package name="org.wso2.carbon.connector.integration.test.meetup.topics"/>-->
-            <!--<package name="org.wso2.carbon.connector.integration.test.meetup.venues"/>-->
+
+
+
             <package name="org.wso2.carbon.connector.integration.test.meetup.batch"/>
             <!--<package name="org.wso2.carbon.connector.integration.test.meetup.boards"/>-->
             <!--<package name="org.wso2.carbon.connector.integration.test.meetup.categories"/>-->
+            <!--package name="org.wso2.carbon.connector.integration.test.meetup.cities"/-->
             <!--<package name="org.wso2.carbon.connector.integration.test.meetup.dashboard"/>-->
+            <!--<package name="org.wso2.carbon.connector.integration.test.meetup.events"/>-->
+            <!--<package name="org.wso2.carbon.connector.integration.test.meetup.everywhere.containers"/>-->
             <!--<package name="org.wso2.carbon.connector.integration.test.meetup.meta"/>-->
+            <!--package name="org.wso2.carbon.connector.integration.test.meetup.notification"/-->
+            <!--package name="org.wso2.carbon.connector.integration.test.meetup.oembed"/-->
             <!--<package name="org.wso2.carbon.connector.integration.test.meetup.photos"/>-->
             <!--<package name="org.wso2.carbon.connector.integration.test.meetup.profiles"/>-->
             <!--<package name="org.wso2.carbon.connector.integration.test.meetup.rsvps"/>-->
+            <!--<package name="org.wso2.carbon.connector.integration.test.meetup.streams"/>-->
+            <!--<package name="org.wso2.carbon.connector.integration.test.meetup.topics"/>-->
+            <!--<package name="org.wso2.carbon.connector.integration.test.meetup.venues"/>-->
         </packages>
     </test>
     

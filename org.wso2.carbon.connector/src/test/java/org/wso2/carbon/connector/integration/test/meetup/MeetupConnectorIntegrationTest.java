@@ -131,56 +131,6 @@ public class MeetupConnectorIntegrationTest extends ESBIntegrationTest {
 		axis2Client.destroy();
 	}
 
-	/**
-	 * Test get open events with required parameters.
-	 * 
-	 * @throws Exception
-	 *             the exception
-	 */
-	@Test(enabled = false, groups = { "wso2.esb" }, description = "meetup {getOpenEvents} integration test")
-	public void testGetOpenEventsWithRequiredParameters() throws Exception {
 
-		String jsonRequestFilePath = pathToRequestsDirectory + "getOpenEvents_mandatory.txt";
-		String methodName = "meetup_get_open_events";
-
-		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-		String modifiedJsonString =
-		                            String.format(jsonString,
-		                                          meetupConnectorProperties.getProperty("key"),
-		                                          // meetupConnectorProperties.getProperty("category"),
-		                                          // meetupConnectorProperties.getProperty("city"),
-		                                          // meetupConnectorProperties.getProperty("country"),
-		                                          // meetupConnectorProperties.getProperty("lat"),
-		                                          // meetupConnectorProperties.getProperty("lon"),
-		                                          // meetupConnectorProperties.getProperty("state"),
-		                                          // meetupConnectorProperties.getProperty("text"),
-		                                          // meetupConnectorProperties.getProperty("topic"),
-		                                          meetupConnectorProperties.getProperty("zip"));
-		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
-
-		try {
-
-			// int responseHeader =
-			// ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
-			// modifiedJsonString);
-			// Assert.assertTrue(responseHeader == 200);
-			JSONObject jsonObject =
-			                        ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName),
-			                                                             modifiedJsonString);
-			// Assert.assertTrue(jsonObject.has("results"));
-			// System.out.println("--------------@@@@@@@@---------");
-			// System.out.println(jsonObject);
-
-			int responseHeader =
-			                     ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
-			                                                                          modifiedJsonString);
-
-			Assert.assertTrue(responseHeader == 200);
-
-		} finally {
-			proxyAdmin.deleteProxy(methodName);
-		}
-	}
 
 }
