@@ -1,7 +1,5 @@
 .project/
 
-.idea/
-
 target/
 
 org.wso2.carbon.connector.meetup.iml
@@ -9,3 +7,5 @@ org.wso2.carbon.connector.meetup.iml
 org.wso2.carbon.connector.meetup.iws
 
 org.wso2.carbon.connector.meetup.ipr
+
+.idea
