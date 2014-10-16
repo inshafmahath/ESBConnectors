@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template name="editProfile" xmlns="http://ws.apache.org/ns/synapse" description="Update a member's group profile">
+<!--
+  ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+  ~
+  ~ WSO2 Inc. licenses this file to you under the Apache License,
+  ~ Version 2.0 (the "License"); you may not use this file except
+  ~ in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<template name="editProfile" xmlns="http://ws.apache.org/ns/synapse"
+          description="Update a member's group profile">
 
     <!-- Required parameters -->
     <parameter name="mid" description="member id"/>
@@ -13,8 +32,9 @@
         <property name="uri.var.intro" expression="$func:intro"/>
         <property name="uri.var.access_token" expression="$func:access_token"/>
         <property name="ContentType" value="application/json" scope="axis2" type="STRING"/>
-        <header name="Authorization" expression="fn:concat('Bearer ',get-property('uri.var.access_token'))"
-        scope="transport"/>
+        <header name="Authorization"
+                expression="fn:concat('Bearer ',get-property('uri.var.access_token'))"
+                scope="transport"/>
 
         <payloadFactory>
             <format>
@@ -30,28 +50,29 @@
             </format>
 
             <args>
-                <arg expression="get-property('uri.var.intro')" />
+                <arg expression="get-property('uri.var.intro')"/>
 
             </args>
 
         </payloadFactory>
 
-        <property name="messageType" value="application/x-www-form-urlencoded" scope="axis2" />
+        <property name="messageType" value="application/x-www-form-urlencoded" scope="axis2"/>
         <property name="DISABLE_CHUNKING" value="true" scope="axis2"/>
         <call>
             <endpoint>
-                <http method="post" uri-template="https://api.meetup.com/2/profile/{uri.var.gid}/{uri.var.mid}"/>
+                <http method="post"
+                      uri-template="https://api.meetup.com/2/profile/{uri.var.gid}/{uri.var.mid}"/>
                 <property name="Accept" value="application/json" scope="transport"/>
 
             </endpoint>
         </call>
 
         <!-- Remove response custom header information -->
-        <header name="x-li-format" scope="transport" action="remove" />
-        <header name="X-LI-UUID" scope="transport" action="remove" />
-        <header name="X-Li-Pop" scope="transport" action="remove" />
-        <header name="X-Li-Fabric" scope="transport" action="remove" />
-        <header name="x-li-request-id" scope="transport" action="remove" />
+        <header name="x-li-format" scope="transport" action="remove"/>
+        <header name="X-LI-UUID" scope="transport" action="remove"/>
+        <header name="X-Li-Pop" scope="transport" action="remove"/>
+        <header name="X-Li-Fabric" scope="transport" action="remove"/>
+        <header name="x-li-request-id" scope="transport" action="remove"/>
 
     </sequence>
 </template>

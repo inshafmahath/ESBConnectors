@@ -1,61 +1,78 @@
+<!--
+  ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+  ~
+  ~ WSO2 Inc. licenses this file to you under the Apache License,
+  ~ Version 2.0 (the "License"); you may not use this file except
+  ~ in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
 <template name="getOpenEvents" xmlns="http://ws.apache.org/ns/synapse">
 
     <!-- Required Parameters -->
-    <parameter name="key" description="API key" />
+    <parameter name="key" description="API key"/>
     <!-- Optional Parameters -->
-    <parameter name="and_text" description="To retrieve the and_text." />
+    <parameter name="and_text" description="To retrieve the and_text."/>
     <!-- At least one of the required parameter must be supplied with the request-->
-    <parameter name="category" description="Comma delimited list of category ids to limit recommendations to." />
+    <parameter name="category"
+               description="Comma delimited list of category ids to limit recommendations to."/>
     <!-- At least one of the required parameter must be supplied with the request-->
-    <parameter name="city" description="To retrieve results based on city" />
+    <parameter name="city" description="To retrieve results based on city"/>
     <!-- At least one of the required parameter must be supplied with the request-->
-    <parameter name="country" description="To retrieve results based on country" />
+    <parameter name="country" description="To retrieve results based on country"/>
     <!-- Optional Parameters -->
-    <parameter name="fields" description="To retrieve results based on fields" />
+    <parameter name="fields" description="To retrieve results based on fields"/>
     <!-- At least one of the required parameter must be supplied with the request-->
-    <parameter name="lat" description="To retrieve results based on lat" />
+    <parameter name="lat" description="To retrieve results based on lat"/>
     <!-- Optional Parameters -->
-    <parameter name="limited_events" description="To retrieve results based on limited_events" />
+    <parameter name="limited_events" description="To retrieve results based on limited_events"/>
     <!-- At least one of the required parameter must be supplied with the request-->
-    <parameter name="lon" description="To retrieve results based on lon" />
+    <parameter name="lon" description="To retrieve results based on lon"/>
     <!-- Optional Parameters -->
-    <parameter name="radius" description="To retrieve results based on radius" />
+    <parameter name="radius" description="To retrieve results based on radius"/>
     <!-- At least one of the required parameter must be supplied with the request-->
-    <parameter name="state" description="To retrieve results based on state" />
+    <parameter name="state" description="To retrieve results based on state"/>
     <!-- Optional Parameters -->
-    <parameter name="status" description="To retrieve results based on status" />
+    <parameter name="status" description="To retrieve results based on status"/>
     <!-- At least one of the required parameter must be supplied with the request-->
-    <parameter name="text" description="To retrieve results based on text" />
+    <parameter name="text" description="To retrieve results based on text"/>
     <!-- Optional Parameters -->
-    <parameter name="text_format" description="To retrieve results based on text_format" />
+    <parameter name="text_format" description="To retrieve results based on text_format"/>
     <!-- Optional Parameters -->
-    <parameter name="time" description="To retrieve results based on time" />
+    <parameter name="time" description="To retrieve results based on time"/>
     <!-- At least one of the required parameter must be supplied with the request-->
-    <parameter name="topic" description="To retrieve results based on topic" />
+    <parameter name="topic" description="To retrieve results based on topic"/>
     <!-- At least one of the required parameter must be supplied with the request-->
-    <parameter name="zip" description="To retrieve results based on zip" />
+    <parameter name="zip" description="To retrieve results based on zip"/>
 
     <sequence>
-        <property name="uri.var.key" expression="$func:key" />
-        <property name="uri.var.and_text" expression="$func:and_text" />
-        <property name="uri.var.category" expression="$func:category" />
-        <property name="uri.var.city" expression="$func:city" />
-        <property name="uri.var.country" expression="$func:country" />
-        <property name="uri.var.fields" expression="$func:fields" />
-        <property name="uri.var.lat" expression="$func:lat" />
-        <property name="uri.var.limited_events" expression="$func:limited_events" />
-        <property name="uri.var.lon" expression="$func:lon" />
-        <property name="uri.var.radius" expression="$func:radius" />
-        <property name="uri.var.state" expression="$func:state" />
-        <property name="uri.var.status" expression="$func:status" />
-        <property name="uri.var.text" expression="$func:text" />
-        <property name="uri.var.text_format" expression="$func:text_format" />
-        <property name="uri.var.time" expression="$func:time" />
-        <property name="uri.var.topic" expression="$func:topic" />
-        <property name="uri.var.zip" expression="$func:zip" />
-        <property name="uri.var.query" value="" />
-
-
+        <property name="uri.var.key" expression="$func:key"/>
+        <property name="uri.var.and_text" expression="$func:and_text"/>
+        <property name="uri.var.category" expression="$func:category"/>
+        <property name="uri.var.city" expression="$func:city"/>
+        <property name="uri.var.country" expression="$func:country"/>
+        <property name="uri.var.fields" expression="$func:fields"/>
+        <property name="uri.var.lat" expression="$func:lat"/>
+        <property name="uri.var.limited_events" expression="$func:limited_events"/>
+        <property name="uri.var.lon" expression="$func:lon"/>
+        <property name="uri.var.radius" expression="$func:radius"/>
+        <property name="uri.var.state" expression="$func:state"/>
+        <property name="uri.var.status" expression="$func:status"/>
+        <property name="uri.var.text" expression="$func:text"/>
+        <property name="uri.var.text_format" expression="$func:text_format"/>
+        <property name="uri.var.time" expression="$func:time"/>
+        <property name="uri.var.topic" expression="$func:topic"/>
+        <property name="uri.var.zip" expression="$func:zip"/>
+        <property name="uri.var.query" value=""/>
 
 
         <script language="js">
@@ -170,40 +187,41 @@
         <filter
                 xpath="get-property('uri.var.key') = '' or not(string(get-property('uri.var.key')))">
             <then>
-                <property name="uri.var.key" value="" />
+                <property name="uri.var.key" value=""/>
             </then>
         </filter>
 
 
-
         <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
-            <property name="string" expression="fn:concat('key - ', get-property('uri.var.key'))" />
+            <property name="string" expression="fn:concat('key - ', get-property('uri.var.key'))"/>
         </log>
         <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
-            <property name="string" expression="fn:concat('query - ', get-property('uri.var.query'))"/>
+            <property name="string"
+                      expression="fn:concat('query - ', get-property('uri.var.query'))"/>
         </log>
         <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
-            <property name="string" expression="fn:concat('apiUrl - ', get-property('uri.var.apiUrl'))"/>
+            <property name="string"
+                      expression="fn:concat('apiUrl - ', get-property('uri.var.apiUrl'))"/>
         </log>
         <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
-            <property name="string" expression="fn:concat('apiVersion - ', get-property('uri.var.apiVersion'))"/>
+            <property name="string"
+                      expression="fn:concat('apiVersion - ', get-property('uri.var.apiVersion'))"/>
         </log>
 
 
-
-          <call>
+        <call>
             <endpoint>
                 <http method="get"
-                      uri-template="{uri.var.apiUrl}/{uri.var.apiVersion}/open_events?key={uri.var.key}{uri.var.query}" />
+                      uri-template="{uri.var.apiUrl}/{uri.var.apiVersion}/open_events?key={uri.var.key}{uri.var.query}"/>
             </endpoint>
         </call>
 
 
         <!-- Remove response custom header information -->
-        <header name="x-li-format" scope="transport" action="remove" />
-        <header name="X-LI-UUID" scope="transport" action="remove" />
-        <header name="X-Li-Pop" scope="transport" action="remove" />
-        <header name="X-Li-Fabric" scope="transport" action="remove" />
-        <header name="x-li-request-id" scope="transport" action="remove" />
+        <header name="x-li-format" scope="transport" action="remove"/>
+        <header name="X-LI-UUID" scope="transport" action="remove"/>
+        <header name="X-Li-Pop" scope="transport" action="remove"/>
+        <header name="X-Li-Fabric" scope="transport" action="remove"/>
+        <header name="x-li-request-id" scope="transport" action="remove"/>
     </sequence>
 </template>

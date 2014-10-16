@@ -1,10 +1,28 @@
+<!--
+  ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+  ~
+  ~ WSO2 Inc. licenses this file to you under the Apache License,
+  ~ Version 2.0 (the "License"); you may not use this file except
+  ~ in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
 <template name="fetchgroups" xmlns="http://ws.apache.org/ns/synapse">
 
-    <parameter name="key" description="API key" />
+    <parameter name="key" description="API key"/>
 
 
-    <parameter name="group_id"  />
-    <parameter name="group_urlname"  />
+    <parameter name="group_id"/>
+    <parameter name="group_urlname"/>
     <parameter name="topic"/>
     <parameter name="groupnum"/>
     <parameter name="category_id"/>
@@ -16,40 +34,39 @@
     <parameter name="lat"/>
     <parameter name="lon"/>
     <parameter name="organizer_id"/>
-    <parameter name="radius"  />
-    <parameter name="zip"  />
-    <parameter name="member_id"  />
+    <parameter name="radius"/>
+    <parameter name="zip"/>
+    <parameter name="member_id"/>
 
 
     <parameter name="parameters"/>
 
 
     <sequence>
-        <property name="uri.var.key" expression="$func:key" />
-        <property name="uri.var.group_id" expression="$func:group_id" />
-        <property name="uri.var.group_urlname" expression="$func:group_urlname" />
-        <property name="uri.var.topic" expression="$func:topic" />
-        <property name="uri.var.groupnum" expression="$func:groupnum" />
-        <property name="uri.var.category_id" expression="$func:category_id" />
-        <property name="uri.var.country" expression="$func:country" />
-        <property name="uri.var.city" expression="$func:city" />
-        <property name="uri.var.state" expression="$func:state" />
-        <property name="uri.var.domain" expression="$func:domain" />
-        <property name="uri.var.fields" expression="$func:fields" />
-        <property name="uri.var.lat" expression="$func:lat" />
-        <property name="uri.var.lon" expression="$func:lon" />
-        <property name="uri.var.organizer_id" expression="$func:organizer_id" />
-        <property name="uri.var.radius" expression="$func:radius" />
-        <property name="uri.var.zip" expression="$func:zip" />
-        <property name="uri.var.member_id" expression="$func:member_id" />
-
+        <property name="uri.var.key" expression="$func:key"/>
+        <property name="uri.var.group_id" expression="$func:group_id"/>
+        <property name="uri.var.group_urlname" expression="$func:group_urlname"/>
+        <property name="uri.var.topic" expression="$func:topic"/>
+        <property name="uri.var.groupnum" expression="$func:groupnum"/>
+        <property name="uri.var.category_id" expression="$func:category_id"/>
+        <property name="uri.var.country" expression="$func:country"/>
+        <property name="uri.var.city" expression="$func:city"/>
+        <property name="uri.var.state" expression="$func:state"/>
+        <property name="uri.var.domain" expression="$func:domain"/>
+        <property name="uri.var.fields" expression="$func:fields"/>
+        <property name="uri.var.lat" expression="$func:lat"/>
+        <property name="uri.var.lon" expression="$func:lon"/>
+        <property name="uri.var.organizer_id" expression="$func:organizer_id"/>
+        <property name="uri.var.radius" expression="$func:radius"/>
+        <property name="uri.var.zip" expression="$func:zip"/>
+        <property name="uri.var.member_id" expression="$func:member_id"/>
 
 
         <property name="meetupParameters" value=""/>
 
 
         <filter
-                xpath="get-property('uri.var.group_id') = '' or  not(string(get-property('uri.var.group_id')))" >
+                xpath="get-property('uri.var.group_id') = '' or  not(string(get-property('uri.var.group_id')))">
             <then>
                 <property name="uri.var.group_id" value=""/>
             </then>
@@ -60,9 +77,8 @@
         </filter>
 
 
-
         <filter
-                xpath="get-property('uri.var.group_urlname') = '' or  not(string(get-property('uri.var.group_urlname')))" >
+                xpath="get-property('uri.var.group_urlname') = '' or  not(string(get-property('uri.var.group_urlname')))">
             <then>
                 <property name="uri.var.group_urlname" value=""/>
             </then>
@@ -73,9 +89,8 @@
         </filter>
 
 
-
         <filter
-                xpath="get-property('uri.var.topic') = '' or  not(string(get-property('uri.var.topic')))" >
+                xpath="get-property('uri.var.topic') = '' or  not(string(get-property('uri.var.topic')))">
             <then>
                 <property name="uri.var.topic" value=""/>
             </then>
@@ -87,7 +102,7 @@
 
 
         <filter
-                xpath="get-property('uri.var.groupnum') = '' or  not(string(get-property('uri.var.groupnum')))" >
+                xpath="get-property('uri.var.groupnum') = '' or  not(string(get-property('uri.var.groupnum')))">
             <then>
                 <property name="uri.var.groupnum" value=""/>
             </then>
@@ -98,7 +113,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.category_id') = '' or  not(string(get-property('uri.var.category_id')))" >
+                xpath="get-property('uri.var.category_id') = '' or  not(string(get-property('uri.var.category_id')))">
             <then>
                 <property name="uri.var.category_id" value=""/>
             </then>
@@ -109,7 +124,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.country') = '' or  not(string(get-property('uri.var.country')))" >
+                xpath="get-property('uri.var.country') = '' or  not(string(get-property('uri.var.country')))">
             <then>
                 <property name="uri.var.country" value=""/>
             </then>
@@ -120,7 +135,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.country') = '' or  not(string(get-property('uri.var.country')))" >
+                xpath="get-property('uri.var.country') = '' or  not(string(get-property('uri.var.country')))">
             <then>
                 <property name="uri.var.country" value=""/>
             </then>
@@ -131,7 +146,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.country') = '' or  not(string(get-property('uri.var.country')))" >
+                xpath="get-property('uri.var.country') = '' or  not(string(get-property('uri.var.country')))">
             <then>
                 <property name="uri.var.country" value=""/>
             </then>
@@ -142,7 +157,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.state') = '' or  not(string(get-property('uri.var.state')))" >
+                xpath="get-property('uri.var.state') = '' or  not(string(get-property('uri.var.state')))">
             <then>
                 <property name="uri.var.state" value=""/>
             </then>
@@ -154,7 +169,7 @@
 
 
         <filter
-                xpath="get-property('uri.var.fields') = '' or  not(string(get-property('uri.var.fields')))" >
+                xpath="get-property('uri.var.fields') = '' or  not(string(get-property('uri.var.fields')))">
             <then>
                 <property name="uri.var.fields" value=""/>
             </then>
@@ -165,7 +180,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.lat') = '' or  not(string(get-property('uri.var.lat')))" >
+                xpath="get-property('uri.var.lat') = '' or  not(string(get-property('uri.var.lat')))">
             <then>
                 <property name="uri.var.lat" value=""/>
             </then>
@@ -177,7 +192,7 @@
 
 
         <filter
-                xpath="get-property('uri.var.lon') = '' or  not(string(get-property('uri.var.lon')))" >
+                xpath="get-property('uri.var.lon') = '' or  not(string(get-property('uri.var.lon')))">
             <then>
                 <property name="uri.var.lon" value=""/>
             </then>
@@ -188,7 +203,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.organizer_id') = '' or  not(string(get-property('uri.var.organizer_id')))" >
+                xpath="get-property('uri.var.organizer_id') = '' or  not(string(get-property('uri.var.organizer_id')))">
             <then>
                 <property name="uri.var.organizer_id" value=""/>
             </then>
@@ -199,7 +214,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.radius') = '' or  not(string(get-property('uri.var.radius')))" >
+                xpath="get-property('uri.var.radius') = '' or  not(string(get-property('uri.var.radius')))">
             <then>
                 <property name="uri.var.radius" value=""/>
             </then>
@@ -210,7 +225,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.zip') = '' or  not(string(get-property('uri.var.zip')))" >
+                xpath="get-property('uri.var.zip') = '' or  not(string(get-property('uri.var.zip')))">
             <then>
                 <property name="uri.var.zip" value=""/>
             </then>
@@ -222,7 +237,7 @@
 
 
         <filter
-                xpath="get-property('uri.var.member_id') = '' or  not(string(get-property('uri.var.member_id')))" >
+                xpath="get-property('uri.var.member_id') = '' or  not(string(get-property('uri.var.member_id')))">
             <then>
                 <property name="uri.var.member_id" value=""/>
             </then>
@@ -233,7 +248,7 @@
         </filter>
 
 
-        <property name="uri.var.parameters" expression="get-property('meetupParameters')" />
+        <property name="uri.var.parameters" expression="get-property('meetupParameters')"/>
 
 
         <call>
@@ -241,15 +256,15 @@
             <endpoint>
 
                 <http method="get"
-                      uri-template="https://api.meetup.com/2/groups.json/?{uri.var.parameters}&amp;key={uri.var.key}" />
+                      uri-template="https://api.meetup.com/2/groups.json/?{uri.var.parameters}&amp;key={uri.var.key}"/>
 
             </endpoint>
         </call>
         <!-- Remove response custom header information -->
-        <header name="x-li-format" scope="transport" action="remove" />
-        <header name="X-LI-UUID" scope="transport" action="remove" />
-        <header name="X-Li-Pop" scope="transport" action="remove" />
-        <header name="X-Li-Fabric" scope="transport" action="remove" />
-        <header name="x-li-request-id" scope="transport" action="remove" />
+        <header name="x-li-format" scope="transport" action="remove"/>
+        <header name="X-LI-UUID" scope="transport" action="remove"/>
+        <header name="X-Li-Pop" scope="transport" action="remove"/>
+        <header name="X-Li-Fabric" scope="transport" action="remove"/>
+        <header name="x-li-request-id" scope="transport" action="remove"/>
     </sequence>
 </template>

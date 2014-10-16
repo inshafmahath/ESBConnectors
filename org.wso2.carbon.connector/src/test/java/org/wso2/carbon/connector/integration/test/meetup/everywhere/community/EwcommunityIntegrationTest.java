@@ -1,3 +1,21 @@
+/*
+ * Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
 package org.wso2.carbon.connector.integration.test.meetup.everywhere.community;
 
 import org.json.JSONObject;
@@ -13,708 +31,728 @@ import java.net.URL;
  */
 public class EwcommunityIntegrationTest extends MeetupConnectorIntegrationTest {
 
+	//**************************************       EVERYWHERE-COMMUNITY      *********************************************************//
 
-    //**************************************       EVERYWHERE-COMMUNITY      *********************************************************//
+	//    //.................   mantatory parameters test for get everywhere community  .....................................
 
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getcommunity} integration test")
+	public void testgetcommunityMandatory() throws Exception {
 
-    //    //.................   mantatory parameters test for get everywhere community  .....................................
+		String jsonRequestFilePath = pathToRequestsDirectory + "getcommunity_mandatory.txt";
+		String methodName = "meetup_getcommunity";
 
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getcommunity} integration test")
-    public void testgetcommunityMandatory() throws Exception {
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String modifiedJsonString = String.format(jsonString,
+		                                          meetupConnectorProperties.getProperty("key"),
+		                                          meetupConnectorProperties
+				                                          .getProperty("community_id"),
+		                                          meetupConnectorProperties
+				                                          .getProperty("community_urlname"),
+		                                          meetupConnectorProperties
+				                                          .getProperty("container_id"),
+		                                          meetupConnectorProperties.getProperty("country"),
+		                                          meetupConnectorProperties.getProperty("city"),
+		                                          meetupConnectorProperties.getProperty("state"),
+		                                          meetupConnectorProperties.getProperty("fields"),
+		                                          meetupConnectorProperties.getProperty("lat"),
+		                                          meetupConnectorProperties.getProperty("lon"),
+		                                          meetupConnectorProperties.getProperty("zip")
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "getcommunity_mandatory.txt";
-        String methodName = "meetup_getcommunity";
+		);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("key"),
-                meetupConnectorProperties.getProperty("community_id"),
-                meetupConnectorProperties.getProperty("community_urlname"),
-                meetupConnectorProperties.getProperty("container_id"),
-                meetupConnectorProperties.getProperty("country"),
-                meetupConnectorProperties.getProperty("city"),
-                meetupConnectorProperties.getProperty("state"),
-                meetupConnectorProperties.getProperty("fields"),
-                meetupConnectorProperties.getProperty("lat"),
-                meetupConnectorProperties.getProperty("lon"),
-                meetupConnectorProperties.getProperty("zip")
+		try {
 
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
+					                             modifiedJsonString);
+			Assert.assertTrue(responseHeader == 200);
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+			// Assert.assertTrue(jsonObject.has("result"));
+			System.out.println("--------------@@@@@@@@---------");
 
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-        try {
+	// ...................................negative test case for  getcommunity ...............................................
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 200);
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            // Assert.assertTrue(jsonObject.has("result"));
-            System.out.println("--------------@@@@@@@@---------");
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getcommunity}  integration test for negative scenario.")
+	public void testgetcommunityNegative() throws Exception {
 
+		String jsonRequestFilePath = pathToRequestsDirectory + "getcommunity_negative.txt";
+		String methodName = "meetup_getcommunity";
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
-
-
-    // ...................................negative test case for  getcommunity ...............................................
-
-
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getcommunity}  integration test for negative scenario.")
-    public void testgetcommunityNegative() throws Exception {
-
-        String jsonRequestFilePath = pathToRequestsDirectory + "getcommunity_negative.txt";
-        String methodName = "meetup_getcommunity";
-
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
         /*String modifiedJsonString = String.format(jsonString,
                 meetupConnectorProperties.getProperty("access_token"),
                 meetupConnectorProperties.getProperty("urlname")
         );*/
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        try {
+		try {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue((responseHeader == 401) || (responseHeader == 400) || (responseHeader == 404));
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(
+					(responseHeader == 401) || (responseHeader == 400) || (responseHeader == 404));
 
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            // Assert.assertTrue(jsonObject.has("errors"));
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), jsonString);
+			// Assert.assertTrue(jsonObject.has("errors"));
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
+	//    //...............   mantatory parameters test for find community by id ............................................
 
-//    //...............   mantatory parameters test for find community by id ............................................
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getcommunity_byid} integration test")
+	public void testgetcommunity_byidMandatory() throws Exception {
 
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getcommunity_byid} integration test")
-    public void testgetcommunity_byidMandatory() throws Exception {
+		String jsonRequestFilePath = pathToRequestsDirectory + "getcommunity_byid_mandatory.txt";
+		String methodName = "meetup_getcommunity_byid";
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "getcommunity_byid_mandatory.txt";
-        String methodName = "meetup_getcommunity_byid";
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String modifiedJsonString = String.format(jsonString,
+		                                          meetupConnectorProperties.getProperty("key"),
+		                                          meetupConnectorProperties.getProperty("id")
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("key"),
-                meetupConnectorProperties.getProperty("id")
+		);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+
+		try {
+
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
+					                             modifiedJsonString);
+			Assert.assertTrue(responseHeader == 200);
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+			Assert.assertTrue(jsonObject.has("zip"));
+			System.out.println("--------------@@@@@@@@---------");
 
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+	//...............   optional parameters test for find community by id ........... .................................
 
-        try {
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getcommunity_byid} integration test")
+	public void testgetcommunity_byidoptional() throws Exception {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 200);
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(jsonObject.has("zip"));
-            System.out.println("--------------@@@@@@@@---------");
+		String jsonRequestFilePath = pathToRequestsDirectory + "getcommunity_byid_optional.txt";
+		String methodName = "meetup_getcommunity_byid";
 
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String modifiedJsonString = String.format(jsonString,
+		                                          meetupConnectorProperties.getProperty("key"),
+		                                          meetupConnectorProperties.getProperty("id")
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+		);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-    //...............   optional parameters test for find community by id ........... .................................
+		try {
 
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getcommunity_byid} integration test")
-    public void testgetcommunity_byidoptional() throws Exception {
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
+					                             modifiedJsonString);
+			Assert.assertTrue(responseHeader == 200);
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+			Assert.assertTrue(jsonObject.has("zip"));
+			System.out.println("--------------@@@@@@@@---------");
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "getcommunity_byid_optional.txt";
-        String methodName = "meetup_getcommunity_byid";
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("key"),
-                meetupConnectorProperties.getProperty("id")
+	//    //...............    negative test for find community by id ...........................................
 
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getcommunity_byid}  integration test for negative scenario.")
+	public void testgetcommunity_byidNegative() throws Exception {
 
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		String jsonRequestFilePath = pathToRequestsDirectory + "getcommunity_byid_negative.txt";
+		String methodName = "meetup_getcommunity_byid";
 
-        try {
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 200);
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(jsonObject.has("zip"));
-            System.out.println("--------------@@@@@@@@---------");
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
+		try {
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(responseHeader == 404);
 
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), jsonString);
+			// Assert.assertTrue(jsonObject.has("errors"));
 
-//    //...............    negative test for find community by id ...........................................
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
+	//    //mantatory parameters test for find everywhere followers
 
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getcommunity_byid}  integration test for negative scenario.")
-    public void testgetcommunity_byidNegative() throws Exception {
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getew_followers} integration test")
+	public void testgetew_followerssMandatory() throws Exception {
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "getcommunity_byid_negative.txt";
-        String methodName = "meetup_getcommunity_byid";
+		String jsonRequestFilePath = pathToRequestsDirectory + "getew_followers_mandatory.txt";
+		String methodName = "meetup_getew_followers";
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String modifiedJsonString = String.format(jsonString,
+		                                          meetupConnectorProperties.getProperty("key"),
+		                                          meetupConnectorProperties
+				                                          .getProperty("community_id"),
+		                                          meetupConnectorProperties
+				                                          .getProperty("community_urlname"),
+		                                          meetupConnectorProperties
+				                                          .getProperty("container_id"),
+		                                          meetupConnectorProperties.getProperty("urlname")
 
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        try {
+		try {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(responseHeader == 404);
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
+					                             modifiedJsonString);
+			Assert.assertTrue(responseHeader == 200);
 
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            // Assert.assertTrue(jsonObject.has("errors"));
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+	// ...................................negative test case for  get every where followers ...............................................
 
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getew-followers}  integration test for negative scenario.")
+	public void testgetew_followersNegative() throws Exception {
 
-    //    //mantatory parameters test for find everywhere followers
+		String jsonRequestFilePath = pathToRequestsDirectory + "getew_followers_negative.txt";
+		String methodName = "meetup_getew_followers";
 
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getew_followers} integration test")
-    public void testgetew_followerssMandatory() throws Exception {
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "getew_followers_mandatory.txt";
-        String methodName = "meetup_getew_followers";
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("key"),
-                meetupConnectorProperties.getProperty("community_id"),
-                meetupConnectorProperties.getProperty("community_urlname"),
-                meetupConnectorProperties.getProperty("container_id"),
-                meetupConnectorProperties.getProperty("urlname")
+		try {
 
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(
+					(responseHeader == 401) || (responseHeader == 400) || (responseHeader == 404));
 
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), jsonString);
+			// Assert.assertTrue(jsonObject.has("errors"));
 
-        try {
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 200);
+	//    //mantatory parameters test for get everywhere follows
 
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getew_follows} integration test")
+	public void testgetew_followsMandatory() throws Exception {
 
+		String jsonRequestFilePath = pathToRequestsDirectory + "getew_follows_mandatory.txt";
+		String methodName = "meetup_getew_follows";
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String modifiedJsonString = String.format(jsonString,
+		                                          meetupConnectorProperties.getProperty("key")
 
-    // ...................................negative test case for  get every where followers ...............................................
+		);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
+		try {
 
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getew-followers}  integration test for negative scenario.")
-    public void testgetew_followersNegative() throws Exception {
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
+					                             modifiedJsonString);
+			Assert.assertTrue(responseHeader == 200);
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+			Assert.assertTrue(jsonObject.has("results"));
+			System.out.println("--------------@@@@@@@@---------");
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "getew_followers_negative.txt";
-        String methodName = "meetup_getew_followers";
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+	// ...................................optional test case for  get every where follows ...............................................
 
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getew_follows}  integration test for negative scenario.")
+	public void testgetew_followsoptional() throws Exception {
 
-        try {
+		String jsonRequestFilePath = pathToRequestsDirectory + "getew_follows_optional.txt";
+		String methodName = "meetup_getew_follows";
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue((responseHeader == 401) || (responseHeader == 400) || (responseHeader == 404));
-
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            // Assert.assertTrue(jsonObject.has("errors"));
-
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
-
-
-    //    //mantatory parameters test for get everywhere follows
-
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getew_follows} integration test")
-    public void testgetew_followsMandatory() throws Exception {
-
-        String jsonRequestFilePath = pathToRequestsDirectory + "getew_follows_mandatory.txt";
-        String methodName = "meetup_getew_follows";
-
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("key")
-
-
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
-
-        try {
-
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 200);
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(jsonObject.has("results"));
-            System.out.println("--------------@@@@@@@@---------");
-
-
-
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
-
-
-    // ...................................optional test case for  get every where follows ...............................................
-
-
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getew_follows}  integration test for negative scenario.")
-    public void testgetew_followsoptional() throws Exception {
-
-        String jsonRequestFilePath = pathToRequestsDirectory + "getew_follows_optional.txt";
-        String methodName = "meetup_getew_follows";
-
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
         /*String modifiedJsonString = String.format(jsonString,
                 meetupConnectorProperties.getProperty("access_token"),
                 meetupConnectorProperties.getProperty("urlname")
         );*/
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        try {
+		try {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(responseHeader == 200);
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(responseHeader == 200);
 
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(jsonObject.has("results"));
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(jsonObject.has("results"));
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
+	// ...................................negative test case for  get every where follows ...............................................
 
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getew_follows}  integration test for negative scenario.")
+	public void testgetew_followsNegative() throws Exception {
 
+		String jsonRequestFilePath = pathToRequestsDirectory + "getew_follows_negative.txt";
+		String methodName = "meetup_getew_follows";
 
-// ...................................negative test case for  get every where follows ...............................................
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
 
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getew_follows}  integration test for negative scenario.")
-    public void testgetew_followsNegative() throws Exception {
+		try {
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "getew_follows_negative.txt";
-        String methodName = "meetup_getew_follows";
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(responseHeader == 401);
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), jsonString);
+			// Assert.assertTrue(jsonObject.has("errors"));
 
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-        try {
+	//    //mantatory parameters test for getew_follows_byid
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(responseHeader == 401);
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getew_follows_byid} integration test")
+	public void testgetew_follows_byidMandatory() throws Exception {
 
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            // Assert.assertTrue(jsonObject.has("errors"));
+		String jsonRequestFilePath = pathToRequestsDirectory + "getew_follows_byid_mandatory.txt";
+		String methodName = "meetup_getew_follows_byid";
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String modifiedJsonString = String.format(jsonString,
+		                                          meetupConnectorProperties.getProperty("key")
 
+		);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
+		try {
 
-    //    //mantatory parameters test for getew_follows_byid
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
+					                             modifiedJsonString);
+			Assert.assertTrue(responseHeader == 200);
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+			Assert.assertTrue(jsonObject.has("id"));
+			System.out.println("--------------@@@@@@@@---------");
 
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getew_follows_byid} integration test")
-    public void testgetew_follows_byidMandatory() throws Exception {
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "getew_follows_byid_mandatory.txt";
-        String methodName = "meetup_getew_follows_byid";
+	// ...................................negative test case for  getew_follows_byid ...............................................
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("key")
+	@Test(enabled = true, groups = { "wso2.esb" },
+	      description = "meetup {getew_follows_byid}  integration test for negative scenario.")
+	public void testgetew_follows_byidNegative() throws Exception {
 
+		String jsonRequestFilePath = pathToRequestsDirectory + "getew_follows_byid_negative.txt";
+		String methodName = "meetup_getew_follows_byid";
 
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
-
-        try {
-
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 200);
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(jsonObject.has("id"));
-            System.out.println("--------------@@@@@@@@---------");
-
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
-
-
-    // ...................................negative test case for  getew_follows_byid ...............................................
-
-
-    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {getew_follows_byid}  integration test for negative scenario.")
-    public void testgetew_follows_byidNegative() throws Exception {
-
-        String jsonRequestFilePath = pathToRequestsDirectory + "getew_follows_byid_negative.txt";
-        String methodName = "meetup_getew_follows_byid";
-
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
         /*String modifiedJsonString = String.format(jsonString,
                 meetupConnectorProperties.getProperty("access_token"),
                 meetupConnectorProperties.getProperty("urlname")
         );*/
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        try {
+		try {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(responseHeader == 404);
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(responseHeader == 404);
 
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(jsonObject.has("problem"));
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(jsonObject.has("problem"));
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
+	//    / ................................ mantatory parameters test for delete_ewcommunity  ......................
 
+	@Test(enabled = false, groups = { "wso2.esb" },
+	      description = "meetup {delete_ewcommunity} integration test")
+	public void testdelete_ewcommunityMandatory() throws Exception {
 
+		String jsonRequestFilePath = pathToRequestsDirectory + "delete_ewcommunity_mandatory.txt";
+		String methodName = "meetup_delete_ewcommunity";
 
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String modifiedJsonString = String.format(jsonString,
+		                                          meetupConnectorProperties.getProperty("key"),
 
-    //    / ................................ mantatory parameters test for delete_ewcommunity  ......................
+		                                          meetupConnectorProperties.getProperty("id")
 
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "meetup {delete_ewcommunity} integration test")
-    public void testdelete_ewcommunityMandatory() throws Exception {
+		);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "delete_ewcommunity_mandatory.txt";
-        String methodName = "meetup_delete_ewcommunity";
+		try {
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("key"),
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
+					                             modifiedJsonString);
+			Assert.assertTrue(responseHeader == 200);
 
-                meetupConnectorProperties.getProperty("id")
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
+	// ...................................negative test case for  delete_ewcommunity .......  ........................................
 
+	@Test(enabled = false, groups = { "wso2.esb" },
+	      description = "meetup {delete_ewcommunity}  integration test for negative scenario.")
+	public void testdelete_ewcommunityNegative() throws Exception {
 
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		String jsonRequestFilePath = pathToRequestsDirectory + "delete_ewcommunity_negative.txt";
+		String methodName = "meetup_delete_ewcommunity";
 
-        try {
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 200);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
+		try {
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue((responseHeader == 404));
 
-    // ...................................negative test case for  delete_ewcommunity .......  ........................................
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(jsonObject.has("problem"));
 
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "meetup {delete_ewcommunity}  integration test for negative scenario.")
-    public void testdelete_ewcommunityNegative() throws Exception {
+	//    / ................................ mantatory parameters test for delete_ewfollow  ......................
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "delete_ewcommunity_negative.txt";
-        String methodName = "meetup_delete_ewcommunity";
+	@Test(enabled = false, groups = { "wso2.esb" },
+	      description = "meetup {delete_ewfollow} integration test")
+	public void testdelete_ewfollowMandatory() throws Exception {
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String jsonRequestFilePath = pathToRequestsDirectory + "delete_ewfollow_mandatory.txt";
+		String methodName = "meetup_delete_ewfollow";
 
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String modifiedJsonString = String.format(jsonString,
+		                                          meetupConnectorProperties.getProperty("key"),
 
-        try {
+		                                          meetupConnectorProperties.getProperty("id")
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue((responseHeader == 404));
+		);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(jsonObject.has("problem"));
+		try {
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
+					                             modifiedJsonString);
+			Assert.assertTrue(responseHeader == 200);
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+			Assert.assertTrue(jsonObject.has("problem"));
 
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-//    / ................................ mantatory parameters test for delete_ewfollow  ......................
+	// ...................................negative test case for  delete_ewfollow ....... ........................................
 
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "meetup {delete_ewfollow} integration test")
-    public void testdelete_ewfollowMandatory() throws Exception {
+	@Test(enabled = false, groups = { "wso2.esb" },
+	      description = "meetup {delete_ewfollow}  integration test for negative scenario.")
+	public void testdelete_ewfollowNegative() throws Exception {
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "delete_ewfollow_mandatory.txt";
-        String methodName = "meetup_delete_ewfollow";
+		String jsonRequestFilePath = pathToRequestsDirectory + "delete_ewfollow_negative.txt";
+		String methodName = "meetup_delete_ewfollow";
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("key"),
-
-                meetupConnectorProperties.getProperty("id")
-
-
-
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
-
-        try {
-
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 200);
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(jsonObject.has("problem"));
-
-
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
-
-    // ...................................negative test case for  delete_ewfollow ....... ........................................
-
-
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "meetup {delete_ewfollow}  integration test for negative scenario.")
-    public void testdelete_ewfollowNegative() throws Exception {
-
-        String jsonRequestFilePath = pathToRequestsDirectory + "delete_ewfollow_negative.txt";
-        String methodName = "meetup_delete_ewfollow";
-
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
         /*String modifiedJsonString = String.format(jsonString,
                 meetupConnectorProperties.getProperty("access_token"),
                 meetupConnectorProperties.getProperty("urlname")
         );*/
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        try {
+		try {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue((responseHeader == 404));
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue((responseHeader == 404));
 
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(jsonObject.has("problem"));
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(jsonObject.has("problem"));
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
+	//........................................ mandatory parameter for post_follow  .........................................
 
-//........................................ mandatory parameter for post_follow  .........................................
+	@Test(enabled = false, groups = { "wso2.esb" },
+	      description = "meetup {post_ewfollow} integration test")
+	public void testpost_followMandatory() throws Exception {
 
+		String jsonRequestFilePath = pathToRequestsDirectory + "post_ewfollow_mandatory.txt";
+		String methodName = "meetup_post_ewfollow";
 
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "meetup {post_ewfollow} integration test")
-    public void testpost_followMandatory() throws Exception {
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String modifiedJsonString = String.format(jsonString,
+		                                          meetupConnectorProperties.getProperty("key"),
+		                                          meetupConnectorProperties
+				                                          .getProperty("community_id")
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "post_ewfollow_mandatory.txt";
-        String methodName = "meetup_post_ewfollow";
+		);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("key"),
-                meetupConnectorProperties.getProperty("community_id")
+		try {
 
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
+					                             modifiedJsonString);
+			Assert.assertTrue(responseHeader == 201);
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+			Assert.assertTrue(jsonObject.has("id"));
+			System.out.println("--------------@@@@@@@@---------");
 
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-        try {
+	//    //...............    negative test for  post_follow  .............................................
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 201);
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(jsonObject.has("id"));
-            System.out.println("--------------@@@@@@@@---------");
+	@Test(enabled = false, groups = { "wso2.esb" },
+	      description = "meetup {post_ewfollow}  integration test for negative scenario.")
+	public void testpost_followNegative() throws Exception {
 
+		String jsonRequestFilePath = pathToRequestsDirectory + "post_ewfollow_negative.txt";
+		String methodName = "meetup_post_ewfollow";
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
-
-//    //...............    negative test for  post_follow  .............................................
-
-
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "meetup {post_ewfollow}  integration test for negative scenario.")
-    public void testpost_followNegative() throws Exception {
-
-        String jsonRequestFilePath = pathToRequestsDirectory + "post_ewfollow_negative.txt";
-        String methodName = "meetup_post_ewfollow";
-
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
         /*String modifiedJsonString = String.format(jsonString,
                 meetupConnectorProperties.getProperty("access_token"),
                 meetupConnectorProperties.getProperty("urlname")
         );*/
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        try {
+		try {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue (responseHeader == 400);
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(responseHeader == 400);
 
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(jsonObject.has("problem"));
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(jsonObject.has("problem"));
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-//........................................ mandatory parameter for edit_ewcommunity  ...  every times data should be changed......................................
+	//........................................ mandatory parameter for edit_ewcommunity  ...  every times data should be changed......................................
 
+	@Test(enabled = false, groups = { "wso2.esb" },
+	      description = "meetup {edit_ewcommunity} integration test")
+	public void testedit_ewcommunityMandatory() throws Exception {
 
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "meetup {edit_ewcommunity} integration test")
-    public void testedit_ewcommunityMandatory() throws Exception {
+		String jsonRequestFilePath = pathToRequestsDirectory + "edit_ewcommunity_mandatory.txt";
+		String methodName = "meetup_edit_ewcommunity";
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "edit_ewcommunity_mandatory.txt";
-        String methodName = "meetup_edit_ewcommunity";
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String modifiedJsonString = String.format(jsonString,
+		                                          meetupConnectorProperties.getProperty("key"),
+		                                          meetupConnectorProperties.getProperty("id"),
+		                                          meetupConnectorProperties.getProperty("name"),
+		                                          meetupConnectorProperties.getProperty("country")
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("key"),
-                meetupConnectorProperties.getProperty("id"),
-                meetupConnectorProperties.getProperty("name"),
-                meetupConnectorProperties.getProperty("country")
+		);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
+		try {
 
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
+					                             modifiedJsonString);
+			Assert.assertTrue(responseHeader == 200);
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+			Assert.assertTrue(jsonObject.has("id"));
+			System.out.println("--------------@@@@@@@@---------");
 
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+	//    //...............    negative test for  edit_ewcommunity  ................. to be checked.............................
 
-        try {
+	@Test(enabled = false, groups = { "wso2.esb" },
+	      description = "meetup {edit_ewcommunity}  integration test for negative scenario.")
+	public void testedit_ewcommunityNegative() throws Exception {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 200);
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(jsonObject.has("id"));
-            System.out.println("--------------@@@@@@@@---------");
+		String jsonRequestFilePath = pathToRequestsDirectory + "edit_ewcommunity_negative.txt";
+		String methodName = "meetup_edit_ewcommunity";
 
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-//    //...............    negative test for  edit_ewcommunity  ................. to be checked.............................
+		try {
 
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(responseHeader == 404);
 
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "meetup {edit_ewcommunity}  integration test for negative scenario.")
-    public void testedit_ewcommunityNegative() throws Exception {
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(jsonObject.has("problem"));
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "edit_ewcommunity_negative.txt";
-        String methodName = "meetup_edit_ewcommunity";
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+	//...............   mantatory parameters test for create_ewcommunity....... same community name cannot be added again.....................................
 
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+	@Test(enabled = false, groups = { "wso2.esb" },
+	      description = "meetup {create_ewcommunity} integration test")
+	public void testcreate_ewcommunityMandatory() throws Exception {
 
-        try {
+		String jsonRequestFilePath = pathToRequestsDirectory + "create_ewcommunity_mandatory.txt";
+		String methodName = "meetup_create_ewcommunity";
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue (responseHeader == 404);
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
+		String modifiedJsonString = String.format(jsonString,
+		                                          meetupConnectorProperties.getProperty("key"),
+		                                          meetupConnectorProperties.getProperty("id")
 
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(jsonObject.has("problem"));
+		);
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
+		try {
 
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName),
+					                             modifiedJsonString);
+			Assert.assertTrue(responseHeader == 201);
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+			Assert.assertTrue(jsonObject.has("id"));
+			System.out.println("--------------@@@@@@@@---------");
 
-    //...............   mantatory parameters test for create_ewcommunity....... same community name cannot be added again.....................................
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "meetup {create_ewcommunity} integration test")
-    public void testcreate_ewcommunityMandatory() throws Exception {
+	//    //...............    negative test for create_ewcommunity...........................................
 
-        String jsonRequestFilePath = pathToRequestsDirectory + "create_ewcommunity_mandatory.txt";
-        String methodName = "meetup_create_ewcommunity";
+	@Test(enabled = false, groups = { "wso2.esb" },
+	      description = "meetup {create_ewcommunity}  integration test for negative scenario.")
+	public void testcreate_ewcommunityNegative() throws Exception {
 
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-        String modifiedJsonString = String.format(jsonString,
-                meetupConnectorProperties.getProperty("key"),
-                meetupConnectorProperties.getProperty("id")
+		String jsonRequestFilePath = pathToRequestsDirectory + "create_ewcommunity_negative.txt";
+		String methodName = "meetup_create_ewcommunity";
 
+		final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
+		final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
 
-        );
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
+		proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
-        try {
+		try {
 
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(responseHeader == 201);
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            Assert.assertTrue(jsonObject.has("id"));
-            System.out.println("--------------@@@@@@@@---------");
+			int responseHeader = ConnectorIntegrationUtil
+					.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(responseHeader == 400);
 
+			JSONObject jsonObject = ConnectorIntegrationUtil
+					.sendRequest(getProxyServiceURL(methodName), jsonString);
+			Assert.assertTrue(jsonObject.has("problem"));
 
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
-
-//    //...............    negative test for create_ewcommunity...........................................
-
-
-    @Test(enabled = false, groups = {"wso2.esb"}, description = "meetup {create_ewcommunity}  integration test for negative scenario.")
-    public void testcreate_ewcommunityNegative() throws Exception {
-
-        String jsonRequestFilePath = pathToRequestsDirectory + "create_ewcommunity_negative.txt";
-        String methodName = "meetup_create_ewcommunity";
-
-        final String jsonString = ConnectorIntegrationUtil.getFileContent(jsonRequestFilePath);
-        final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
-
-        proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
-
-        try {
-
-            int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(responseHeader == 400);
-
-            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(jsonObject.has("problem"));
-
-        } finally {
-            proxyAdmin.deleteProxy(methodName);
-        }
-    }
-
-
-
+		} finally {
+			proxyAdmin.deleteProxy(methodName);
+		}
+	}
 
 }

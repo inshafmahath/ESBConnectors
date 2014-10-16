@@ -1,3 +1,21 @@
+/*
+ * Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
 package org.wso2.carbon.connector.integration.test.meetup.profiles;
 
 import org.json.JSONObject;
@@ -80,11 +98,12 @@ public class ProfilesIntegrationTest extends MeetupConnectorIntegrationTest {
 		}
 	}
 
-	/** Test editProfile API operation for Mandatory fields.
-			* Expecting Response header '201'.
-			*
-			* @throws Exception if test fails.
-			*/
+	/**
+	 * Test editProfile API operation for Mandatory fields.
+	 * Expecting Response header '201'.
+	 *
+	 * @throws Exception if test fails.
+	 */
 	@Test(enabled = false, groups = { "wso2.esb" },
 	      description = "Testing {editProfile} API method")
 	public void testEditProfileMandatory() throws Exception {
@@ -117,7 +136,8 @@ public class ProfilesIntegrationTest extends MeetupConnectorIntegrationTest {
 		}
 	}
 
-	/** Test getProfile API operation for Mandatory fields.
+	/**
+	 * Test getProfile API operation for Mandatory fields.
 	 * Expecting Response header '201'.
 	 *
 	 * @throws Exception if test fails.
@@ -154,7 +174,8 @@ public class ProfilesIntegrationTest extends MeetupConnectorIntegrationTest {
 		}
 	}
 
-	/** Test delete Profile API operation for Mandatory fields.
+	/**
+	 * Test delete Profile API operation for Mandatory fields.
 	 * Expecting Response header '201'.
 	 *
 	 * @throws Exception if test fails.
@@ -186,7 +207,8 @@ public class ProfilesIntegrationTest extends MeetupConnectorIntegrationTest {
 		}
 	}
 
-	/** Test Profile approvals API operation for Mandatory fields.
+	/**
+	 * Test Profile approvals API operation for Mandatory fields.
 	 * Expecting Response header '201'.
 	 *
 	 * @throws Exception if test fails.
@@ -218,7 +240,8 @@ public class ProfilesIntegrationTest extends MeetupConnectorIntegrationTest {
 		}
 	}
 
-	/** Test Profile decline API operation for Mandatory fields.
+	/**
+	 * Test Profile decline API operation for Mandatory fields.
 	 * Expecting Response header '201'.
 	 *
 	 * @throws Exception if test fails.

@@ -1,3 +1,21 @@
+<!--
+  ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+  ~
+  ~ WSO2 Inc. licenses this file to you under the Apache License,
+  ~ Version 2.0 (the "License"); you may not use this file except
+  ~ in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
 <template name="getRecommendedVenues" xmlns="http://ws.apache.org/ns/synapse">
 
     <!-- Required Parameters -->
@@ -14,7 +32,8 @@
     <parameter name="lon" description="To retrieve results based on lon"/>
     <parameter name="min_groups" description="To retrieve results based on min groups"/>
     <parameter name="radius" description="To retrieve results based on radius"/>
-    <parameter name="used_between" description="Return venues that have been used within the given time range"/>
+    <parameter name="used_between"
+               description="Return venues that have been used within the given time range"/>
     <parameter name="zip" description="To retrieve results based on zip"/>
 
     <sequence>
@@ -125,13 +144,16 @@
             <property name="string" expression="fn:concat('key - ', get-property('uri.var.key'))"/>
         </log>
         <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
-            <property name="string" expression="fn:concat('query2 - ', get-property('uri.var.query'))"/>
+            <property name="string"
+                      expression="fn:concat('query2 - ', get-property('uri.var.query'))"/>
         </log>
         <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
-            <property name="string" expression="fn:concat('apiUrl - ', get-property('uri.var.apiUrl'))"/>
+            <property name="string"
+                      expression="fn:concat('apiUrl - ', get-property('uri.var.apiUrl'))"/>
         </log>
         <log level="custom" xmlns="http://ws.apache.org/ns/synapse">
-            <property name="string" expression="fn:concat('apiVersion - ', get-property('uri.var.apiVersion'))"/>
+            <property name="string"
+                      expression="fn:concat('apiVersion - ', get-property('uri.var.apiVersion'))"/>
         </log>
 
 

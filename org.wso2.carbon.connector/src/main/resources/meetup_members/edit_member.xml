@@ -1,72 +1,87 @@
+<!--
+  ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+  ~
+  ~ WSO2 Inc. licenses this file to you under the Apache License,
+  ~ Version 2.0 (the "License"); you may not use this file except
+  ~ in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
 <template name="edit_member" xmlns="http://ws.apache.org/ns/synapse">
 
 
-    <parameter name="member_id" />
+    <parameter name="member_id"/>
 
-    <parameter name="add_topics" />
-    <parameter name="key" />
-    <parameter name="bio"  />
-    <parameter name="bio_privacy"  />
-    <parameter name="birthday"  />
-    <parameter name="city"  />
-    <parameter name="city_id"  />
-    <parameter name="country"  />
-    <parameter name="facebook_privacy"  />
-    <parameter name="gender"  />
-    <parameter name="groups_privacy"  />
-    <parameter name="hometown"  />
-    <parameter name="lang"  />
-    <parameter name="lat"  />
-    <parameter name="lon"  />
-    <parameter name="name"  />
-    <parameter name="photo_id"  />
-    <parameter name="photos_privacy"  />
-    <parameter name="radius"  />
-    <parameter name="remove_topics"  />
-    <parameter name="sync_photo"  />
-    <parameter name="topics_privacy"  />
-    <parameter name="zip"  />
-
-
+    <parameter name="add_topics"/>
+    <parameter name="key"/>
+    <parameter name="bio"/>
+    <parameter name="bio_privacy"/>
+    <parameter name="birthday"/>
+    <parameter name="city"/>
+    <parameter name="city_id"/>
+    <parameter name="country"/>
+    <parameter name="facebook_privacy"/>
+    <parameter name="gender"/>
+    <parameter name="groups_privacy"/>
+    <parameter name="hometown"/>
+    <parameter name="lang"/>
+    <parameter name="lat"/>
+    <parameter name="lon"/>
+    <parameter name="name"/>
+    <parameter name="photo_id"/>
+    <parameter name="photos_privacy"/>
+    <parameter name="radius"/>
+    <parameter name="remove_topics"/>
+    <parameter name="sync_photo"/>
+    <parameter name="topics_privacy"/>
+    <parameter name="zip"/>
 
 
     <parameter name="parameters"/>
 
 
     <sequence>
-        <property name="uri.var.member_id" expression="$func:member_id" />
+        <property name="uri.var.member_id" expression="$func:member_id"/>
 
-        <property name="uri.var.key" expression="$func:key" />
-        <property name="uri.var.add_topics" expression="$func:add_topics" />
-        <property name="uri.var.bio" expression="$func:bio" />
-        <property name="uri.var.bio_privacy" expression="$func:bio_privacy" />
-        <property name="uri.var.birthday" expression="$func:birthday" />
-        <property name="uri.var.city" expression="$func:city" />
-        <property name="uri.var.city_id" expression="$func:city_id" />
-        <property name="uri.var.country" expression="$func:country" />
-        <property name="uri.var.facebook_privacy" expression="$func:facebook_privacy" />
-        <property name="uri.var.gender" expression="$func:gender" />
-        <property name="uri.var.groups_privacy" expression="$func:groups_privacy" />
-        <property name="uri.var.hometown" expression="$func:hometown" />
-        <property name="uri.var.lang" expression="$func:lang" />
-        <property name="uri.var.lat" expression="$func:lat" />
-        <property name="uri.var.lon" expression="$func:lon" />
-        <property name="uri.var.name" expression="$func:name" />
-        <property name="uri.var.photo_id" expression="$func:photo_id" />
-        <property name="uri.var.photos_privacy" expression="$func:photos_privacy" />
-        <property name="uri.var.radius" expression="$func:radius" />
-        <property name="uri.var.remove_topics" expression="$func:remove_topics" />
-        <property name="uri.var.sync_photo" expression="$func:sync_photo" />
-        <property name="uri.var.topics_privacy" expression="$func:topics_privacy" />
-        <property name="uri.var.zip" expression="$func:zip" />
+        <property name="uri.var.key" expression="$func:key"/>
+        <property name="uri.var.add_topics" expression="$func:add_topics"/>
+        <property name="uri.var.bio" expression="$func:bio"/>
+        <property name="uri.var.bio_privacy" expression="$func:bio_privacy"/>
+        <property name="uri.var.birthday" expression="$func:birthday"/>
+        <property name="uri.var.city" expression="$func:city"/>
+        <property name="uri.var.city_id" expression="$func:city_id"/>
+        <property name="uri.var.country" expression="$func:country"/>
+        <property name="uri.var.facebook_privacy" expression="$func:facebook_privacy"/>
+        <property name="uri.var.gender" expression="$func:gender"/>
+        <property name="uri.var.groups_privacy" expression="$func:groups_privacy"/>
+        <property name="uri.var.hometown" expression="$func:hometown"/>
+        <property name="uri.var.lang" expression="$func:lang"/>
+        <property name="uri.var.lat" expression="$func:lat"/>
+        <property name="uri.var.lon" expression="$func:lon"/>
+        <property name="uri.var.name" expression="$func:name"/>
+        <property name="uri.var.photo_id" expression="$func:photo_id"/>
+        <property name="uri.var.photos_privacy" expression="$func:photos_privacy"/>
+        <property name="uri.var.radius" expression="$func:radius"/>
+        <property name="uri.var.remove_topics" expression="$func:remove_topics"/>
+        <property name="uri.var.sync_photo" expression="$func:sync_photo"/>
+        <property name="uri.var.topics_privacy" expression="$func:topics_privacy"/>
+        <property name="uri.var.zip" expression="$func:zip"/>
 
 
         <property name="meetupParameters" value=""/>
 
 
-
         <filter
-                xpath="get-property('uri.var.add_topics') = '' or  not(string(get-property('uri.var.add_topics')))" >
+                xpath="get-property('uri.var.add_topics') = '' or  not(string(get-property('uri.var.add_topics')))">
             <then>
                 <property name="uri.var.add_topics" value=""/>
             </then>
@@ -77,7 +92,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.bio') = '' or  not(string(get-property('uri.var.bio')))" >
+                xpath="get-property('uri.var.bio') = '' or  not(string(get-property('uri.var.bio')))">
             <then>
                 <property name="uri.var.bio" value=""/>
             </then>
@@ -89,7 +104,7 @@
 
 
         <filter
-                xpath="get-property('uri.var.bio_privacy') = '' or  not(string(get-property('uri.var.bio_privacy')))" >
+                xpath="get-property('uri.var.bio_privacy') = '' or  not(string(get-property('uri.var.bio_privacy')))">
             <then>
                 <property name="uri.var.bio_privacy" value=""/>
             </then>
@@ -100,7 +115,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.birthday') = '' or  not(string(get-property('uri.var.birthday')))" >
+                xpath="get-property('uri.var.birthday') = '' or  not(string(get-property('uri.var.birthday')))">
             <then>
                 <property name="uri.var.birthday" value=""/>
             </then>
@@ -112,7 +127,7 @@
 
 
         <filter
-                xpath="get-property('uri.var.city') = '' or  not(string(get-property('uri.var.city')))" >
+                xpath="get-property('uri.var.city') = '' or  not(string(get-property('uri.var.city')))">
             <then>
                 <property name="uri.var.city" value=""/>
             </then>
@@ -123,7 +138,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.city_id') = '' or  not(string(get-property('uri.var.city_id')))" >
+                xpath="get-property('uri.var.city_id') = '' or  not(string(get-property('uri.var.city_id')))">
             <then>
                 <property name="uri.var.city_id" value=""/>
             </then>
@@ -135,7 +150,7 @@
 
 
         <filter
-                xpath="get-property('uri.var.country') = '' or  not(string(get-property('uri.var.country')))" >
+                xpath="get-property('uri.var.country') = '' or  not(string(get-property('uri.var.country')))">
             <then>
                 <property name="uri.var.country" value=""/>
             </then>
@@ -146,7 +161,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.facebook_privacy') = '' or  not(string(get-property('uri.var.facebook_privacy')))" >
+                xpath="get-property('uri.var.facebook_privacy') = '' or  not(string(get-property('uri.var.facebook_privacy')))">
             <then>
                 <property name="uri.var.facebook_privacy" value=""/>
             </then>
@@ -157,7 +172,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.gender') = '' or  not(string(get-property('uri.var.gender')))" >
+                xpath="get-property('uri.var.gender') = '' or  not(string(get-property('uri.var.gender')))">
             <then>
                 <property name="uri.var.gender" value=""/>
             </then>
@@ -168,7 +183,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.groups_privacy') = '' or  not(string(get-property('uri.var.groups_privacy')))" >
+                xpath="get-property('uri.var.groups_privacy') = '' or  not(string(get-property('uri.var.groups_privacy')))">
             <then>
                 <property name="uri.var.groups_privacy" value=""/>
             </then>
@@ -179,7 +194,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.hometown') = '' or  not(string(get-property('uri.var.hometown')))" >
+                xpath="get-property('uri.var.hometown') = '' or  not(string(get-property('uri.var.hometown')))">
             <then>
                 <property name="uri.var.hometown" value=""/>
             </then>
@@ -190,7 +205,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.lang') = '' or  not(string(get-property('uri.var.lang')))" >
+                xpath="get-property('uri.var.lang') = '' or  not(string(get-property('uri.var.lang')))">
             <then>
                 <property name="uri.var.lang" value=""/>
             </then>
@@ -201,7 +216,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.lat') = '' or  not(string(get-property('uri.var.lat')))" >
+                xpath="get-property('uri.var.lat') = '' or  not(string(get-property('uri.var.lat')))">
             <then>
                 <property name="uri.var.lat" value=""/>
             </then>
@@ -213,7 +228,7 @@
 
 
         <filter
-                xpath="get-property('uri.var.lon') = '' or  not(string(get-property('uri.var.lon')))" >
+                xpath="get-property('uri.var.lon') = '' or  not(string(get-property('uri.var.lon')))">
             <then>
                 <property name="uri.var.lon" value=""/>
             </then>
@@ -224,7 +239,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.name') = '' or  not(string(get-property('uri.var.name')))" >
+                xpath="get-property('uri.var.name') = '' or  not(string(get-property('uri.var.name')))">
             <then>
                 <property name="uri.var.name" value=""/>
             </then>
@@ -235,7 +250,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.photo_id') = '' or  not(string(get-property('uri.var.photo_id')))" >
+                xpath="get-property('uri.var.photo_id') = '' or  not(string(get-property('uri.var.photo_id')))">
             <then>
                 <property name="uri.var.photo_id" value=""/>
             </then>
@@ -246,7 +261,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.photos_privacy') = '' or  not(string(get-property('uri.var.photos_privacy')))" >
+                xpath="get-property('uri.var.photos_privacy') = '' or  not(string(get-property('uri.var.photos_privacy')))">
             <then>
                 <property name="uri.var.photos_privacy" value=""/>
             </then>
@@ -257,9 +272,8 @@
         </filter>
 
 
-
         <filter
-                xpath="get-property('uri.var.radius') = '' or  not(string(get-property('uri.var.radius')))" >
+                xpath="get-property('uri.var.radius') = '' or  not(string(get-property('uri.var.radius')))">
             <then>
                 <property name="uri.var.radius" value=""/>
             </then>
@@ -270,7 +284,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.remove_topics') = '' or  not(string(get-property('uri.var.remove_topics')))" >
+                xpath="get-property('uri.var.remove_topics') = '' or  not(string(get-property('uri.var.remove_topics')))">
             <then>
                 <property name="uri.var.remove_topics" value=""/>
             </then>
@@ -281,7 +295,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.sync_photo') = '' or  not(string(get-property('uri.var.sync_photo')))" >
+                xpath="get-property('uri.var.sync_photo') = '' or  not(string(get-property('uri.var.sync_photo')))">
             <then>
                 <property name="uri.var.sync_photo" value=""/>
             </then>
@@ -292,7 +306,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.topics_privacy') = '' or  not(string(get-property('uri.var.topics_privacy')))" >
+                xpath="get-property('uri.var.topics_privacy') = '' or  not(string(get-property('uri.var.topics_privacy')))">
             <then>
                 <property name="uri.var.topics_privacy" value=""/>
             </then>
@@ -303,7 +317,7 @@
         </filter>
 
         <filter
-                xpath="get-property('uri.var.zip') = '' or  not(string(get-property('uri.var.zip')))" >
+                xpath="get-property('uri.var.zip') = '' or  not(string(get-property('uri.var.zip')))">
             <then>
                 <property name="uri.var.zip" value=""/>
             </then>
@@ -314,25 +328,18 @@
         </filter>
 
 
+        <property name="uri.var.parameters" expression="get-property('meetupParameters')"/>
 
 
-
-
-
-
-        <property name="uri.var.parameters" expression="get-property('meetupParameters')" />
-
-
-        <header name="Content-Type" value="application/json" scope="transport" />
+        <header name="Content-Type" value="application/json" scope="transport"/>
         <!--header name="Authorization" expression="fn:concat('Bearer ',get-property('uri.var.accessToken'))"
                 scope="transport"/-->
-
 
 
         <call>
             <endpoint>
                 <http method="post"
-                      uri-template="https://api.meetup.com/2/member/{uri.var.member_id}?key={uri.var.key}&amp;{uri.var.parameters}" />
+                      uri-template="https://api.meetup.com/2/member/{uri.var.member_id}?key={uri.var.key}&amp;{uri.var.parameters}"/>
 
             </endpoint>
         </call>
