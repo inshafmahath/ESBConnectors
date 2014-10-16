@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="meetup_ew_events" type="synapse/template">
+    <subComponents>
+        <component name="getew_events">
+            <file>getew_events.xml</file>
+            <description>fetch every where events information</description>
+        </component>
+
+        <component name="getew_event_byid">
+            <file>getew_event_byid.xml</file>
+            <description>get every where events by event id</description>
+        </component>
+
+
+
+        <component name="edit_ewevent">
+            <file>edit_ewevent.xml</file>
+            <description>edit every where events by event id</description>
+        </component>
+
+        <component name="post_ewevent">
+            <file>post_ewevent.xml</file>
+            <description>post every where events by event id</description>
+        </component>
+
+
+
+    </subComponents>
+</component>

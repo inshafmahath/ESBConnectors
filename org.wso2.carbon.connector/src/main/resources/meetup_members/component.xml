@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="meetup_members" type="synapse/template">
+    <subComponents>
+        <component name="getmembers">
+            <file>getmembers.xml</file>
+            <description>fetch member information</description>
+        </component>
+
+        <component name="getmember_byid">
+            <file>getmember_byid.xml</file>
+            <description>fetch member by his/her id</description>
+        </component>
+
+        <component name="delete_member_photo">
+            <file>delete_member_photo.xml</file>
+            <description>delete member photo</description>
+        </component>
+
+        <component name="edit_member">
+            <file>edit_member.xml</file>
+            <description>edit member detail</description>
+        </component>
+
+    </subComponents>
+</component>

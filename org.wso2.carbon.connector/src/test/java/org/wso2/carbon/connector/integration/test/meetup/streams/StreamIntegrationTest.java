@@ -18,7 +18,7 @@ public class StreamIntegrationTest extends MeetupConnectorIntegrationTest {
 
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getStreamOpenEvents} integration test")
+    @Test(enabled = false, groups = { "wso2.esb" }, description = "meetup {getStreamOpenEvents} integration test")
     public void testStreamGetOpenVenuesWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "streams_get_open_venues_optional.txt";

@@ -1,0 +1,29 @@
+<template name="getew_rsvps_byid" xmlns="http://ws.apache.org/ns/synapse">
+
+    <parameter name="id" description="rsvp_id" />
+    <parameter name="key" />
+
+
+    <sequence>
+        <property name="uri.var.key" expression="$func:key" />
+        <property name="uri.var.id" expression="$func:id" />
+
+
+
+
+
+        <header name="Content-Type" value="application/json" scope="transport" />
+        <!--header name="Authorization" expression="fn:concat('Bearer ',get-property('uri.var.accessToken'))"
+                scope="transport"/-->
+
+
+
+        <call>
+            <endpoint>
+                <http method="get"
+                      uri-template="https://api.meetup.com/ew/rsvp/{uri.var.id}?key={uri.var.key}" />
+
+            </endpoint>
+        </call>
+    </sequence>
+</template>

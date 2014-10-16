@@ -1,0 +1,30 @@
+<template name="post_ewfollow" xmlns="http://ws.apache.org/ns/synapse">
+
+    <parameter name="comment" description="comment content" />
+    <parameter name="key" />
+    <parameter name="community_id"  />
+
+
+    <sequence>
+        <property name="uri.var.key" expression="$func:key" />
+        <property name="uri.var.community_id" expression="$func:community_id" />
+
+
+
+
+
+        <header name="Content-Type" value="application/json" scope="transport" />
+        <!--header name="Authorization" expression="fn:concat('Bearer ',get-property('uri.var.accessToken'))"
+                scope="transport"/-->
+
+
+
+        <call>
+            <endpoint>
+                <http method="post"
+                      uri-template="https://api.meetup.com/ew/follow?key={uri.var.key}&amp;community_id={uri.var.community_id}" />
+
+            </endpoint>
+        </call>
+    </sequence>
+</template>

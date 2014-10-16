@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="meetup_everywhere_seedevents" type="synapse/template">
+    <subComponents>
+        <component name="get_ewseed_event">
+            <file>get_ewseed_event.xml</file>
+            <description>get everywhere event seeds</description>
+        </component>
+    </subComponents>
+</component>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <connector>
     <component name="meetup" package="org.wso2.carbon.connector" >
-        <dependency component="helloWorld"/>
+
+
         <dependency component="meetup_config" />
         <dependency component="meetup_events"/>
         <dependency component="batch"/>
@@ -15,6 +16,16 @@
         <dependency component="photos"/>
         <dependency component="profiles"/>
         <dependency component="rsvps"/>
+        <dependency component="meetup_feed"/>
+        <dependency component="meetup_groups"/>
+        <dependency component="meetup_members"/>
+        <dependency component="meetup_everywhere_comments"/>
+        <dependency component="meetup_everywhere_commmunity"/>
+        <dependency component="meetup_ew_events"/>
+        <dependency component="meetup_everywhere_rsvps"/>
+        <dependency component="meetup_everywhere_seedevents"/>
+        <dependency component="meetup_everywhere_containers"/>
+
         <description>wso2 ESB Carbon connector library for Meetup</description>
     </component>
 </connector>

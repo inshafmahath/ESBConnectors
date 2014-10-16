@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="meetup_everywhere_comments" type="synapse/template">
+<subComponents>
+    <component name="getcomments-byid">
+        <file>getcomments-byid.xml</file>
+        <description>fetch community comments by id</description>
+    </component>
+
+        <component name="getew_comments">
+            <file>getew_comments.xml</file>
+            <description>fetch community comments</description>
+        </component>
+
+    <component name="delete_ewcomments">
+        <file>delete_ewcomments.xml</file>
+        <description>delete every where comments</description>
+    </component>
+
+    <component name="post_ew_comments">
+        <file>post_ew_comments.xml</file>
+        <description>post every where comments</description>
+    </component>
+
+    </subComponents>
+</component>

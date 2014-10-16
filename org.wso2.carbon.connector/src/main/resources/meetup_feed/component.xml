@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="meetup_feed" type="synapse/template">
+    <subComponents>
+        <component name="activityfeed">
+            <file>activityfeed.xml</file>
+            <description>get activity feeds</description>
+        </component>
+    </subComponents>
+</component>

@@ -16,7 +16,7 @@ import java.net.URL;
 public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getOpenEvents} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getOpenEvents} integration test")
     public void testGetOpenEventsWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getOpenEvents_mandatory.txt";
@@ -40,7 +40,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getOpenEvents} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getOpenEvents} integration test")
     public void testGetOpenEventsWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getOpenEvents_negative.txt";
@@ -62,7 +62,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         }
     }
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getOpenEvents} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getOpenEvents} integration test")
     public void testGetOpenEventsWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getOpenEvents_optional.txt";
@@ -86,7 +86,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getConcierge} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getConcierge} integration test")
     public void testGetConciergeWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getConcierge_negative.txt";
@@ -99,7 +99,6 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
 
 
-
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
@@ -110,7 +109,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         }
     }
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getConcierge} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getConcierge} integration test")
     public void testGetConciergeWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getConcierge_optional.txt";
@@ -134,7 +133,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEvents} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEvents} integration test")
     public void testGetEventsWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEvents_mandatory.txt";
@@ -158,7 +157,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEvents} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEvents} integration test")
     public void testGetEventsWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEvents_negative.txt";
@@ -180,7 +179,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         }
     }
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEvents} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEvents} integration test")
     public void testGetEventsWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEvents_optional.txt";
@@ -204,7 +203,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventsByID} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventsByID} integration test")
     public void testGetEventsByIDWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventsByID_mandatory.txt";
@@ -228,7 +227,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventsByID} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventsByID} integration test")
     public void testGetEventsByIDWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventsByID_negative.txt";
@@ -250,7 +249,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         }
     }
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventsByID} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventsByID} integration test")
     public void testGetEventsByIDWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventsByID_optional.txt";
@@ -274,7 +273,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventComments} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventComments} integration test")
     public void testGetEventCommentsWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventsComments_mandatory.txt";
@@ -298,7 +297,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventComments} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventComments} integration test")
     public void testGetEventCommentsWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventsComments_negative.txt";
@@ -321,7 +320,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventComments} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventComments} integration test")
     public void testGetEventCommentsWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventsComments_optional.txt";
@@ -345,8 +344,8 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventCommentsByID} integration test")
-    public void testGetEventCommentsByIDWithRequiredParameters() throws Exception   {
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventCommentsByID} integration test")
+    public void testGetEventCommentsByIDWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventCommentByID_mandatory.txt";
         String methodName = "events_get_event_comment_by_id";
@@ -369,7 +368,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventCommentsByID} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventCommentsByID} integration test")
     public void testGetEventCommentsByIDWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventCommentByID_negative.txt";
@@ -392,7 +391,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventCommentsByID} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventCommentsByID} integration test")
     public void testGetEventCommentsByIDWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventCommentByID_optional.txt";
@@ -416,8 +415,8 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventCommentLikes} integration test")
-    public void testGetEventCommentLikesWithRequiredParameters() throws Exception   {
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventCommentLikes} integration test")
+    public void testGetEventCommentLikesWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventsCommentLikes_mandatory.txt";
         String methodName = "events_get_event_comment_likes";
@@ -441,7 +440,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventCommentLikes} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventCommentLikes} integration test")
     public void testGetEventCommentLikesWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventsCommentLikes_negative.txt";
@@ -464,7 +463,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventRating} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventRating} integration test")
     public void testGetEventRatingWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventRating_mandatory.txt";
@@ -488,7 +487,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventRating} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventRating} integration test")
     public void testGetEventRatingWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventRating_negative.txt";
@@ -511,7 +510,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventRating} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventRating} integration test")
     public void testGetEventRatingWithOptionalParameters() throws Exception {
 
         //System.out.println("*************0");
@@ -526,9 +525,9 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
 
         try {
-             System.out.println("*************1");
-             JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-             System.out.println("*************2");
+            System.out.println("*************1");
+            JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
+            System.out.println("*************2");
 
             Assert.assertTrue(jsonObject.has("results"));
             System.out.println("*************3");
@@ -539,7 +538,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventComments} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventComments} integration test")
     public void testPostEventCommentsWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsComments_mandatory.txt";
@@ -556,7 +555,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 201);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
@@ -564,7 +563,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventComments} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventComments} integration test")
     public void testPostEventCommentsWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsComments_negative.txt";
@@ -587,7 +586,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventComments} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventComments} integration test")
     public void testPostEventCommentsWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsComments_optional.txt";
@@ -604,7 +603,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 201);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
@@ -612,7 +611,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {deleteEventCommentsByID} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {deleteEventCommentsByID} integration test")
     public void testDeleteEventCommentsByIDWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_deleteEventCommentsByID_mandatory.txt";
@@ -636,7 +635,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {deleteEventCommentsByID} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {deleteEventCommentsByID} integration test")
     public void testDeleteEventCommentsByIDWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_deleteEventCommentsByID_negative.txt";
@@ -659,8 +658,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEvents} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEvents} integration test")
     public void testPostEventsWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEvents_mandatory.txt";
@@ -678,7 +676,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 201);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
@@ -686,7 +684,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEvents} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEvents} integration test")
     public void testPostEventsWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEvents_negative.txt";
@@ -703,7 +701,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 401);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
@@ -711,7 +709,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEvents} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEvents} integration test")
     public void testPostEventsWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEvents_optional.txt";
@@ -721,7 +719,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         final String proxyFilePath = "file:///" + pathToProxiesDirectory + methodName + ".xml";
         String modifiedJsonString = String.format(jsonString,
                 meetupConnectorProperties.getProperty("key"));
-        System.out.println("modifiedJsonString-"+modifiedJsonString);
+        System.out.println("modifiedJsonString-" + modifiedJsonString);
 
 
         proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
@@ -731,11 +729,11 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
 
             JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("jsonObject-"+jsonObject);
+            System.out.println("jsonObject-" + jsonObject);
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 201);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
@@ -743,9 +741,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventsByID} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventsByID} integration test")
     public void testPostEventsByIDWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsById_negative.txt";
@@ -762,7 +758,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 401);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
@@ -770,7 +766,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventsByID} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventsByID} integration test")
     public void testPostEventsByIDWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsById_optional.txt";
@@ -786,9 +782,8 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("jsonObject-"+jsonObject);
+            System.out.println("jsonObject-" + jsonObject);
             Assert.assertTrue(jsonObject.has("status"));
-
 
 
         } finally {
@@ -797,10 +792,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {deleteEvents} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {deleteEvents} integration test")
     public void testDeleteEventWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_deleteEventByID_mandatory.txt";
@@ -818,7 +810,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 200);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
@@ -826,7 +818,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {deleteEventsByID} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {deleteEventsByID} integration test")
     public void testDeleteEventWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_deleteEventByID_negative.txt";
@@ -843,7 +835,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
             Assert.assertTrue(responseHeader == 401);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
@@ -851,10 +843,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventCommentsFlag} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventCommentsFlag} integration test")
     public void testPostEventCommentsFlagWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsCommentsFlag_mandatory.txt";
@@ -870,7 +859,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -879,8 +868,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventCommentsFlag} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventCommentsFlag} integration test")
     public void testPostEventCommentsFlagWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsCommentsFlag_negative.txt";
@@ -895,7 +883,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -904,7 +892,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventCommentsFlag} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventCommentsFlag} integration test")
     public void testPostEventCommentsFlagWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsCommentsFlag_optional.txt";
@@ -920,7 +908,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -929,7 +917,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventCommentSubscribe} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventCommentSubscribe} integration test")
     public void testPostEventCommentSubscribeWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsCommentSubscribe_mandatory.txt";
@@ -945,7 +933,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 200);
 
         } finally {
@@ -954,8 +942,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventCommentSubscribe} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventCommentSubscribe} integration test")
     public void testPostEventCommentSubscribeWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsCommentSubscribe_negative.txt";
@@ -970,7 +957,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -979,8 +966,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {deleteEventCommentSubscribe} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {deleteEventCommentSubscribe} integration test")
     public void testDeleteEventCommentSubscribeWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_deleteEventsCommentSubscribe_mandatory.txt";
@@ -996,7 +982,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 200);
 
         } finally {
@@ -1005,8 +991,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {deleteEventCommentSubscribe} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {deleteEventCommentSubscribe} integration test")
     public void testDeleteEventCommentSubscribeWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_deleteEventsCommentSubscribe_negative.txt";
@@ -1021,7 +1006,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -1030,8 +1015,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventCommentLike} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventCommentLike} integration test")
     public void testPostEventCommentLikeWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsCommentLike_mandatory.txt";
@@ -1047,7 +1031,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 200);
 
         } finally {
@@ -1056,8 +1040,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventCommentLike} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventCommentLike} integration test")
     public void testPostEventCommentLikeWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventsCommentLike_negative.txt";
@@ -1072,7 +1055,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -1081,8 +1064,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {deleteEventCommentLike} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {deleteEventCommentLike} integration test")
     public void testDeleteEventCommentLikeWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_deleteEventsCommentLike_mandatory.txt";
@@ -1098,7 +1080,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 200);
 
         } finally {
@@ -1107,8 +1089,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {deleteEventCommentLike} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {deleteEventCommentLike} integration test")
     public void testDeleteEventCommentLikeWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_deleteEventsCommentLike_negative.txt";
@@ -1123,7 +1104,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -1132,10 +1113,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventRating} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventRating} integration test")
     public void testPostEventRatingWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventRating_mandatory.txt";
@@ -1151,7 +1129,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 400);
 
         } finally {
@@ -1160,8 +1138,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventRating} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventRating} integration test")
     public void testPostEventRatingWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventRating_negative.txt";
@@ -1176,7 +1153,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -1185,7 +1162,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postRating} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postRating} integration test")
     public void testPostEventRatingWithOptionalParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventRating_optional.txt";
@@ -1201,7 +1178,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 400);
 
         } finally {
@@ -1210,10 +1187,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-
-
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventAttendance} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventAttendance} integration test")
     public void testGetEventAttendanceWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventsAttendance_mandatory.txt";
@@ -1240,7 +1214,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventAttendance} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventAttendance} integration test")
     public void testGetEventAttendanceWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_getEventsAttendance_negative.txt";
@@ -1263,7 +1237,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(groups = { "wso2.esb" }, description = "meetup {getEventAttendance} integration test")
+    @Test(groups = {"wso2.esb"}, description = "meetup {getEventAttendance} integration test")
     public void testGetEventAttendanceWithOptionalParameters() throws Exception {
 
         //System.out.println("*************0");
@@ -1291,9 +1265,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventAttendance} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventAttendance} integration test")
     public void testPostEventAttendanceWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventAttendance_mandatory.txt";
@@ -1310,7 +1282,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 200);
 
         } finally {
@@ -1319,8 +1291,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventAttendance} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventAttendance} integration test")
     public void testPostAttendanceWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventAttendance_negative.txt";
@@ -1335,7 +1306,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -1344,7 +1315,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventAttendance} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventAttendance} integration test")
     public void testPostEventAttendanceWithOptionalParameters() throws Exception {
 
         //System.out.println("*************0");
@@ -1362,7 +1333,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
 
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 200);
 
 
@@ -1372,8 +1343,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventPayments} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventPayments} integration test")
     public void testPostEventPaymentsWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventPayments_mandatory.txt";
@@ -1389,7 +1359,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 200);
 
         } finally {
@@ -1398,8 +1368,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventPayments} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventPayments} integration test")
     public void testPostEventPaymentsWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventPayments_negative.txt";
@@ -1414,7 +1383,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -1423,7 +1392,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventPayments} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventPayments} integration test")
     public void testPostEventPaymentsWithOptionalParameters() throws Exception {
 
         //System.out.println("*************0");
@@ -1440,9 +1409,9 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             JSONObject jsonObject = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("jsonObject-"+jsonObject);
+            System.out.println("jsonObject-" + jsonObject);
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 200);
 
 
@@ -1452,9 +1421,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventWatchlist} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventWatchlist} integration test")
     public void testPostEventWatchlistWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventWatchlist_mandatory.txt";
@@ -1470,7 +1437,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 200);
 
         } finally {
@@ -1479,8 +1446,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {postEventWatchlist} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {postEventWatchlist} integration test")
     public void testPostWatchlistWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_postEventWatchlist_negative.txt";
@@ -1495,7 +1461,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
@@ -1504,8 +1470,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {deleteEventWatchlist} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {deleteEventWatchlist} integration test")
     public void testDeleteEventWatchlistWithRequiredParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_deleteEventWatchlist_mandatory.txt";
@@ -1530,8 +1495,7 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
     }
 
 
-
-    @Test(enabled = true, groups = { "wso2.esb" }, description = "meetup {deleteEventWatchlist} integration test")
+    @Test(enabled = true, groups = {"wso2.esb"}, description = "meetup {deleteEventWatchlist} integration test")
     public void testDeleteWatchlistWithNegativeParameters() throws Exception {
 
         String jsonRequestFilePath = pathToRequestsDirectory + "events_deleteEventWatchlist_negative.txt";
@@ -1546,14 +1510,13 @@ public class EventsIntegrationTest extends MeetupConnectorIntegrationTest {
         try {
 
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), modifiedJsonString);
-            System.out.println("responseHeader-"+responseHeader);
+            System.out.println("responseHeader-" + responseHeader);
             Assert.assertTrue(responseHeader == 401);
 
         } finally {
             proxyAdmin.deleteProxy(methodName);
         }
     }
-
 
 
 }
